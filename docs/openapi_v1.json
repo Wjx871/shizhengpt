@@ -1,0 +1,312 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ShizhenGPT 图文问答接口",
+    "version": "1.0.0",
+    "description": "自定义 REST JSON 接口，非 OpenAI 协议。默认基础权重 raw 模式。"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:7860"
+    }
+  ],
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "服务就绪与版本",
+        "responses": {
+          "200": {
+            "description": "模型已加载"
+          }
+        }
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "summary": "模型、模式与输入限制",
+        "responses": {
+          "200": {
+            "description": "模型元数据"
+          }
+        }
+      }
+    },
+    "/v1/chat": {
+      "post": {
+        "summary": "文字、图片或图文联合问答",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "模型回答",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/reset": {
+      "post": {
+        "summary": "释放一个会话及其临时图片",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "session_id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "session_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 80
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "幂等清理成功"
+          },
+          "400": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChatRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 6000,
+            "default": "",
+            "description": "与图片至少提供一项。"
+          },
+          "image_base64": {
+            "type": "string",
+            "description": "JPEG/PNG/WebP 纯 Base64 或 data:image/...;base64,...；解码后最多8 MB。"
+          },
+          "session_id": {
+            "type": "string",
+            "description": "首次省略，续聊传回上次返回值；模式必须一致。"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "raw",
+              "guarded",
+              "guarded_v1"
+            ],
+            "default": "raw"
+          },
+          "max_new_tokens": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1024,
+            "default": 768,
+            "description": "仅 raw 支持。"
+          }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "required": [
+              "image_base64"
+            ],
+            "properties": {
+              "image_base64": {
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      },
+      "ChatResponse": {
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "answer",
+          "model",
+          "mode",
+          "finish_reason"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "api_version": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "weights_version": {
+            "type": "string"
+          },
+          "session_id": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "workflow_version": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "latency_sec": {
+            "type": "number"
+          },
+          "finish_reason": {
+            "type": "string",
+            "enum": [
+              "stop",
+              "length"
+            ]
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "guard_status": {
+            "type": "string"
+          },
+          "model_invocations": {
+            "type": "integer"
+          },
+          "usage": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "input_tokens": {
+                "type": "integer"
+              },
+              "output_tokens": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

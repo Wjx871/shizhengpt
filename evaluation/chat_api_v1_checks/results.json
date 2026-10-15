@@ -1,0 +1,664 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "path": "/healthz",
+      "status": 200,
+      "result": {
+        "ready": true,
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "default_mode": "guarded",
+        "api_v1_default_mode": "raw",
+        "api_version": "1.0.0",
+        "workflow_version": "cautious_chat_v2_20261015"
+      }
+    },
+    {
+      "path": "/v1/models",
+      "status": 200,
+      "result": {
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "default_mode": "raw",
+        "available_modes": [
+          "raw",
+          "guarded",
+          "guarded_v1"
+        ],
+        "cautious_workflow_version": "cautious_chat_v2_20261015",
+        "input_types": [
+          "text",
+          "image",
+          "text_and_image"
+        ],
+        "streaming": false,
+        "limits": {
+          "text_characters": 6000,
+          "image_bytes": 8388608,
+          "image_pixels": 24000000,
+          "request_bytes": 12582912,
+          "input_tokens_raw": 12000,
+          "raw_max_new_tokens": 1024,
+          "concurrent_inferences": 1,
+          "session_idle_seconds": 7200,
+          "max_replies": 15
+        },
+        "image_preprocessing": "EXIF transpose, RGB, longest edge <=1600, JPEG quality 95",
+        "guarded_usage_note": "usage is null for guarded workflows; model_invocations counts stages/retries",
+        "runtime": {
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0",
+          "device_name": "K100_AI",
+          "model_class": "Qwen2_5_VLForConditionalGeneration",
+          "lora_loaded": false,
+          "attention": "eager"
+        }
+      }
+    },
+    {
+      "path": "/openapi.json",
+      "status": 200,
+      "result": {
+        "openapi": "3.0.3",
+        "info": {
+          "title": "ShizhenGPT 图文问答接口",
+          "version": "1.0.0",
+          "description": "自定义 REST JSON 接口，非 OpenAI 协议。默认基础权重 raw 模式。"
+        },
+        "servers": [
+          {
+            "url": "http://127.0.0.1:7860"
+          }
+        ],
+        "paths": {
+          "/healthz": {
+            "get": {
+              "summary": "服务就绪与版本",
+              "responses": {
+                "200": {
+                  "description": "模型已加载"
+                }
+              }
+            }
+          },
+          "/v1/models": {
+            "get": {
+              "summary": "模型、模式与输入限制",
+              "responses": {
+                "200": {
+                  "description": "模型元数据"
+                }
+              }
+            }
+          },
+          "/v1/chat": {
+            "post": {
+              "summary": "文字、图片或图文联合问答",
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ChatRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "模型回答",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ChatResponse"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                },
+                "404": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                },
+                "413": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                },
+                "503": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/sessions/reset": {
+            "post": {
+              "summary": "释放一个会话及其临时图片",
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "required": [
+                        "session_id"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "session_id": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "幂等清理成功"
+                },
+                "400": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                },
+                "503": {
+                  "description": "失败响应；查看 error.code 和 error.message，request_id 可用于定位请求。",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "ChatRequest": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "maxLength": 6000,
+                  "default": "",
+                  "description": "与图片至少提供一项。"
+                },
+                "image_base64": {
+                  "type": "string",
+                  "description": "JPEG/PNG/WebP 纯 Base64 或 data:image/...;base64,...；解码后最多8 MB。"
+                },
+                "session_id": {
+                  "type": "string",
+                  "description": "首次省略，续聊传回上次返回值；模式必须一致。"
+                },
+                "mode": {
+                  "type": "string",
+                  "enum": [
+                    "raw",
+                    "guarded",
+                    "guarded_v1"
+                  ],
+                  "default": "raw"
+                },
+                "max_new_tokens": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1024,
+                  "default": 768,
+                  "description": "仅 raw 支持。"
+                }
+              },
+              "anyOf": [
+                {
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "minLength": 1
+                    }
+                  }
+                },
+                {
+                  "required": [
+                    "image_base64"
+                  ],
+                  "properties": {
+                    "image_base64": {
+                      "minLength": 1
+                    }
+                  }
+                }
+              ]
+            },
+            "ChatResponse": {
+              "type": "object",
+              "required": [
+                "request_id",
+                "session_id",
+                "answer",
+                "model",
+                "mode",
+                "finish_reason"
+              ],
+              "properties": {
+                "request_id": {
+                  "type": "string"
+                },
+                "api_version": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "weights_version": {
+                  "type": "string"
+                },
+                "session_id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                },
+                "workflow_version": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                },
+                "latency_sec": {
+                  "type": "number"
+                },
+                "finish_reason": {
+                  "type": "string",
+                  "enum": [
+                    "stop",
+                    "length"
+                  ]
+                },
+                "truncated": {
+                  "type": "boolean"
+                },
+                "guard_status": {
+                  "type": "string"
+                },
+                "model_invocations": {
+                  "type": "integer"
+                },
+                "usage": {
+                  "type": "object",
+                  "nullable": true,
+                  "properties": {
+                    "input_tokens": {
+                      "type": "integer"
+                    },
+                    "output_tokens": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            },
+            "Error": {
+              "type": "object",
+              "properties": {
+                "request_id": {
+                  "type": "string"
+                },
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "f580472c-d3a0-470d-bacd-212276b3adf3",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "c0e20362-1745-46a3-a971-a3e65e820858",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "已记住。",
+        "latency_sec": 4.3,
+        "finish_reason": "stop",
+        "truncated": false,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 60,
+          "output_tokens": 4
+        },
+        "model_invocations": 1
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "10522c8f-a500-49c8-9be7-a4ee78586c0b",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "c0e20362-1745-46a3-a971-a3e65e820858",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "青松73",
+        "latency_sec": 0.3,
+        "finish_reason": "stop",
+        "truncated": false,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 84,
+          "output_tokens": 5
+        },
+        "model_invocations": 1
+      }
+    },
+    {
+      "path": "/v1/sessions/reset",
+      "status": 200,
+      "result": {
+        "request_id": "52d4b9c3-195c-4730-95c8-cdc886c0bf06",
+        "ok": true
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "bc8aef33-0115-441f-9b7b-961bfa248c77",
+        "error": {
+          "code": "invalid_request",
+          "message": "对话已过期，请开始新对话。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "fb298f37-68c3-49d6-8c66-90ac4ffccd6a",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "1b3fd43e-1342-4c32-9ed1-0ff51720b3cc",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "这是一张展示宇航员相关场景的图片。画面主体是一位身着橙色宇航服的女性宇航员，其宇航服带有“NASA”标识以及“Columbia Aircraft Carrier”（哥伦比亚号飞机载具）的圆形徽章，表明与航天飞机计划的关联。",
+        "latency_sec": 4.7,
+        "finish_reason": "length",
+        "truncated": true,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 381,
+          "output_tokens": 64
+        },
+        "model_invocations": 1
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "4442e1b0-4b19-4433-aab3-ce7757d333b3",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "561d33e6-baee-452c-9ae3-b30d6da0a1c7",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "美国宇航员瓦尔·海格身穿橙色航天服，头戴黑色头盔，背景为美国国旗与航天器模型，展现其太空探索的专业形象。",
+        "latency_sec": 2.5,
+        "finish_reason": "stop",
+        "truncated": false,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 380,
+          "output_tokens": 38
+        },
+        "model_invocations": 1
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "0a711892-2d3c-4f50-b41c-fcf7b58ac6a8",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "a2ae0d5a-9c29-4e28-8e7a-ffcd4fc4628c",
+        "mode": "guarded",
+        "workflow_version": "cautious_chat_v2_20261015",
+        "answer": "可以先提供：主要不适、开始时间、严重程度、出现频率、诱因及缓解因素，再补充既往病史、用药和已有检查结果。不确定的信息可以直接说不清楚。",
+        "latency_sec": 0.0,
+        "finish_reason": "stop",
+        "truncated": false,
+        "guard_status": "informational",
+        "usage": null,
+        "model_invocations": 0
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "008df7ad-28cf-48fb-8aa8-a3ab3bdd4b53",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "8bdb36ed-16b8-4e42-98a4-5cd8647cacb7",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "在",
+        "latency_sec": 0.1,
+        "finish_reason": "length",
+        "truncated": true,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 55,
+          "output_tokens": 1
+        },
+        "model_invocations": 1
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "3639f70b-e068-431b-b60e-72917d8289f5",
+        "error": {
+          "code": "invalid_request",
+          "message": "text 和 image_base64 至少提供一项。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "13da9d64-9fd8-4366-9a0a-9790c4a0dddd",
+        "error": {
+          "code": "invalid_request",
+          "message": "mode 必须为 raw、guarded 或 guarded_v1。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "bd5704ee-7d8c-4438-9d37-16b1f56164e7",
+        "error": {
+          "code": "invalid_request",
+          "message": "未知字段：image"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "37acd620-9b3e-40d7-a23d-9987958ca626",
+        "error": {
+          "code": "invalid_request",
+          "message": "cannot identify image file <_io.BytesIO object at 0x7f687e6ce980>"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "31577fe5-4638-423d-a9e1-22f60965ad80",
+        "error": {
+          "code": "invalid_request",
+          "message": "session_id 必须是有效的会话字符串。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "526df0ed-c977-486b-a0da-c30e1f48ca82",
+        "error": {
+          "code": "invalid_request",
+          "message": "max_new_tokens 仅用于 raw；谨慎模式使用固定的阶段上限。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "56638923-88d3-49cd-97ee-ecfdb3c8be66",
+        "error": {
+          "code": "invalid_request",
+          "message": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 400,
+      "result": {
+        "request_id": "0d22618a-a580-4318-9813-77c9711bc228",
+        "error": {
+          "code": "invalid_content_type",
+          "message": "Content-Type 必须为 application/json。"
+        }
+      }
+    },
+    {
+      "path": "/v1/unknown",
+      "status": 404,
+      "result": {
+        "request_id": "ef46ad40-7c3a-4962-acec-f0c1921a8142",
+        "error": {
+          "code": "not_found",
+          "message": "接口不存在。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 503,
+      "result": {
+        "request_id": "3763001c-c881-455c-a194-27471e849199",
+        "error": {
+          "code": "model_busy",
+          "message": "模型正在处理其他请求，请稍后重试。"
+        }
+      }
+    },
+    {
+      "path": "/v1/chat",
+      "status": 200,
+      "result": {
+        "request_id": "a48b9ef0-4e9d-414f-9c3b-376ead04f00d",
+        "api_version": "1.0.0",
+        "model": "ShizhenGPT-7B-VL",
+        "weights_version": "base-bf16",
+        "session_id": "ba58a5d9-07b9-41f8-99d6-53712a596722",
+        "mode": "raw",
+        "workflow_version": "raw_base",
+        "answer": "收到",
+        "latency_sec": 0.1,
+        "finish_reason": "stop",
+        "truncated": false,
+        "guard_status": "raw_unchecked",
+        "usage": {
+          "input_tokens": 50,
+          "output_tokens": 2
+        },
+        "model_invocations": 1
+      }
+    }
+  ]
+}

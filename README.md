@@ -11,6 +11,10 @@
 
 下文保留初始部署和各历史实验入口，反映各阶段的研究设置。
 
+### 图文问答接口
+
+供其他系统接入的 REST API：`POST /v1/chat`，默认原始模型，支持文字、Base64 图片和多轮会话；可查询 `/v1/models`、`/healthz` 和 `/openapi.json`。Python 示例见 `scripts/api_client.py`，完整协议见 [API v1 文档](docs/api_v1.md)。当前访问经过服务器回环地址或 SSH 转发。
+
 ### 谨慎回答 v2（独立优化分支）
 
 `optimization/cautious-v2` 在固定备份后继续开发。新增礼貌前缀后的症状识别、假设语句与实际报告区分、用药问题的独立弃答、口语不适的补充追问，以及由程序测量的图片信息。默认入口为 `scripts/cautious_chat_v2.py`，v1 保留用于对照。详见 [v2 结果与限制](docs/cautious_chat_v2_report_20261015.md)。

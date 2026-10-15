@@ -1,0 +1,19 @@
+{
+  "request_id": "d13ded0f-2810-4f27-af0d-aa36e1583f8b",
+  "api_version": "1.0.0",
+  "model": "ShizhenGPT-7B-VL",
+  "weights_version": "base-bf16",
+  "session_id": "2c7d7152-174c-463a-a409-7300633f4301",
+  "mode": "raw",
+  "workflow_version": "raw_base",
+  "answer": "接口可用。",
+  "latency_sec": 0.2,
+  "finish_reason": "stop",
+  "truncated": false,
+  "guard_status": "raw_unchecked",
+  "usage": {
+    "input_tokens": 52,
+    "output_tokens": 4
+  },
+  "model_invocations": 1
+}
