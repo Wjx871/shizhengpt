@@ -1,0 +1,19 @@
+{
+  "id": "p09",
+  "arm": "v2",
+  "checks": {
+    "productive_clarification": true
+  },
+  "result": {
+    "version": "cautious_chat_v2_20261015",
+    "status": "needs_clarification",
+    "trace": {
+      "original_user_texts": [
+        "我肚子不舒服。"
+      ],
+      "symptom_sources": []
+    },
+    "answer": "**需要进一步说明症状。** 我还不能准确识别你说的不适，暂时无法判断原因。具体是哪个部位、什么感觉、从什么时候开始、是否影响日常活动？",
+    "model_invocations": 0
+  }
+}

@@ -2,6 +2,8 @@
 
 2026-10-13。网页默认模式现为“谨慎回答”；“原始模型（未核对）”用于对照。切换模式会新建对话。底座仍是原始 ShizhenGPT-7B-VL，没有继续微调。
 
+2026-10-15 更新：默认谨慎流程为 v2。它保留程序可测的图片分辨率、彩色像素及质控信息，仍弃答未核验的医学细节；改进礼貌前缀、假设语句和用药话题的处理。参见 [v2 对照报告](cautious_chat_v2_report_20261015.md)。旧版 API 可显式传 `mode: "guarded_v1"` 做对照，新默认仍传 `mode: "guarded"`。
+
 ## 这版做什么
 
 - 图片先做曝光、分辨率和既有面部质控。不合格时提示无法可靠判断和重新拍摄。
@@ -23,3 +25,5 @@
 每个会话保存用户原文与最近一张图片；后续追问可使用前文。候选解释、拒绝原因和图片质控记录只保存在服务器会话内存的 `last_guard_trace` 中，不把被拒绝的内容返回网页。新对话和过期清理同时清理会话与临时图片。服务重启不会恢复旧对话。
 
 研究代码：`scripts/cautious_chat.py`。行为回归：`scripts/evaluate_cautious_chat.py`。前端验证：`scripts/check_cautious_web.cjs`。
+
+当前 v2 代码为 `scripts/cautious_chat_v2.py`，回归入口为 `scripts/check_cautious_v2.py`，服务器成对开发评测为 `scripts/evaluate_cautious_v2.py`，网页检查为 `scripts/check_cautious_v2_web.cjs`。此前 v1 的脚本和冻结记录保留，行为不做追溯修改。

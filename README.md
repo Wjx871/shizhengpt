@@ -11,6 +11,10 @@
 
 下文保留初始部署和各历史实验入口，反映各阶段的研究设置。
 
+### 谨慎回答 v2（独立优化分支）
+
+`optimization/cautious-v2` 在固定备份后继续开发。新增礼貌前缀后的症状识别、假设语句与实际报告区分、用药问题的独立弃答、口语不适的补充追问，以及由程序测量的图片信息。默认入口为 `scripts/cautious_chat_v2.py`，v1 保留用于对照。详见 [v2 结果与限制](docs/cautious_chat_v2_report_20261015.md)。
+
 服务器项目目录：`/root/private_data/shizhengpt-evaluation`。模型目录：`/root/private_data/models/ShizhenGPT-7B-VL`。
 
 配置见 `configs/inference.yaml`；部署记录见 `docs/deployment.md`；环境实测见 `docs/environment.md`；评测结论见 `docs/evaluation_report.md`。

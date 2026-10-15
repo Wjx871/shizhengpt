@@ -1,0 +1,22 @@
+{
+  "id": "p06",
+  "arm": "v1",
+  "checks": {
+    "clarify_conflict": true
+  },
+  "result": {
+    "version": "cautious_chat_v1_20261013",
+    "status": "contradiction_abstained",
+    "trace": {
+      "symptom_sources": [
+        "我今天有发热",
+        "我今天没有发热"
+      ],
+      "contradictions": [
+        "fever"
+      ]
+    },
+    "answer": "**需要先核实信息。** 你提供的症状中有同一不适既报告存在、又报告不存在的情况。请说明目前以哪一条为准，以及是否发生过变化；核实前无法据此分析。",
+    "model_invocations": 0
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "p05",
+  "arm": "v1",
+  "checks": {
+    "source_retained": true
+  },
+  "result": {
+    "version": "cautious_chat_v1_20261013",
+    "status": "explanation_abstained",
+    "trace": {
+      "symptom_sources": [
+        "我近四天偶尔轻微疲劳，休息后减轻"
+      ],
+      "aligned_result": {
+        "symptoms_original": [
+          "我近四天偶尔轻微疲劳，休息后减轻"
+        ],
+        "visual": null,
+        "analysis": {
+          "possible_explanations": [
+            {
+              "hypothesis": "气虚证可能性需考虑",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "近四天偶尔轻微疲劳"
+                },
+                {
+                  "source_id": "S1",
+                  "quote": "休息后减轻"
+                }
+              ],
+              "missing_info": [
+                "是否有活动耐力下降（如爬楼梯费力）",
+                "是否伴有食欲变化（如食量减少/易饱）"
+              ]
+            }
+          ],
+          "questions": [
+            "疲劳是否在夜间加重？",
+            "近期饮食作息是否有明显改变？"
+          ],
+          "limitations": [
+            "未获取舌脉等体征信息",
+            "缺乏既往病史及家族史记录"
+          ]
+        },
+        "visual_attempts": [],
+        "analysis_attempts": [
+          {
+            "model_result": {
+              "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"气虚证可能性需考虑\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"近四天偶尔轻微疲劳\"\n        },\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"休息后减轻\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有活动耐力下降（如爬楼梯费力）\",\n        \"是否伴有食欲变化（如食量减少/易饱）\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在夜间加重？\",\n    \"近期饮食作息是否有明显改变？\"\n  ],\n  \"limitations\": [\n    \"未获取舌脉等体征信息\",\n    \"缺乏既往病史及家族史记录\"\n  ]\n}\n```",
+              "latency_sec": 10.9,
+              "truncated": false,
+              "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"我近四天偶尔轻微疲劳，休息后减轻\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"我近四天偶尔轻微疲劳，休息后减轻\", \"clauses\": [{\"text\": \"我近四天偶尔轻微疲劳\", \"start\": 0, \"end\": 10, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"疲劳\", \"start\": 8, \"end\": 10}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 6, \"end\": 8}], \"frequency\": [{\"text\": \"偶尔\", \"start\": 4, \"end\": 6}], \"time\": [{\"text\": \"近四天\", \"start\": 1, \"end\": 4}]}}, {\"text\": \"休息后减轻\", \"start\": 11, \"end\": 16, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+              "image_path": null,
+              "generation_max_new_tokens": 768
+            },
+            "parsed": {
+              "possible_explanations": [
+                {
+                  "hypothesis": "气虚证可能性需考虑",
+                  "evidence": [
+                    {
+                      "source_id": "S1",
+                      "quote": "近四天偶尔轻微疲劳"
+                    },
+                    {
+                      "source_id": "S1",
+                      "quote": "休息后减轻"
+                    }
+                  ],
+                  "missing_info": [
+                    "是否有活动耐力下降（如爬楼梯费力）",
+                    "是否伴有食欲变化（如食量减少/易饱）"
+                  ]
+                }
+              ],
+              "questions": [
+                "疲劳是否在夜间加重？",
+                "近期饮食作息是否有明显改变？"
+              ],
+              "limitations": [
+                "未获取舌脉等体征信息",
+                "缺乏既往病史及家族史记录"
+              ]
+            },
+            "reasons": []
+          }
+        ],
+        "visual_action": "no_image",
+        "analysis_action": "full_answer_requires_review",
+        "clinical_verification": false,
+        "model_invocations": 1,
+        "model_latency_sec": 10.9,
+        "workflow_version": "v4.1_independent_component_retention",
+        "component_checks": []
+      },
+      "additional_rejections": [
+        {
+          "item": {
+            "hypothesis": "气虚证可能性需考虑",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "近四天偶尔轻微疲劳"
+              },
+              {
+                "source_id": "S1",
+                "quote": "休息后减轻"
+              }
+            ],
+            "missing_info": [
+              "是否有活动耐力下降（如爬楼梯费力）",
+              "是否伴有食欲变化（如食量减少/易饱）"
+            ]
+          },
+          "reasons": [
+            "no_active_symptom_in_quote"
+          ]
+        }
+      ]
+    },
+    "answer": "**你提供的信息**\n- 我近四天偶尔轻微疲劳，休息后减轻\n\n**目前无法可靠确定病因或证候。** 现有信息不足，或候选解释没有通过依据和不确定性检查。\n\n**还需要补充**\n1. 疲劳是否在夜间加重？\n2. 近期饮食作息是否有明显改变？",
+    "model_invocations": 1
+  }
+}

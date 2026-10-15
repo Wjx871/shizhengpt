@@ -1,0 +1,159 @@
+{
+  "id": "p10",
+  "arm": "v1",
+  "checks": {
+    "measured_facts_present": false,
+    "no_unchecked_visual_assertion": true
+  },
+  "result": {
+    "version": "cautious_chat_v1_20261013",
+    "status": "visual_details_abstained",
+    "trace": {
+      "image_qc": {
+        "image_mean_brightness": 114.6,
+        "reasons": [],
+        "face_qc": {
+          "image_present": true,
+          "measurement_type": "image_space_only",
+          "not_a_medical_assessment": true,
+          "allow_medical_colour_inference": false,
+          "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+          "parameters": {
+            "scale_factor": 1.05,
+            "min_neighbors": 5,
+            "min_face_px": 80,
+            "min_laplacian_variance": 50,
+            "soft_blur_variance": 170,
+            "max_clipped_fraction": 0.3,
+            "max_monochrome_fraction": 0.98,
+            "detail_warning_face_px": 200
+          },
+          "warnings": [
+            "low_resolution_for_fine_facial_features",
+            "no_colour_card_or_capture_calibration",
+            "patches_are_geometric_not_segmented_skin",
+            "pose_occlusion_and_mirroring_not_verified",
+            "RGB_is_assumed_sRGB_not_physically_calibrated"
+          ],
+          "reject_reasons": [],
+          "patches": {
+            "image_left_patch": {
+              "bbox_xyxy": [
+                185,
+                116,
+                208,
+                139
+              ],
+              "pixel_count": 529,
+              "rgb_median": [
+                222.0,
+                187.0,
+                160.0
+              ],
+              "lab_median": [
+                78.192,
+                8.812,
+                17.875
+              ],
+              "grey_mean": 192.493,
+              "clipped_high_fraction": 0.0227,
+              "clipped_low_fraction": 0.0
+            },
+            "image_right_patch": {
+              "bbox_xyxy": [
+                239,
+                116,
+                262,
+                139
+              ],
+              "pixel_count": 529,
+              "rgb_median": [
+                210.0,
+                174.0,
+                147.0
+              ],
+              "lab_median": [
+                73.792,
+                9.391,
+                18.531
+              ],
+              "grey_mean": 176.242,
+              "clipped_high_fraction": 0.0,
+              "clipped_low_fraction": 0.0
+            }
+          },
+          "detection_candidates": [
+            {
+              "bbox_xywh": [
+                175,
+                66,
+                97,
+                97
+              ],
+              "paired_eyes": [
+                [
+                  15,
+                  23,
+                  25,
+                  25
+                ],
+                [
+                  59,
+                  24,
+                  27,
+                  27
+                ]
+              ]
+            },
+            {
+              "bbox_xywh": [
+                284,
+                125,
+                127,
+                127
+              ],
+              "paired_eyes": null
+            }
+          ],
+          "icc_profile_present": true,
+          "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+          "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+          "width": 512,
+          "height": 512,
+          "exif_orientation": 1,
+          "monochrome_fraction": 0.1617,
+          "detector": {
+            "opencv_version": "4.12.0",
+            "type": "Haar frontal face plus paired eyes",
+            "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+            "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+          },
+          "raw_face_count": 2,
+          "eye_verified_count": 1,
+          "detected_face_bbox_xywh": [
+            175,
+            66,
+            97,
+            97
+          ],
+          "laplacian_variance": 901.742,
+          "face_high_clip_fraction": 0.0009,
+          "face_low_clip_fraction": 0.0094,
+          "measurement_bbox_xywh": [
+            175,
+            66,
+            97,
+            97
+          ],
+          "fixed_reference_roi_used": false,
+          "usable_for_technical_description": true,
+          "cv_latency_sec": 0.8820613184943795
+        },
+        "passed": true
+      },
+      "symptom_sources": []
+    },
+    "answer": "**图片信息尚不能确认。** 基础面部定位和画质检查已通过，但目前没有独立核验肤色、病变和各部位细节的能力，无法可靠判断这些内容，也不能仅凭照片给出诊断。\n\n**目前无法可靠回答。** 当前没有识别到明确的症状事实，也没有可核查的资料支持这个问题的结论。请补充具体情况或提供可靠资料；我不会据此猜测病因、证候或照片中不可见的内容。",
+    "model_invocations": 0
+  }
+}

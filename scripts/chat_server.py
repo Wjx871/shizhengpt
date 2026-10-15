@@ -14,7 +14,8 @@ from PIL import Image, ImageOps
 import torch
 from qwen_vl_utils import process_vision_info
 from infer_image import Engine, ROOT
-from cautious_chat import run as cautious_run, VERSION as CAUTIOUS_VERSION
+from cautious_chat import run as cautious_v1
+from cautious_chat_v2 import run as cautious_run, VERSION as CAUTIOUS_VERSION
 
 WEB = ROOT / 'web'
 MAX_BODY = 12 * 1024 * 1024
@@ -31,7 +32,7 @@ def chat(payload):
     if not text.strip() and not encoded:
         raise ValueError('请输入文字或选择图片。')
     mode = payload.get('mode', 'guarded')
-    if mode not in ('guarded', 'raw'):
+    if mode not in ('guarded', 'guarded_v1', 'raw'):
         raise ValueError('回答模式无效。')
     sid = payload.get('session_id')
     now = time.time()
@@ -68,11 +69,12 @@ def chat(payload):
         if len(messages) > 31:
             raise ValueError('本轮对话已达到 15 次回复，请开始新对话。')
         start = time.perf_counter()
-        if mode == 'guarded':
+        if mode in ('guarded', 'guarded_v1'):
             user_texts=session['user_texts']+[text.strip()]
             if sum(len(s) for s in user_texts)>16000:
                 raise ValueError('对话内容过长，请开始新对话。')
-            guard=cautious_run(lambda prompt,image=None: ENGINE.infer(prompt,image,max_new_tokens=512),user_texts,path or session['latest_image'])
+            workflow=cautious_v1 if mode=='guarded_v1' else cautious_run
+            guard=workflow(lambda prompt,image=None: ENGINE.infer(prompt,image,max_new_tokens=512),user_texts,path or session['latest_image'])
             answer=guard['answer']
             session['messages']=messages+[{'role':'assistant','content':[{'type':'text','text':answer}]}]
             session['user_texts']=user_texts

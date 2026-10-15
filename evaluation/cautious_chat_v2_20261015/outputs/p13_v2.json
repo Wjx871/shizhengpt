@@ -1,0 +1,81 @@
+{
+  "id": "p13",
+  "arm": "v2",
+  "checks": {
+    "measured_facts_present": true,
+    "no_unchecked_visual_assertion": true,
+    "photo_detail_abstained": true
+  },
+  "result": {
+    "version": "cautious_chat_v2_20261015",
+    "status": "image_abstained",
+    "trace": {
+      "image_qc": {
+        "image_mean_brightness": 128.0,
+        "reasons": [
+          "nearly_monochrome_colour_assessment_not_supported",
+          "single_frontal_region_not_confirmed"
+        ],
+        "face_qc": {
+          "image_present": true,
+          "measurement_type": "image_space_only",
+          "not_a_medical_assessment": true,
+          "allow_medical_colour_inference": false,
+          "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+          "parameters": {
+            "scale_factor": 1.05,
+            "min_neighbors": 5,
+            "min_face_px": 80,
+            "min_laplacian_variance": 50,
+            "soft_blur_variance": 170,
+            "max_clipped_fraction": 0.3,
+            "max_monochrome_fraction": 0.98,
+            "detail_warning_face_px": 200
+          },
+          "warnings": [
+            "no_colour_card_or_capture_calibration",
+            "patches_are_geometric_not_segmented_skin",
+            "pose_occlusion_and_mirroring_not_verified",
+            "RGB_is_assumed_sRGB_not_physically_calibrated"
+          ],
+          "reject_reasons": [
+            "nearly_monochrome_colour_assessment_not_supported",
+            "single_frontal_region_not_confirmed"
+          ],
+          "patches": {},
+          "detection_candidates": [],
+          "icc_profile_present": false,
+          "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/cautious_chat_v2_20261015/grey.png",
+          "image_sha256": "4852d9e98a096191e3a6fa07313d515631384f47438d5deb6228bcdbed87af44",
+          "width": 320,
+          "height": 320,
+          "exif_orientation": 1,
+          "monochrome_fraction": 1.0,
+          "detector": {
+            "opencv_version": "4.12.0",
+            "type": "Haar frontal face plus paired eyes",
+            "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+            "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+          },
+          "raw_face_count": 0,
+          "eye_verified_count": 0,
+          "usable_for_technical_description": false,
+          "cv_latency_sec": 0.044329795986413956
+        },
+        "passed": false,
+        "pixel_facts": {
+          "width": 320,
+          "height": 320,
+          "chromatic_pixel_fraction": 0.0,
+          "measurement_scope": "image_pixels_only_not_true_skin_colour"
+        }
+      },
+      "original_user_texts": [
+        "请描述这张图片。"
+      ],
+      "symptom_sources": []
+    },
+    "answer": "**能核对的图片信息**\n- 图像分辨率：320 × 320 像素。\n- 图像中未检测到明显彩色差异；这不能说明拍摄方式或真实肤色。\n- 无法通过当前面部流程：未能确认单一正面面部区域。\n**医学内容无法可靠判断。** 局部照片、舌头或其他部位不适用当前正面面部流程；如需面部分析，请补充自然光下清晰、完整的正面照片。",
+    "model_invocations": 0
+  }
+}

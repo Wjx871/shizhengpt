@@ -1,0 +1,14 @@
+{
+  "id": "p08",
+  "arm": "v1",
+  "checks": {
+    "useful_help": true
+  },
+  "result": {
+    "version": "cautious_chat_v1_20261013",
+    "status": "informational",
+    "trace": {},
+    "answer": "可以先提供：主要不适、开始时间、严重程度、出现频率、诱因及缓解因素，再补充既往病史、用药和已有检查结果。不确定的信息可以直接说不清楚。",
+    "model_invocations": 0
+  }
+}

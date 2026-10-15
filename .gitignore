@@ -34,6 +34,7 @@ __pycache__/
 !/evaluation/alignment_engineering_v41_replay_20261009/
 !/evaluation/alignment_lora_pilot_20261009/
 !/evaluation/cautious_chat_20261013/
+!/evaluation/cautious_chat_v2_20261015/
 !/evaluation/consultation_facts_20261008/
 !/evaluation/consultation_facts_v31_replay_20261008/
 !/evaluation/guarded_consultation_20261008/

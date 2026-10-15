@@ -1,0 +1,118 @@
+{
+  "id": "p03",
+  "arm": "v1",
+  "checks": {
+    "not_patient_fact": false
+  },
+  "result": {
+    "version": "cautious_chat_v1_20261013",
+    "status": "limited_answer",
+    "trace": {
+      "symptom_sources": [
+        "我如果发热会是什么原因？"
+      ],
+      "aligned_result": {
+        "symptoms_original": [
+          "我如果发热会是什么原因？"
+        ],
+        "visual": null,
+        "analysis": {
+          "possible_explanations": [
+            {
+              "hypothesis": "外感风寒证（需核实）",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "发热"
+                }
+              ],
+              "missing_info": [
+                "是否有恶寒、无汗、头身疼痛等表寒症状？"
+              ]
+            },
+            {
+              "hypothesis": "阴虚内热证（需核实）",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "发热"
+                }
+              ],
+              "missing_info": [
+                "是否有午后潮热、盗汗、五心烦热等阴虚表现？"
+              ]
+            }
+          ],
+          "questions": [
+            "是否有恶寒、无汗、头身疼痛等表寒症状？",
+            "是否有午后潮热、盗汗、五心烦热等阴虚表现？"
+          ],
+          "limitations": [
+            "仅凭单一症状无法明确辨证分型",
+            "缺乏舌脉等四诊信息"
+          ]
+        },
+        "visual_attempts": [],
+        "analysis_attempts": [
+          {
+            "model_result": {
+              "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"外感风寒证（需核实）\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"发热\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有恶寒、无汗、头身疼痛等表寒症状？\"\n      ]\n    },\n    {\n      \"hypothesis\": \"阴虚内热证（需核实）\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"发热\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有午后潮热、盗汗、五心烦热等阴虚表现？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"是否有恶寒、无汗、头身疼痛等表寒症状？\",\n    \"是否有午后潮热、盗汗、五心烦热等阴虚表现？\"\n  ],\n  \"limitations\": [\n    \"仅凭单一症状无法明确辨证分型\",\n    \"缺乏舌脉等四诊信息\"\n  ]\n}\n```",
+              "latency_sec": 14.3,
+              "truncated": false,
+              "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"我如果发热会是什么原因？\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"我如果发热会是什么原因？\", \"clauses\": [{\"text\": \"我如果发热会是什么原因？\", \"start\": 0, \"end\": 12, \"findings\": [{\"term\": \"fever\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"发热\", \"start\": 3, \"end\": 5}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+              "image_path": null,
+              "generation_max_new_tokens": 768
+            },
+            "parsed": {
+              "possible_explanations": [
+                {
+                  "hypothesis": "外感风寒证（需核实）",
+                  "evidence": [
+                    {
+                      "source_id": "S1",
+                      "quote": "发热"
+                    }
+                  ],
+                  "missing_info": [
+                    "是否有恶寒、无汗、头身疼痛等表寒症状？"
+                  ]
+                },
+                {
+                  "hypothesis": "阴虚内热证（需核实）",
+                  "evidence": [
+                    {
+                      "source_id": "S1",
+                      "quote": "发热"
+                    }
+                  ],
+                  "missing_info": [
+                    "是否有午后潮热、盗汗、五心烦热等阴虚表现？"
+                  ]
+                }
+              ],
+              "questions": [
+                "是否有恶寒、无汗、头身疼痛等表寒症状？",
+                "是否有午后潮热、盗汗、五心烦热等阴虚表现？"
+              ],
+              "limitations": [
+                "仅凭单一症状无法明确辨证分型",
+                "缺乏舌脉等四诊信息"
+              ]
+            },
+            "reasons": []
+          }
+        ],
+        "visual_action": "no_image",
+        "analysis_action": "full_answer_requires_review",
+        "clinical_verification": false,
+        "model_invocations": 1,
+        "model_latency_sec": 14.3,
+        "workflow_version": "v4.1_independent_component_retention",
+        "component_checks": []
+      },
+      "additional_rejections": []
+    },
+    "answer": "**你提供的信息**\n- 我如果发热会是什么原因？\n\n**待核实的可能方向**\n- 外感风寒证（需核实）\n  - 依据：S1「发热」\n- 阴虚内热证（需核实）\n  - 依据：S1「发热」\n这些方向尚未经过医学核验，不能据此确定病因或证候。\n\n**还需要补充**\n1. 是否有恶寒、无汗、头身疼痛等表寒症状？\n2. 是否有午后潮热、盗汗、五心烦热等阴虚表现？",
+    "model_invocations": 1
+  }
+}

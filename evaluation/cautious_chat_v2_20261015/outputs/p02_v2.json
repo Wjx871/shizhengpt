@@ -1,0 +1,187 @@
+{
+  "id": "p02",
+  "arm": "v2",
+  "checks": {
+    "source_retained": true
+  },
+  "result": {
+    "version": "cautious_chat_v2_20261015",
+    "status": "explanation_abstained",
+    "trace": {
+      "original_user_texts": [
+        "请帮我分析，我今天有点腹胀。"
+      ],
+      "symptom_sources": [
+        "我今天有点腹胀"
+      ],
+      "aligned_result": {
+        "symptoms_original": [
+          "我今天有点腹胀"
+        ],
+        "visual": null,
+        "analysis": {
+          "possible_explanations": [
+            {
+              "hypothesis": "饮食因素导致暂时性胃肠功能紊乱",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "今天"
+                },
+                {
+                  "source_id": "S1",
+                  "quote": "有点"
+                }
+              ],
+              "missing_info": [
+                "是否食用过量产气食物（如豆类、碳酸饮料）？",
+                "腹胀是否在进食后加重？"
+              ]
+            },
+            {
+              "hypothesis": "功能性消化不良可能性待排除",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "有点"
+                },
+                {
+                  "source_id": "S1",
+                  "quote": "腹胀"
+                }
+              ],
+              "missing_info": [
+                "是否伴有早饱感或餐后上腹不适？",
+                "是否与情绪波动相关？"
+              ]
+            }
+          ],
+          "questions": [
+            "腹胀是否在特定时间段（如饭后1小时内）明显加重？",
+            "是否伴随排气增多或排便异常？"
+          ],
+          "limitations": [
+            "仅凭单一症状无法进行辨证分型",
+            "缺乏舌脉等四诊信息"
+          ]
+        },
+        "visual_attempts": [],
+        "analysis_attempts": [
+          {
+            "model_result": {
+              "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"饮食因素导致暂时性胃肠功能紊乱\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"今天\"\n        },\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"有点\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否食用过量产气食物（如豆类、碳酸饮料）？\",\n        \"腹胀是否在进食后加重？\"\n      ]\n    },\n    {\n      \"hypothesis\": \"功能性消化不良可能性待排除\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"有点\"\n        },\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"腹胀\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否伴有早饱感或餐后上腹不适？\",\n        \"是否与情绪波动相关？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"腹胀是否在特定时间段（如饭后1小时内）明显加重？\",\n    \"是否伴随排气增多或排便异常？\"\n  ],\n  \"limitations\": [\n    \"仅凭单一症状无法进行辨证分型\",\n    \"缺乏舌脉等四诊信息\"\n  ]\n}\n```",
+              "latency_sec": 16.8,
+              "truncated": false,
+              "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"我今天有点腹胀\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"我今天有点腹胀\", \"clauses\": [{\"text\": \"我今天有点腹胀\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"bloating\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"腹胀\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"有点\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"今天\", \"start\": 1, \"end\": 3}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+              "image_path": null,
+              "generation_max_new_tokens": 768
+            },
+            "parsed": {
+              "possible_explanations": [
+                {
+                  "hypothesis": "饮食因素导致暂时性胃肠功能紊乱",
+                  "evidence": [
+                    {
+                      "source_id": "S1",
+                      "quote": "今天"
+                    },
+                    {
+                      "source_id": "S1",
+                      "quote": "有点"
+                    }
+                  ],
+                  "missing_info": [
+                    "是否食用过量产气食物（如豆类、碳酸饮料）？",
+                    "腹胀是否在进食后加重？"
+                  ]
+                },
+                {
+                  "hypothesis": "功能性消化不良可能性待排除",
+                  "evidence": [
+                    {
+                      "source_id": "S1",
+                      "quote": "有点"
+                    },
+                    {
+                      "source_id": "S1",
+                      "quote": "腹胀"
+                    }
+                  ],
+                  "missing_info": [
+                    "是否伴有早饱感或餐后上腹不适？",
+                    "是否与情绪波动相关？"
+                  ]
+                }
+              ],
+              "questions": [
+                "腹胀是否在特定时间段（如饭后1小时内）明显加重？",
+                "是否伴随排气增多或排便异常？"
+              ],
+              "limitations": [
+                "仅凭单一症状无法进行辨证分型",
+                "缺乏舌脉等四诊信息"
+              ]
+            },
+            "reasons": []
+          }
+        ],
+        "visual_action": "no_image",
+        "analysis_action": "full_answer_requires_review",
+        "clinical_verification": false,
+        "model_invocations": 1,
+        "model_latency_sec": 16.8,
+        "workflow_version": "v4.1_independent_component_retention",
+        "component_checks": []
+      },
+      "additional_rejections": [
+        {
+          "item": {
+            "hypothesis": "饮食因素导致暂时性胃肠功能紊乱",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "今天"
+              },
+              {
+                "source_id": "S1",
+                "quote": "有点"
+              }
+            ],
+            "missing_info": [
+              "是否食用过量产气食物（如豆类、碳酸饮料）？",
+              "腹胀是否在进食后加重？"
+            ]
+          },
+          "reasons": [
+            "no_active_symptom_in_quote",
+            "uncertainty_missing"
+          ]
+        },
+        {
+          "item": {
+            "hypothesis": "功能性消化不良可能性待排除",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "有点"
+              },
+              {
+                "source_id": "S1",
+                "quote": "腹胀"
+              }
+            ],
+            "missing_info": [
+              "是否伴有早饱感或餐后上腹不适？",
+              "是否与情绪波动相关？"
+            ]
+          },
+          "reasons": [
+            "no_active_symptom_in_quote"
+          ]
+        }
+      ]
+    },
+    "answer": "**你提供的信息**\n- 我今天有点腹胀\n\n**目前无法可靠确定病因或证候。** 现有信息不足，或候选解释没有通过依据和不确定性检查。\n\n**还需要补充**\n1. 腹胀是否在特定时间段（如饭后1小时内）明显加重？\n2. 是否伴随排气增多或排便异常？",
+    "model_invocations": 1
+  }
+}
