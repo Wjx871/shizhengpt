@@ -15,7 +15,8 @@ import torch
 from qwen_vl_utils import process_vision_info
 from infer_image import Engine, ROOT
 from cautious_chat import run as cautious_v1
-from cautious_chat_v3 import run as cautious_run, VERSION as CAUTIOUS_VERSION
+from cautious_chat_v4 import run as cautious_run, VERSION as CAUTIOUS_VERSION
+from chat_history import restore as restore_history
 from chat_api import API_VERSION, normalize_request, format_response, model_info, openapi_spec
 
 WEB = ROOT / 'web'
@@ -139,6 +140,13 @@ class Handler(BaseHTTPRequestHandler):
                 'attention':ENGINE.model.config._attn_implementation}
             return self.respond(200,info)
         if self.path=='/openapi.json':return self.respond(200,openapi_spec())
+        if self.path in ('/app.js','/app.css'):
+            raw=(WEB/self.path[1:]).read_bytes()
+            self.send_response(200)
+            self.send_header('Content-Type','application/javascript; charset=utf-8' if self.path.endswith('.js') else 'text/css; charset=utf-8')
+            self.send_header('Content-Length',str(len(raw)))
+            self.send_header('Cache-Control','no-cache')
+            self.end_headers();self.wfile.write(raw);return
         if self.path not in ('/', '/index.html'):
             return self.respond(404, {'error': '页面不存在'})
         raw = (WEB / 'index.html').read_bytes()
@@ -151,11 +159,13 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         if self.path.startswith('/v1/'):
             return self.api_v1_post()
-        if self.path not in ('/api/chat', '/api/reset'):
+        if self.path not in ('/api/chat', '/api/reset', '/api/restore'):
             return self.respond(404, {'error': '接口不存在'})
         try:
             length = int(self.headers.get('Content-Length', '0'))
-            if not 0 < length <= MAX_BODY:
+            # Restoring up to 15 image turns can exceed a single chat request.
+            body_limit=170*1024*1024 if self.path=='/api/restore' else MAX_BODY
+            if not 0 < length <= body_limit:
                 raise ValueError('请求过大或为空。')
             payload = json.loads(self.rfile.read(length))
             if not isinstance(payload, dict):
@@ -168,6 +178,8 @@ class Handler(BaseHTTPRequestHandler):
                     if session:
                         session['temp'].cleanup()
                     result = {'ok': True}
+                elif self.path == '/api/restore':
+                    result = restore_history(payload,SESSIONS,ENGINE.config['max_pixels'])
                 else:
                     result = chat(payload)
             finally:

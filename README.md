@@ -1,11 +1,11 @@
 # ShizhenGPT-7B-VL 部署与望诊 / 问诊评测
 
-在 K100_AI 64 GB、DTK 25.04.2、PyTorch 2.5.1 上验证官方 BF16 模型，研究图片、文本、图文联合推理。当前网页默认使用基础权重和谨慎回答流程；曾进行小规模 LoRA 代理实验，未替换默认模型，没有引入 RAG 或量化。
+在 K100_AI 64 GB、DTK 25.04.2、PyTorch 2.5.1 上验证官方 BF16 模型，研究图片、文本、图文联合推理。当前网页和 v1 接口默认使用基础权重的原始模式，可切换谨慎回答 v4；曾进行小规模 LoRA 代理实验，未替换默认模型，没有引入 RAG 或量化。
 
-## 当前入口（2026-10-15 备份）
+## 当前入口（2026-10-15）
 
 - 网页与服务：`web/index.html`、`scripts/chat_server.py`。见 [启动说明](docs/chat_web.md)。
-- 默认谨慎回答：`scripts/cautious_chat.py`。见 [能力范围](docs/cautious_chat_usage.md) 和 [行为测试结果](docs/cautious_chat_report_20261013.md)。
+- 谨慎回答 v4：`scripts/cautious_chat_v4.py`，保留基础图片观察并限制不可靠细节；网页新增本地历史聊天、搜索、续聊、等待动画和最终回答逐字显示。见 [本轮改动与验证](docs/chat_experience_v4.md)。
 - 可切换原始模型对照；信息不足时弃答是有限工程策略，不能保证零幻觉或诊断正确。
 - 仓库备份代码、配置、文档及合成条件实验记录。模型权重、原始图片、舌诊数据、缓存与临时压缩包保持本地保存，见 [备份范围](docs/github_backup_20261015.md)。
 

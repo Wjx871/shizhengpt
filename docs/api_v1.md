@@ -7,7 +7,7 @@
 - 模型：`ShizhenGPT-7B-VL`，原始基础权重，`base-bf16`，未加载实验性 LoRA。
 - 运行环境：现有曙光 DCU 实例，BF16、eager attention。
 - `/v1/chat` 默认 `mode: "raw"`，直接返回原始模型回答，不经过额外质控和回答筛选。
-- `guarded` 为谨慎回答 v3（恢复可见图像描述，医学结论仍受限），`guarded_v1` 为旧谨慎版。两者仍使用同一基础权重，仅外层流程不同。
+- `guarded` 为谨慎回答 v4（保留基本可见观察，限制不可靠细节，医学结论仍受限），`guarded_v1` 为旧谨慎版。两者仍使用同一基础权重，仅外层流程不同。
 - API 版本：`1.0.0`；可通过 `/healthz` 和 `/v1/models` 查询实际模式、运行类型及是否加载 LoRA。
 
 ## 地址与访问方式
@@ -149,3 +149,6 @@ client.reset(first["session_id"])
 `scripts/check_chat_api.py` 检查无模型的接口契约；`scripts/check_chat_api_live.py` 在真实服务检查文字、图片、图文、多轮、清理、截断、参数错误及并发繁忙响应。测试记录保存在 `evaluation/chat_api_v1_checks/results.json`，不评价医学诊断正确率。
 
 本次部署已通过 6 项契约测试及 22 项真实 HTTP 检查；Python 命令行客户端也已实测。运行时查询确认 `device_name=K100_AI`、`dtype=torch.bfloat16`、`lora_loaded=false`。
+
+
+网页另提供浏览器本地历史记录与内部 `/api/restore` 恢复流程，见 [聊天体验 v4](chat_experience_v4.md)。v1 API 的过期规则保持不变，接口仍为非流式 JSON；网页逐字效果是在最终回答返回后的显示动画。
