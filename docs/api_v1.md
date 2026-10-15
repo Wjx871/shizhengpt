@@ -7,7 +7,7 @@
 - 模型：`ShizhenGPT-7B-VL`，原始基础权重，`base-bf16`，未加载实验性 LoRA。
 - 运行环境：现有曙光 DCU 实例，BF16、eager attention。
 - `/v1/chat` 默认 `mode: "raw"`，直接返回原始模型回答，不经过额外质控和回答筛选。
-- `guarded` 为谨慎回答 v2，`guarded_v1` 为旧谨慎版。两者仍使用同一基础权重，仅外层流程不同。
+- `guarded` 为谨慎回答 v3（恢复可见图像描述，医学结论仍受限），`guarded_v1` 为旧谨慎版。两者仍使用同一基础权重，仅外层流程不同。
 - API 版本：`1.0.0`；可通过 `/healthz` 和 `/v1/models` 查询实际模式、运行类型及是否加载 LoRA。
 
 ## 地址与访问方式

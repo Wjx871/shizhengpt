@@ -15,7 +15,7 @@ import torch
 from qwen_vl_utils import process_vision_info
 from infer_image import Engine, ROOT
 from cautious_chat import run as cautious_v1
-from cautious_chat_v2 import run as cautious_run, VERSION as CAUTIOUS_VERSION
+from cautious_chat_v3 import run as cautious_run, VERSION as CAUTIOUS_VERSION
 from chat_api import API_VERSION, normalize_request, format_response, model_info, openapi_spec
 
 WEB = ROOT / 'web'
