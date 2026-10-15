@@ -1,0 +1,293 @@
+{
+  "user_symptoms": [
+    "近两天有点疲劳",
+    "睡眠尚可",
+    "没有发热",
+    "没有胸痛"
+  ],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "low_resolution_for_fine_facial_features",
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [],
+    "patches": {
+      "image_left_patch": {
+        "bbox_xyxy": [
+          185,
+          116,
+          208,
+          139
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          222.0,
+          187.0,
+          160.0
+        ],
+        "lab_median": [
+          78.192,
+          8.812,
+          17.875
+        ],
+        "grey_mean": 192.493,
+        "clipped_high_fraction": 0.0227,
+        "clipped_low_fraction": 0.0
+      },
+      "image_right_patch": {
+        "bbox_xyxy": [
+          239,
+          116,
+          262,
+          139
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          210.0,
+          174.0,
+          147.0
+        ],
+        "lab_median": [
+          73.792,
+          9.391,
+          18.531
+        ],
+        "grey_mean": 176.242,
+        "clipped_high_fraction": 0.0,
+        "clipped_low_fraction": 0.0
+      }
+    },
+    "detection_candidates": [
+      {
+        "bbox_xywh": [
+          175,
+          66,
+          97,
+          97
+        ],
+        "paired_eyes": [
+          [
+            15,
+            23,
+            25,
+            25
+          ],
+          [
+            59,
+            24,
+            27,
+            27
+          ]
+        ]
+      },
+      {
+        "bbox_xywh": [
+          284,
+          125,
+          127,
+          127
+        ],
+        "paired_eyes": null
+      }
+    ],
+    "icc_profile_present": true,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "width": 512,
+    "height": 512,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.1617,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 2,
+    "eye_verified_count": 1,
+    "detected_face_bbox_xywh": [
+      175,
+      66,
+      97,
+      97
+    ],
+    "laplacian_variance": 901.742,
+    "face_high_clip_fraction": 0.0009,
+    "face_low_clip_fraction": 0.0094,
+    "measurement_bbox_xywh": [
+      175,
+      66,
+      97,
+      97
+    ],
+    "fixed_reference_roi_used": false,
+    "usable_for_technical_description": true,
+    "cv_latency_sec": 0.14582762913778424
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "invalid_json: Expecting ',' delimiter: line 1 column 44 (char 43)"
+      ],
+      "model_result": {
+        "raw_output": "{\"visual_facts\":[\"面部轮廓清晰，肤色均匀无明显异常斑点或肿胀迹象\"]，\"limitations\":[\"面部细节分辨率不足，无法观察到细微皮肤纹理或毛细血管状态；无法确认具体五官形态特征\"]}",
+        "latency_sec": 3.2850839109160006,
+        "preprocess_sec": 0.031196743715554476,
+        "generation_sec": 3.252717727329582,
+        "output_tokens": 51,
+        "tokens_per_sec": 15.679196375232353,
+        "peak_memory": 16892613120,
+        "peak_reserved_bytes": 17058234368,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 556,
+        "image_grid_thw": [
+          [
+            1,
+            36,
+            36
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+        "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+      }
+    },
+    {
+      "attempt": 2,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"佩戴橙色宇航服头盔，头盔内衬黑色材质\",\n    \"面部肤色均匀，无明显可见皮疹或异常色泽变化\"\n  ],\n  \"limitations\": [\n    \"面部皮肤纹理因分辨率限制无法清晰辨识具体特征\",\n    \"无法判断真实肤色及肤色健康状态（如红润/苍白）\",\n    \"无法观察到耳部、鼻部等其他面部区域细节\"\n  ]\n}\n```",
+        "latency_sec": 6.432301410008222,
+        "preprocess_sec": 0.0255757630802691,
+        "generation_sec": 6.404561912640929,
+        "output_tokens": 106,
+        "tokens_per_sec": 16.55070267816191,
+        "peak_memory": 16892982272,
+        "peak_reserved_bytes": 17075011584,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 607,
+        "image_grid_thw": [
+          [
+            1,
+            36,
+            36
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。\n上次输出未通过检查，原因：[\"invalid_json: Expecting ',' delimiter: line 1 column 44 (char 43)\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+        "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+      }
+    }
+  ],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能由多种因素引起，需进一步明确诱因和伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在活动后加重？\",\n    \"是否有长时间用脑或体力消耗的情况？\",\n    \"最近饮食和睡眠是否有变化？\"\n  ],\n  \"limitations\": [\n    \"无法通过照片判断面色及舌象等关键辨证信息\",\n    \"缺乏既往病史和用药史等重要背景资料\"\n  ]\n}\n```",
+        "latency_sec": 7.421668019145727,
+        "preprocess_sec": 0.004078872036188841,
+        "generation_sec": 7.415017809253186,
+        "output_tokens": 129,
+        "tokens_per_sec": 17.397126118702122,
+        "peak_memory": 16683335680,
+        "peak_reserved_bytes": 16787701760,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 432,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近两天有点疲劳\nS2：睡眠尚可\nS3：没有发热\nS4：没有胸痛\n图片处理状态：technical_description_passed_limited_checks_unverified\n未核验的照片技术观察，仅供说明照片条件，不作为证候依据：佩戴橙色宇航服头盔，头盔内衬黑色材质；面部肤色均匀，无明显可见皮疹或异常色泽变化\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。",
+        "image_path": "",
+        "image_sha256": null
+      },
+      "prior_guard_reasons": []
+    }
+  ],
+  "visual_facts": [
+    "佩戴橙色宇航服头盔，头盔内衬黑色材质",
+    "面部肤色均匀，无明显可见皮疹或异常色泽变化"
+  ],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能由多种因素引起，需进一步明确诱因和伴随症状"
+    }
+  ],
+  "questions": [
+    "疲劳是否在活动后加重？",
+    "是否有长时间用脑或体力消耗的情况？",
+    "最近饮食和睡眠是否有变化？"
+  ],
+  "limitations": [
+    "照片技术描述未经医学核验；症状原文由程序保留。",
+    "无法通过照片判断面色及舌象等关键辨证信息",
+    "缺乏既往病史和用药史等重要背景资料"
+  ],
+  "source_symptoms": {
+    "S1": "近两天有点疲劳",
+    "S2": "睡眠尚可",
+    "S3": "没有发热",
+    "S4": "没有胸痛"
+  },
+  "visual_action": "technical_description_passed_limited_checks_unverified",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 3,
+  "model_latency_sec": 17.13905334006995,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "fusion_full_photo_new_text",
+  "arm": "guarded_final",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "visual_reused_from": "/root/private_data/shizhengpt-evaluation/evaluation/guarded_consultation_v2_20261008/outputs/fusion_full_photo_new_text_guarded.json",
+  "new_inferences_in_final_run": 1,
+  "selected_analysis_attempt": 1,
+  "analysis_revalidated_without_new_generation": true
+}

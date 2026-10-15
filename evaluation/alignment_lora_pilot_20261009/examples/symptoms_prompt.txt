@@ -1,0 +1,5 @@
+按原文提取事实，不做诊断。仅输出JSON：facts列表，按输入顺序，每项有source_id、quote（完整原文）、polarity（reported/negative/improved）、severity、frequency、duration。程度、频率和时间使用原文词句；未说明填not_stated。已缓解或好转为improved，否认/没有为negative。不把一般改成差，不把偶尔改成经常，不增加病程。
+来源：
+S2：我的睡眠质量一般
+I3：近日有时头晕
+S7：否认胸痛

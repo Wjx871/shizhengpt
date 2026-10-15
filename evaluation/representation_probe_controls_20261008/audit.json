@@ -1,0 +1,21 @@
+{
+  "model_inferences": 8,
+  "schema_ok": 8,
+  "truncated": 0,
+  "clinical_accuracy_measured": false,
+  "visual_only": {
+    "conditions": 4,
+    "matched": 9,
+    "total": 16,
+    "unsupported_assertions": 3,
+    "clinical_output_violation_cases": 1,
+    "invalid_basis_id_cases": 1,
+    "abstentions": 4
+  },
+  "text_only": {
+    "conditions": 4,
+    "symptoms_exact": 4,
+    "history_exact": 3
+  },
+  "note": "Follow-up on the same known proxy fixtures; visual-only request differs from joint task, so encoder/fusion attribution remains tentative."
+}

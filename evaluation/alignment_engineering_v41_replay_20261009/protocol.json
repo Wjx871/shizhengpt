@@ -1,0 +1,7 @@
+{
+  "type": "posthoc_replay",
+  "new_model_inferences": 0,
+  "source_outputs_directory": "evaluation\\alignment_engineering_v4_20261009",
+  "component_module_sha256": "dfa57a6483990920c29615bb6fef604d52224e06ae3912ff4c887b671d06d153",
+  "not_independent_validation": true
+}

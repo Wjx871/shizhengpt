@@ -1,0 +1,8 @@
+{
+  "symptom_cases": 6,
+  "accepted_analysis_cases": 6,
+  "new_model_inferences": 0,
+  "reason": "Unknown symptoms may be asked as questions; only presupposed changed sleep severity is blocked.",
+  "script_sha256": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+  "backups_retained": true
+}

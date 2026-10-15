@@ -1,0 +1,19 @@
+{
+  "cases": 12,
+  "pipeline_results": 12,
+  "model_inferences": 14,
+  "elapsed_sec": 104.25497722625732,
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "script_sha256": "2f019b5b6442d4c0d2d5d7682f8b71aabc81433b9e281566fc88a3cc5f7238fb",
+  "changed": "Natural-language input envelope, explicit output format, reject unfilled placeholder and missing questions",
+  "baseline_source": "/root/private_data/shizhengpt-evaluation/evaluation/guarded_consultation_20261008/outputs"
+}

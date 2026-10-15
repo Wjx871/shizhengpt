@@ -1,0 +1,10 @@
+{
+  "cases": 12,
+  "symptom_cases": 10,
+  "full_analysis_cases": 8,
+  "questions_only_cases": 2,
+  "cases_with_questions": 10,
+  "new_model_inferences": 0,
+  "note": "Post-output engineering replay on existing v3 candidates. Not independent validation of v3.1.",
+  "script_sha256": "bf11bdaeb9100e403e24d0291d7f738d528046b1f3671755630f1012c636076b"
+}

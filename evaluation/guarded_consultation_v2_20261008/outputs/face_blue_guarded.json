@@ -1,0 +1,197 @@
+{
+  "user_symptoms": [],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "low_resolution_for_fine_facial_features",
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [],
+    "patches": {
+      "image_left_patch": {
+        "bbox_xyxy": [
+          36,
+          95,
+          59,
+          118
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          198.0,
+          190.0,
+          177.0
+        ],
+        "lab_median": [
+          77.045,
+          0.844,
+          7.375
+        ],
+        "grey_mean": 187.667,
+        "clipped_high_fraction": 0.0076,
+        "clipped_low_fraction": 0.0
+      },
+      "image_right_patch": {
+        "bbox_xyxy": [
+          90,
+          95,
+          113,
+          118
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          186.0,
+          176.0,
+          162.0
+        ],
+        "lab_median": [
+          72.217,
+          1.219,
+          8.969
+        ],
+        "grey_mean": 171.233,
+        "clipped_high_fraction": 0.0,
+        "clipped_low_fraction": 0.0
+      }
+    },
+    "detection_candidates": [
+      {
+        "bbox_xywh": [
+          26,
+          45,
+          97,
+          97
+        ],
+        "paired_eyes": [
+          [
+            15,
+            23,
+            25,
+            25
+          ],
+          [
+            57,
+            24,
+            29,
+            29
+          ]
+        ]
+      }
+    ],
+    "icc_profile_present": false,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/astronaut_blue.png",
+    "image_sha256": "c5ae574f597fa73597496427b8902cf5b66b2f5e97d25c9ef8ef8bee10f96d51",
+    "width": 155,
+    "height": 172,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.0431,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 1,
+    "eye_verified_count": 1,
+    "detected_face_bbox_xywh": [
+      26,
+      45,
+      97,
+      97
+    ],
+    "laplacian_variance": 865.685,
+    "face_high_clip_fraction": 0.0002,
+    "face_low_clip_fraction": 0.0089,
+    "measurement_bbox_xywh": [
+      26,
+      45,
+      97,
+      97
+    ],
+    "fixed_reference_roi_used": false,
+    "usable_for_technical_description": true,
+    "cv_latency_sec": 0.07218827679753304
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，头发呈波浪状卷曲\"\n  ],\n  \"limitations\": [\n    \"面部皮肤纹理及细节因分辨率限制无法准确判断\",\n    \"无法观察到耳部、颈部等周边区域\"\n  ]\n}\n```",
+        "latency_sec": 3.718221857212484,
+        "preprocess_sec": 0.006197353824973106,
+        "generation_sec": 3.7105244621634483,
+        "output_tokens": 64,
+        "tokens_per_sec": 17.24823556686225,
+        "peak_memory": 16644608000,
+        "peak_reserved_bytes": 16693329920,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 268,
+        "image_grid_thw": [
+          [
+            1,
+            12,
+            12
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/astronaut_blue.png",
+        "image_sha256": "c5ae574f597fa73597496427b8902cf5b66b2f5e97d25c9ef8ef8bee10f96d51"
+      }
+    }
+  ],
+  "analysis_attempts": [],
+  "visual_facts": [
+    "面部轮廓清晰，头发呈波浪状卷曲"
+  ],
+  "possible_explanations": [],
+  "questions": [],
+  "limitations": [
+    "面部皮肤纹理及细节因分辨率限制无法准确判断",
+    "无法观察到耳部、颈部等周边区域"
+  ],
+  "source_symptoms": {},
+  "visual_action": "technical_description_passed_limited_checks_unverified",
+  "analysis_action": "no_symptoms_analysis_skipped",
+  "model_invocations": 1,
+  "model_latency_sec": 3.718221857212484,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "face_blue",
+  "arm": "guarded_v2",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

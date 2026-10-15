@@ -1,0 +1,1 @@
+只检查图片事实，不做诊断，不推断职业、年龄、性别或健康。输出JSON：image_type为photo/diagram/other；visual_status包含eyes/nose/mouth（visible/not_visible/unknown）与headgear_worn（yes/no/unknown）；clinical_inference为字符串列表，必须为空。visible表示在图内，not_visible表示不在图内，unknown表示无法判断。示意图不是真人病征。

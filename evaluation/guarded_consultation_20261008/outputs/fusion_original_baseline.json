@@ -1,0 +1,40 @@
+{
+  "raw_output": "**【视觉观察】**  \n因未提供图片，无法进行视觉观察。\n\n**【用户自述】**  \n1. 易疲劳  \n2. 手脚凉  \n3. 睡眠质量差  \n4. 偶尔食欲不佳  \n\n---\n\n**【中医角度综合分析】**  \n1 **阳气不足**：手脚凉、易疲劳提示阳气虚衰，温煦推动功能减弱。  \n2 **心神失养**：睡眠质量差可能与心血不足或心肾不交相关。  \n3 **脾胃虚弱**：食欲不佳反映脾失健运，气血生化不足。  \n\n---\n\n**【仍需询问的问题】**  \n1 寒热倾向（怕冷/怕热？）  \n2 大小便情况（尿频/便秘？便溏/干结？）  \n3 舌象特征（舌质淡白/红？苔薄白/黄腻？）  \n4 脉象特点（沉细/滑数？）  \n5 月经情况（女性需补充经期、量、色等）  \n\n---\n\n**【不确定性】**  \n1 阳虚程度（轻/中/重？）  \n2 是否兼夹湿/瘀/痰等病理因素  \n3 具体脏腑定位（心/脾/肾为主？）  \n4 是否存在情志或外感诱因  \n\n（注：以上分析基于现有信息，需结合四诊合参进一步辨证。）",
+  "latency_sec": 17.91117903776467,
+  "preprocess_sec": 0.04747671680524945,
+  "generation_sec": 17.857719726860523,
+  "output_tokens": 317,
+  "tokens_per_sec": 17.75142654541651,
+  "peak_memory": 16621479936,
+  "peak_reserved_bytes": 16911433728,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 165,
+  "image_grid_thw": [
+    [
+      1,
+      12,
+      12
+    ]
+  ],
+  "truncated": false,
+  "prompt": "请综合图片中直接观察到的信息（如果没有图片请明确说明）和用户明确提供的信息，按照【视觉观察】【用户自述】【中医角度综合分析】【仍需询问的问题】【不确定性】分析。禁止自行添加用户没有描述的症状，不能仅凭图文确诊。用户明确提供：最近容易疲劳，手脚较凉，睡眠质量一般，偶尔食欲不佳。请简洁回答。",
+  "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/astronaut_original.png",
+  "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa",
+  "status": "ok",
+  "case_id": "fusion_original",
+  "arm": "baseline",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

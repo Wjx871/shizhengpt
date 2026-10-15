@@ -1,0 +1,896 @@
+[
+  {
+    "case_id": "h01",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "近三天轻微乏力",
+          "否认发烧",
+          "睡眠正常"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "轻微乏力可能由多种因素引起，需进一步明确具体诱因和伴随症状"
+          }
+        ],
+        "questions": [
+          "轻微乏力是否在活动后加重？",
+          "是否有近期饮食变化或体重波动？",
+          "是否伴有食欲减退或腹胀感？",
+          "近期是否有过度劳累或情绪压力？",
+          "乏力是否影响日常活动能力？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断具体病因",
+          "缺乏舌象和脉象等关键诊断信息"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"轻微乏力可能由多种因素引起，需进一步明确具体诱因和伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"轻微乏力是否在活动后加重？\",\n    \"是否有近期饮食变化或体重波动？\",\n    \"是否伴有食欲减退或腹胀感？\",\n    \"近期是否有过度劳累或情绪压力？\",\n    \"乏力是否影响日常活动能力？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断具体病因\",\n    \"缺乏舌象和脉象等关键诊断信息\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "近三天轻微乏力",
+          "否认发烧",
+          "睡眠正常"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "需要核实轻微乏力的具体原因，如是否存在潜在感染、慢性疲劳或其他系统性疾病"
+          }
+        ],
+        "questions": [
+          "睡眠质量正常具体指入睡时间、睡眠深度、夜间觉醒次数等如何？",
+          "近期是否有过过度劳累、情绪波动或饮食改变等可能影响体力的因素？",
+          "是否伴随其他症状如头晕、心悸、肌肉酸痛等？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断面色、舌象等非文字描述的体征",
+          "需排除用户未主动提及的潜在症状",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需要核实轻微乏力的具体原因，如是否存在潜在感染、慢性疲劳或其他系统性疾病\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量正常具体指入睡时间、睡眠深度、夜间觉醒次数等如何？\",\n    \"近期是否有过过度劳累、情绪波动或饮食改变等可能影响体力的因素？\",\n    \"是否伴随其他症状如头晕、心悸、肌肉酸痛等？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色、舌象等非文字描述的体征\",\n    \"需排除用户未主动提及的潜在症状\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h02",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "最近一周偶有腹胀",
+          "没有恶心和呕吐",
+          "食欲尚可"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能与饮食因素、脾胃功能失调或气机不畅相关"
+          }
+        ],
+        "questions": [
+          "腹胀主要出现在餐后还是空腹时？",
+          "是否伴随排气增多或减少？",
+          "是否有腹部按压不适感？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断腹部形态变化"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能与饮食因素、脾胃功能失调或气机不畅相关\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要出现在餐后还是空腹时？\",\n    \"是否伴随排气增多或减少？\",\n    \"是否有腹部按压不适感？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断腹部形态变化\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "最近一周偶有腹胀",
+          "没有恶心和呕吐",
+          "食欲尚可"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能由饮食因素（如过量产气食物）、胃肠动力异常或情绪压力诱发，需进一步确认诱因和伴随症状"
+          }
+        ],
+        "questions": [
+          "腹胀发作时是否伴随排气增多或排便异常？",
+          "近期饮食中有无生冷油腻或暴饮暴食情况？",
+          "腹胀是否在特定体位（如饭后平躺）时加重？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断腹部形态或皮肤色泽等体征",
+          "未获取舌象、脉象等关键四诊信息",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能由饮食因素（如过量产气食物）、胃肠动力异常或情绪压力诱发，需进一步确认诱因和伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀发作时是否伴随排气增多或排便异常？\",\n    \"近期饮食中有无生冷油腻或暴饮暴食情况？\",\n    \"腹胀是否在特定体位（如饭后平躺）时加重？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断腹部形态或皮肤色泽等体征\",\n    \"未获取舌象、脉象等关键四诊信息\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h03",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "有时头晕",
+          "没有心慌",
+          "没有胸部疼痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "头晕可能由多种因素引起，需进一步明确诱因与伴随症状"
+          }
+        ],
+        "questions": [
+          "头晕发作的具体时间规律（如晨起/午后/体位改变时）",
+          "是否伴随视物旋转、恶心呕吐等前庭功能异常表现",
+          "头晕发作时的活动状态（如静止/运动/站立/卧位）"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断面色及舌象特征",
+          "未获取脉象信息"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "invalid_json: Extra data: line 18 column 1 (char 302)"
+            ],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认头晕是否伴随旋转感、天旋地转感或其他异常体征\"\n    }\n  ],\n  \"questions\": [\n    \"头晕发作时的具体诱因（如起床/转头/用脑过度等）\",\n    \"头晕持续时间（短暂/反复发作/持续数小时）\",\n    \"是否伴随耳鸣、听力下降或平衡障碍\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断是否存在耳石症相关体征\",\n    \"无法排除前庭系统疾病可能性\"\n  ]\n}\n``` \n\n**分析说明**：  \n1. **可能解释**基于S1的\"有时头晕\"，需区分生理性（如体位性低血压）与病理性（如耳石症、前庭功能障碍）  \n2. **追问设计**遵循\"时间-诱因-伴随症状\"的临床思维框架，避免预设诊断  \n3 **限制说明**明确指出无法依赖图片进行耳石症等体征判断，保持诊断严谨性"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"头晕可能由多种因素引起，需进一步明确诱因与伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"头晕发作的具体时间规律（如晨起/午后/体位改变时）\",\n    \"是否伴随视物旋转、恶心呕吐等前庭功能异常表现\",\n    \"头晕发作时的活动状态（如静止/运动/站立/卧位）\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色及舌象特征\",\n    \"未获取脉象信息\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "有时头晕",
+          "没有心慌",
+          "没有胸部疼痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "需确认头晕的具体性质（如天旋地转感、头重脚轻等）"
+          }
+        ],
+        "questions": [
+          "头晕发作时是否伴随恶心/呕吐？",
+          "头晕是否与特定体位变化相关？",
+          "头晕发作时是否影响日常活动？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断面色/舌象等非文字描述信息",
+          "未提供持续时间、诱发因素等关键病程细节",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认头晕的具体性质（如天旋地转感、头重脚轻等）\"\n    }\n  ],\n  \"questions\": [\n    \"头晕发作时是否伴随恶心/呕吐？\",\n    \"头晕是否与特定体位变化相关？\",\n    \"头晕发作时是否影响日常活动？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等非文字描述信息\",\n    \"未提供持续时间、诱发因素等关键病程细节\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h04",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "昨天头疼，今天已经缓解",
+          "没有发热"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "头痛缓解后需排除潜在诱因（如紧张、睡眠不足、饮食因素等）"
+          }
+        ],
+        "questions": [
+          "头痛缓解前的具体部位（前额/两侧/后脑/全头）？",
+          "头痛发作时的性质（胀痛/刺痛/跳痛/钝痛）？",
+          "头痛是否伴随其他不适（恶心/畏光/耳鸣等）？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断头痛相关体征（如眼睑浮肿、鼻窦压痛等）"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"头痛缓解后需排除潜在诱因（如紧张、睡眠不足、饮食因素等）\"\n    }\n  ],\n  \"questions\": [\n    \"头痛缓解前的具体部位（前额/两侧/后脑/全头）？\",\n    \"头痛发作时的性质（胀痛/刺痛/跳痛/钝痛）？\",\n    \"头痛是否伴随其他不适（恶心/畏光/耳鸣等）？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断头痛相关体征（如眼睑浮肿、鼻窦压痛等）\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "昨天头疼，今天已经缓解",
+          "没有发热"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "头痛的具体部位（如前额、太阳穴等）、性质（胀痛/刺痛/跳痛等）需进一步明确"
+          }
+        ],
+        "questions": [
+          "头痛发作时是否有伴随恶心、畏光等症状？",
+          "头痛是否在特定时间段（如晨起/夜间）加重？",
+          "头痛是否与情绪波动、用眼过度等诱因相关？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断头痛的性质（如紧张型头痛/偏头痛）",
+          "未提及头痛的持续时间（急性/慢性）",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"头痛的具体部位（如前额、太阳穴等）、性质（胀痛/刺痛/跳痛等）需进一步明确\"\n    }\n  ],\n  \"questions\": [\n    \"头痛发作时是否有伴随恶心、畏光等症状？\",\n    \"头痛是否在特定时间段（如晨起/夜间）加重？\",\n    \"头痛是否与情绪波动、用眼过度等诱因相关？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断头痛的性质（如紧张型头痛/偏头痛）\",\n    \"未提及头痛的持续时间（急性/慢性）\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h05",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "近两周有时食欲下降",
+          "并非每天都有",
+          "没有腹痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "食欲下降可能由多种因素引起，需进一步明确具体诱因和伴随症状"
+          }
+        ],
+        "questions": [
+          "食欲下降是否与特定饮食习惯改变相关？",
+          "是否有进食后饱胀感或消化不良现象？",
+          "近期饮食结构或进食时间是否有明显变化？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断具体病因",
+          "缺乏舌象和脉象等关键诊断信息"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"食欲下降可能由多种因素引起，需进一步明确具体诱因和伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"食欲下降是否与特定饮食习惯改变相关？\",\n    \"是否有进食后饱胀感或消化不良现象？\",\n    \"近期饮食结构或进食时间是否有明显变化？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断具体病因\",\n    \"缺乏舌象和脉象等关键诊断信息\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "近两周有时食欲下降",
+          "并非每天都有",
+          "没有腹痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "模型分析未通过检查，保留症状原文并建议补充信息。",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "explanation_unsupported_symptom_nausea"
+            ],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认食欲下降的具体表现（如饭量减少程度、伴随恶心/胀气等）\"\n    }\n  ],\n  \"questions\": [\n    \"食欲下降是否伴随饭后饱胀感？\",\n    \"是否有进食后恶心或反酸等症状？\",\n    \"每日饮食量与之前相比变化幅度？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等体征\",\n    \"未提供体重变化等关键指标\"\n  ]\n}\n```"
+          },
+          {
+            "reasons": [
+              "unfilled_template_placeholder"
+            ],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需要核实的可能解释\"\n    }\n  ],\n  \"questions\": [\n    \"食欲下降具体指哪些食物或餐次？\",\n    \"是否有伴随恶心、反酸等消化不适？\",\n    \"近期饮食习惯或压力情况如何？\"\n  ],\n  \"limitations\": [\n    \"无法基于图片颜色进行辨证\",\n    \"未提供舌脉等其他四诊信息\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h06",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "睡眠良好",
+          "最近五天白天有点疲乏",
+          "没有咳嗽"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S2"
+            ],
+            "explanation": "疲乏可能与气虚、湿困或作息不规律相关"
+          }
+        ],
+        "questions": [
+          "疲乏主要出现在工作/学习时段还是全天？",
+          "是否有注意力下降或记忆力减退现象？",
+          "近期饮食是否规律？有无过量食用生冷或油腻食物？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断是否存在面色萎黄等体征"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"疲乏可能与气虚、湿困或作息不规律相关\"\n    }\n  ],\n  \"questions\": [\n    \"疲乏主要出现在工作/学习时段还是全天？\",\n    \"是否有注意力下降或记忆力减退现象？\",\n    \"近期饮食是否规律？有无过量食用生冷或油腻食物？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断是否存在面色萎黄等体征\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "睡眠良好",
+          "最近五天白天有点疲乏",
+          "没有咳嗽"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "模型分析未通过检查，保留症状原文并建议补充信息。",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "explanation_added_severity",
+              "explanation_unsupported_symptom_sleep_quality"
+            ],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"需确认睡眠良好的具体表现（如入睡时间、夜间觉醒次数等）\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量一般具体指什么？\",\n    \"是否有夜间易醒或多梦的情况？\",\n    \"疲劳感是否伴随注意力下降或记忆力减退？\",\n    \"近期是否有过熬夜或工作压力增大的情况？\",\n    \"疲劳感是否在休息后完全缓解？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等视觉信息\",\n    \"未提供脉象、二便、饮食等关键四诊信息\"\n  ]\n}\n```"
+          },
+          {
+            "reasons": [
+              "explanation_added_severity",
+              "explanation_unsupported_symptom_sleep_quality"
+            ],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"需确认睡眠质量良好的具体表现\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量具体指什么？\",\n    \"是否有夜间易醒或多梦的情况？\",\n    \"白天疲乏是否伴随注意力下降或记忆力减退？\"\n  ],\n  \"limitations\": [\n    \"无法基于图片颜色进行辨证\",\n    \"未提供脉象/舌象等其他诊断依据\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h07",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "最近一个月偶有手足凉",
+          "没有便秘和腹泻",
+          "睡眠质量一般"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "手足凉可能与阳气不足或气血运行不畅相关"
+          }
+        ],
+        "questions": [
+          "手足凉主要出现在哪些时段？白天/夜间/全天？",
+          "是否伴随其他不适如乏力、怕冷等？",
+          "近期是否有过劳、情绪波动或饮食生冷史？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断手足温度客观数值",
+          "缺乏脉象、舌象等关键诊断依据"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"手足凉可能与阳气不足或气血运行不畅相关\"\n    }\n  ],\n  \"questions\": [\n    \"手足凉主要出现在哪些时段？白天/夜间/全天？\",\n    \"是否伴随其他不适如乏力、怕冷等？\",\n    \"近期是否有过劳、情绪波动或饮食生冷史？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断手足温度客观数值\",\n    \"缺乏脉象、舌象等关键诊断依据\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "最近一个月偶有手足凉",
+          "没有便秘和腹泻",
+          "睡眠质量一般"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "需确认手足凉的具体表现（如温度降低程度、发作时间规律性等）"
+          }
+        ],
+        "questions": [
+          "睡眠质量一般具体指什么？",
+          "手足凉是否伴随麻木/刺痛感？",
+          "手足凉在什么情况下易出现（如寒冷环境/空腹后/活动后）？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断手足温度客观数据",
+          "未获取舌象/脉象等体征信息",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认手足凉的具体表现（如温度降低程度、发作时间规律性等）\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量一般具体指什么？\",\n    \"手足凉是否伴随麻木/刺痛感？\",\n    \"手足凉在什么情况下易出现（如寒冷环境/空腹后/活动后）？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断手足温度客观数据\",\n    \"未获取舌象/脉象等体征信息\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h08",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "近四天有点腹胀",
+          "没有发烧但偶尔咳嗽",
+          "睡眠尚可"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能由饮食因素（如进食过快/油腻）、消化功能异常或气机阻滞引起"
+          }
+        ],
+        "questions": [
+          "腹胀是否在饭后加重？",
+          "是否伴随排气增多或排便异常？",
+          "是否有反酸、嗳气等胃部不适感？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断腹部形态变化",
+          "缺乏舌苔、脉象等体征信息"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能由饮食因素（如进食过快/油腻）、消化功能异常或气机阻滞引起\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀是否在饭后加重？\",\n    \"是否伴随排气增多或排便异常？\",\n    \"是否有反酸、嗳气等胃部不适感？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断腹部形态变化\",\n    \"缺乏舌苔、脉象等体征信息\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "近四天有点腹胀",
+          "没有发烧但偶尔咳嗽",
+          "睡眠尚可"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能由饮食不当、消化功能紊乱或或或其他潜在胃肠问题引起"
+          }
+        ],
+        "questions": [
+          "腹胀主要出现在餐后还是夜间？",
+          "是否伴随排气增多或排便异常？",
+          "饮食习惯是否有变化（如油腻/生冷食物增加？"
+        ],
+        "limitations": [
+          "未提供图片，未进行视觉分析。",
+          "无法通过图片判断腹部体征",
+          "需排除器质性疾病可能性",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能由饮食不当、消化功能紊乱或或或其他潜在胃肠问题引起\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要出现在餐后还是夜间？\",\n    \"是否伴随排气增多或排便异常？\",\n    \"饮食习惯是否有变化（如油腻/生冷食物增加？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断腹部体征\",\n    \"需排除器质性疾病可能性\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h09",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "最近一周偶有腹胀",
+          "没有恶心和呕吐",
+          "食欲尚可"
+        ],
+        "visual_facts": [
+          "面部轮廓清晰，可见发际线及耳部轮廓"
+        ],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能由饮食因素（如过食生冷油腻）、脾胃运化功能暂时失调或气机阻滞引起"
+          }
+        ],
+        "questions": [
+          "腹胀主要发生在餐后还是空腹时？",
+          "是否伴随排气增多或排便异常？",
+          "是否有情绪波动后加重的情况？"
+        ],
+        "limitations": [
+          "分辨率不足，无法观察细微皮肤纹理及毛孔细节；照片颜色未校准，无法准确判断肤色色调；照片左右方向仅指画面布局，不对应人体解剖方位",
+          "无法通过照片判断舌苔厚薄及颜色变化",
+          "缺乏脉象特征描述"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "invalid_json: Expecting ',' delimiter: line 1 column 36 (char 35)"
+            ],
+            "raw_output": "{\"visual_facts\":[\"面部轮廓清晰，头发呈棕色卷曲状\"]，\"limitations\":[\"照片分辨率不足，无法观察皮肤纹理及细微特征；面部表情可能影响观察准确性\"]}"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\"面部轮廓清晰，可见发际线及耳部轮廓\"],\n  \"limitations\": [\"分辨率不足，无法观察细微皮肤纹理及毛孔细节；照片颜色未校准，无法准确判断肤色色调；照片左右方向仅指画面布局，不对应人体解剖方位\"]\n}\n```"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能由饮食因素（如过食生冷油腻）、脾胃运化功能暂时失调或气机阻滞引起\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要发生在餐后还是空腹时？\",\n    \"是否伴随排气增多或排便异常？\",\n    \"是否有情绪波动后加重的情况？\"\n  ],\n  \"limitations\": [\n    \"无法通过照片判断舌苔厚薄及颜色变化\",\n    \"缺乏脉象特征描述\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "最近一周偶有腹胀",
+          "没有恶心和呕吐",
+          "食欲尚可"
+        ],
+        "visual_facts": [
+          "面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角"
+        ],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "腹胀可能与饮食因素（如过食生冷、油腻）、脾胃运化功能失调或气机阻滞相关"
+          }
+        ],
+        "questions": [
+          "腹胀主要发生在餐后还是空腹时？",
+          "腹胀是否伴随排气增多或排便异常？",
+          "腹胀是否在特定体位（如弯腰、平躺时加重？"
+        ],
+        "limitations": [
+          "因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征",
+          "无法观察到耳部、鼻部、口唇等关键区域细节",
+          "未提供舌象/脉象等关键四诊信息",
+          "面部照片未显示舌苔/齿痕等重要体征",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角\"\n  ],\n  \"limitations\": [\n    \"因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征\",\n    \"无法观察到耳部、鼻部、口唇等关键区域细节\"\n  ]\n}\n```"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能与饮食因素（如过食生冷、油腻）、脾胃运化功能失调或气机阻滞相关\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要发生在餐后还是空腹时？\",\n    \"腹胀是否伴随排气增多或排便异常？\",\n    \"腹胀是否在特定体位（如弯腰、平躺时加重？\"\n  ],\n  \"limitations\": [\n    \"未提供舌象/脉象等关键四诊信息\",\n    \"面部照片未显示舌苔/齿痕等重要体征\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "h10",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [
+          "有时头晕",
+          "没有心慌",
+          "没有胸部疼痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "需确认头晕是否伴随旋转感、天旋地转感或其他异常体征"
+          }
+        ],
+        "questions": [
+          "头晕在什么情况下发生？（如起床/久坐后突然站立时）",
+          "头晕是否伴随耳鸣、听力下降或平衡障碍？",
+          "头晕发作时是否有恶心、呕吐等胃肠道症状？",
+          "头晕是否与特定姿势、活动相关？",
+          "头晕是否影响日常活动或工作？"
+        ],
+        "limitations": [
+          "图片未通过面部质控，未生成面部观察；有症状时仍可做文字追问。",
+          "无法通过图片判断头晕类型（如耳源性/中枢性/前庭性）",
+          "缺乏持续时间、诱发因素等关键信息"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认头晕是否伴随旋转感、天旋地转感或其他异常体征\"\n    }\n  ],\n  \"questions\": [\n    \"头晕在什么情况下发生？（如起床/久坐后突然站立时）\",\n    \"头晕是否伴随耳鸣、听力下降或平衡障碍？\",\n    \"头晕发作时是否有恶心、呕吐等胃肠道症状？\",\n    \"头晕是否与特定姿势、活动相关？\",\n    \"头晕是否影响日常活动或工作？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断头晕类型（如耳源性/中枢性/前庭性）\",\n    \"缺乏持续时间、诱发因素等关键信息\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [
+          "有时头晕",
+          "没有心慌",
+          "没有胸部疼痛"
+        ],
+        "visual_facts": [],
+        "possible_explanations": [
+          {
+            "basis_ids": [
+              "S1"
+            ],
+            "explanation": "需确认头晕的具体性质（如天旋地转感、头重脚轻等）"
+          }
+        ],
+        "questions": [
+          "头晕发作时是否伴随恶心/呕吐？",
+          "头晕是否与特定体位变化相关？",
+          "头晕发作时是否影响日常活动？"
+        ],
+        "limitations": [
+          "图片未通过面部质控，未生成面部观察；有症状时仍可做文字追问。",
+          "无法通过图片判断面色/舌象等非文字描述信息",
+          "未提供头晕持续时间、诱发因素等关键细节",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认头晕的具体性质（如天旋地转感、头重脚轻等）\"\n    }\n  ],\n  \"questions\": [\n    \"头晕发作时是否伴随恶心/呕吐？\",\n    \"头晕是否与特定体位变化相关？\",\n    \"头晕发作时是否影响日常活动？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等非文字描述信息\",\n    \"未提供头晕持续时间、诱发因素等关键细节\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "r01",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [],
+        "visual_facts": [
+          "佩戴橙色宇航服头盔，头盔内衬黑色材质",
+          "面部肤色均匀，无明显可见皮疹或异常色泽变化"
+        ],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "面部皮肤纹理因分辨率限制无法清晰辨识具体特征",
+          "无法判断真实肤色及肤色健康状态（如红润/苍白）",
+          "无法观察到耳部、鼻部等其他面部区域细节"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [
+          "clinical_or_normality_claim_unverified",
+          "outside_face_description_scope"
+        ],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "invalid_json: Expecting ',' delimiter: line 1 column 44 (char 43)"
+            ],
+            "raw_output": "{\"visual_facts\":[\"面部轮廓清晰，肤色均匀无明显异常斑点或肿胀迹象\"]，\"limitations\":[\"面部细节分辨率不足，无法观察到细微皮肤纹理或毛细血管状态；无法确认具体五官形态特征\"]}"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"佩戴橙色宇航服头盔，头盔内衬黑色材质\",\n    \"面部肤色均匀，无明显可见皮疹或异常色泽变化\"\n  ],\n  \"limitations\": [\n    \"面部皮肤纹理因分辨率限制无法清晰辨识具体特征\",\n    \"无法判断真实肤色及肤色健康状态（如红润/苍白）\",\n    \"无法观察到耳部、鼻部等其他面部区域细节\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [],
+        "visual_facts": [
+          "面部轮廓清晰，朝向正前方"
+        ],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "无法判断肤色具体色调",
+          "无法判断皮肤表面细微特征（如皱纹、斑点）",
+          "无法判断五官具体形态细节",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [
+              "clinical_or_normality_claim_unverified"
+            ],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方\",\n    \"肤色均匀，无明显皮疹、红肿或异常色泽\"\n  ],\n  \"limitations\": [\n    \"无法判断具体年龄、性别、职业等背景信息\",\n    \"无法观察到舌象、脉象等中医诊断相关特征\",\n    \"因头盔遮挡无法评估眼部、鼻部及口周细节\"\n  ]\n}\n```"
+          },
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方\"\n  ],\n  \"limitations\": [\n    \"无法判断肤色具体色调\",\n    \"无法判断皮肤表面细微特征（如皱纹、斑点）\",\n    \"无法判断五官具体形态细节\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "r02",
+    "outputs": [
+      {
+        "arm": "v2",
+        "symptoms": [],
+        "visual_facts": [
+          "面部轮廓清晰，无明显肿胀或畸形"
+        ],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "分辨率不足，无法观察细微皮肤纹理或色泽变化",
+          "照片颜色未校准，无法准确判断肤色或局部颜色特征"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [
+          "clinical_or_normality_claim_unverified"
+        ],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，无明显肿胀或畸形\"\n  ],\n  \"limitations\": [\n    \"分辨率不足，无法观察细微皮肤纹理或色泽变化\",\n    \"照片颜色未校准，无法准确判断肤色或局部颜色特征\"\n  ]\n}\n```"
+          }
+        ]
+      },
+      {
+        "arm": "v3",
+        "symptoms": [],
+        "visual_facts": [
+          "面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角"
+        ],
+        "possible_explanations": [],
+        "questions": [],
+        "limitations": [
+          "因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征",
+          "无法观察到耳部、鼻部、口唇等关键区域细节",
+          "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+        ],
+        "analysis_rule_flags": [],
+        "visual_rule_flags": [],
+        "candidate_checks": [
+          {
+            "reasons": [],
+            "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角\"\n  ],\n  \"limitations\": [\n    \"因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征\",\n    \"无法观察到耳部、鼻部、口唇等关键区域细节\"\n  ]\n}\n```"
+          }
+        ]
+      }
+    ]
+  }
+]

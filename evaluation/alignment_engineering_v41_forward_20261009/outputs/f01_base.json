@@ -1,0 +1,94 @@
+{
+  "symptoms_original": [
+    "最近四天有点疲乏，休息后能减轻",
+    "睡眠正常",
+    "没有咳嗽和发热"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "气虚证可能性较大",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "疲乏症状休息后缓解符合气虚特点"
+          },
+          {
+            "source_id": "S1",
+            "quote": "未提及明显寒热倾向"
+          }
+        ],
+        "missing_info": [
+          "是否有自汗/盗汗现象",
+          "舌脉特征"
+        ]
+      }
+    ],
+    "questions": [
+      "是否伴有活动后气短或易出汗？",
+      "近期饮食睡眠情况如何？"
+    ],
+    "limitations": [
+      "缺乏舌象脉象等关键诊断依据",
+      "症状描述过于简略"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"气虚证可能性较大\",\n      \"evidence\": [\n        {\"source_id\": \"S1\", \"quote\": \"疲乏症状休息后缓解符合气虚特点\"},\n        {\"source_id\": \"S1\", \"quote\": \"未提及明显寒热倾向\"}\n      ],\n      \"missing_info\": [\"是否有自汗/盗汗现象\", \"舌脉特征\"]\n    }\n  ],\n  \"questions\": [\n    \"是否伴有活动后气短或易出汗？\",\n    \"近期饮食睡眠情况如何？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌象脉象等关键诊断依据\",\n    \"症状描述过于简略\"\n  ]\n}\n```",
+        "latency_sec": 9.0,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"最近四天有点疲乏，休息后能减轻\", \"S2\": \"睡眠正常\", \"S3\": \"没有咳嗽和发热\"}",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "气虚证可能性较大",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "疲乏症状休息后缓解符合气虚特点"
+              },
+              {
+                "source_id": "S1",
+                "quote": "未提及明显寒热倾向"
+              }
+            ],
+            "missing_info": [
+              "是否有自汗/盗汗现象",
+              "舌脉特征"
+            ]
+          }
+        ],
+        "questions": [
+          "是否伴有活动后气短或易出汗？",
+          "近期饮食睡眠情况如何？"
+        ],
+        "limitations": [
+          "缺乏舌象脉象等关键诊断依据",
+          "症状描述过于简略"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "full_answer_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 1,
+  "model_latency_sec": 9.0,
+  "case_id": "f01",
+  "arm": "base",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_alignment_v41.py": "dfa57a6483990920c29615bb6fef604d52224e06ae3912ff4c887b671d06d153",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v41.py": "edd491852ce726722bfb537b47f21a65523ae1d618614c12318eb065b82236c4"
+  }
+}

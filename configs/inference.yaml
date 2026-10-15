@@ -1,0 +1,8 @@
+model_path: /root/private_data/models/ShizhenGPT-7B-VL
+dtype: bfloat16
+attention: eager
+max_pixels: 1003520
+min_pixels: 3136
+max_new_tokens: 768
+do_sample: false
+seed: 42

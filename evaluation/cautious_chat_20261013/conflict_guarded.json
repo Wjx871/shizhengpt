@@ -1,0 +1,17 @@
+{
+  "id": "conflict",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "2b08bc3d-5367-4e17-8053-1fc9c4bdfd88",
+      "answer": "**需要先核实信息。** 你提供的症状中有同一不适既报告存在、又报告不存在的情况。请说明目前以哪一条为准，以及是否发生过变化；核实前无法据此分析。",
+      "latency_sec": 0.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "contradiction_abstained",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    }
+  ],
+  "functional_check_passed": true
+}

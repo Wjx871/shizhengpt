@@ -1,0 +1,6 @@
+{
+  "original_protocol_preserved": true,
+  "issue": "The phrase new asset/subject in the frozen protocol overstates available identity evidence.",
+  "corrected_scope": "Train/test image bytes are disjoint. No patient identity metadata is available; independent subjects or pretraining novelty cannot be established.",
+  "action": "Use asset-level holdout language in the report; do not claim independent patient validation."
+}

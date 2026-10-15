@@ -1,0 +1,407 @@
+[
+  {
+    "case_id": "p01_full_visual_only",
+    "kind": "visual_only",
+    "symptoms": [],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "A NASA astronaut suit with 'Johnson Space Center' patch visible on the arm.",
+        "A black helmet placed next to the subject."
+      ],
+      "user_symptoms": [],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [],
+      "limitations": [
+        "The image is a photograph of an astronaut in a NASA spacesuit, but no user-provided symptoms or additional history are available for analysis."
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"A NASA astronaut suit with 'Johnson Space Center' patch visible on the arm.\",\n    \"A black helmet placed next to the subject.\"\n  ],\n  \"user_symptoms\": [],\n  \"additional_history\": [],\n  \"possible_explanations\": [],\n  \"questions\": [],\n  \"limitations\": [\n    \"The image is a photograph of an astronaut in a NASA spacesuit, but no user-provided symptoms or additional history are available for analysis.\"\n  ]\n}\n```",
+    "visual_items_matched": 3,
+    "abstentions_on_known_items": 1,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "p02_crop_visual_only",
+    "kind": "visual_only",
+    "symptoms": [],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "Blonde hair styled in a short bob with visible bangs and side parts.",
+        "Neutral background without identifiable landmarks."
+      ],
+      "user_symptoms": [],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [],
+      "limitations": [
+        "No facial expression or skin tone details provided for clinical assessment.",
+        "Synthetic image lacks real-world diagnostic context."
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"Blonde hair styled in a short bob with visible bangs and side parts.\",\n    \"Neutral background without identifiable landmarks.\"\n  ],\n  \"user_symptoms\": [],\n  \"additional_history\": [],\n  \"possible_explanations\": [],\n  \"questions\": [],\n  \"limitations\": [\n    \"No facial expression or skin tone details provided for clinical assessment.\",\n    \"Synthetic image lacks real-world diagnostic context.\"\n  ]\n}\n```",
+    "visual_items_matched": 2,
+    "abstentions_on_known_items": 2,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "p03_partial_visual_only",
+    "kind": "visual_only",
+    "symptoms": [],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "耳周皮肤可见红色斑疹样改变，局部有疑似毛细血管扩张表现（箭头标注处）。",
+        "皮肤表面无明显破溃、渗出或鳞屑，但色泽偏红，边界模糊。"
+      ],
+      "user_symptoms": [],
+      "additional_history": [],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S10"
+          ],
+          "text": "可能与局部气血瘀滞相关，需结合患者是否有刺痛感、压痛等进一步判断。"
+        }
+      ],
+      "questions": [
+        "是否伴有耳部疼痛、瘙痒或灼热感？"
+      ],
+      "limitations": [
+        "仅通过静态图像无法获取动态变化（如皮疹发展速度）、脉象、舌象等关键诊断信息。",
+        "无法排除其他系统性疾病（如自身免疫病、感染等）导致的皮肤表现。"
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"耳周皮肤可见红色斑疹样改变，局部有疑似毛细血管扩张表现（箭头标注处）。\",\n    \"皮肤表面无明显破溃、渗出或鳞屑，但色泽偏红，边界模糊。\"\n  ],\n  \"user_symptoms\": [],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S10\"],\n      \"text\": \"可能与局部气血瘀滞相关，需结合患者是否有刺痛感、压痛等进一步判断。\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有耳部疼痛、瘙痒或灼热感？\"\n  ],\n  \"limitations\": [\n    \"仅通过静态图像无法获取动态变化（如皮疹发展速度）、脉象、舌象等关键诊断信息。\",\n    \"无法排除其他系统性疾病（如自身免疫病、感染等）导致的皮肤表现。\"\n  ]\n}\n```",
+    "visual_items_matched": 1,
+    "abstentions_on_known_items": 0,
+    "unsupported_visual_assertions": 3,
+    "invalid_basis_ids": [
+      "S10"
+    ],
+    "clinical_output_on_visual_only": true,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "p04_blue_visual_only",
+    "kind": "visual_only",
+    "symptoms": [],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "Blonde hair styled in a short bob with visible bangs covering forehead.",
+        "Neutral facial expression with no discernible emotional cues."
+      ],
+      "user_symptoms": [],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [],
+      "limitations": [
+        "Photo lacks sufficient detail to assess skin tone, complexion, or subtle facial features (e.g., paleness, redness).",
+        "No visible context for lighting conditions affecting color perception."
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"Blonde hair styled in a short bob with visible bangs covering forehead.\",\n    \"Neutral facial expression with no discernible emotional cues.\"\n  ],\n  \"user_symptoms\": [],\n  \"additional_history\": [],\n  \"possible_explanations\": [],\n  \"questions\": [],\n  \"limitations\": [\n    \"Photo lacks sufficient detail to assess skin tone, complexion, or subtle facial features (e.g., paleness, redness).\",\n    \"No visible context for lighting conditions affecting color perception.\"\n  ]\n}\n```",
+    "visual_items_matched": 3,
+    "abstentions_on_known_items": 1,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "synthetic_fatigue_text_basic",
+    "kind": "text_only",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1"
+          ],
+          "text": "疲劳可能与气虚或脾虚相关"
+        },
+        {
+          "basis_ids": [
+            "S2"
+          ],
+          "text": "手足凉提示阳气不足或气血运行不畅"
+        }
+      ],
+      "questions": [
+        "是否伴有头晕、气短或自汗？",
+        "饮食偏好如何（如喜热饮/冷食）？",
+        "是否有长期熬夜或情绪压力因素？"
+      ],
+      "limitations": [
+        "未提供舌象、脉象等关键诊断信息",
+        "需结合季节气候判断外感或内伤因素"
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"text\": \"疲劳可能与气虚或脾虚相关\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"text\": \"手足凉提示阳气不足或气血运行不畅\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有头晕、气短或自汗？\",\n    \"饮食偏好如何（如喜热饮/冷食）？\",\n    \"是否有长期熬夜或情绪压力因素？\"\n  ],\n  \"limitations\": [\n    \"未提供舌象、脉象等关键诊断信息\",\n    \"需结合季节气候判断外感或内伤因素\"\n  ]\n}\n```",
+    "visual_items_matched": 4,
+    "abstentions_on_known_items": 0,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "synthetic_fatigue_text_expanded",
+    "kind": "text_only",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "history": [
+      "这些不适约一周，工作忙时更明显",
+      "最近每晚约睡6小时，有时熬夜",
+      "没有发热、胸痛或心慌",
+      "休息后疲劳会减轻",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [
+        "这些不适约一周，工作忙时更明显",
+        "最近每晚约睡6小时，有时熬夜",
+        "没有发热、胸痛或心慌",
+        "休息后疲劳会减轻"
+      ],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "text": "气虚失养，脾阳不振，导致疲劳、四肢不温、纳差"
+        }
+      ],
+      "questions": [
+        "是否伴有头晕、气短等气虚表现？",
+        "是否有口淡不渴、喜热饮等阳虚倾向？",
+        "饮食偏好及近期饮食变化如何？"
+      ],
+      "limitations": [
+        "缺乏舌象、脉象及详细病史资料，影响辨证准确性",
+        "未提及二便情况及情绪状态，需进一步确认"
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [\"这些不适约一周，工作忙时更明显\", \"最近每晚约睡6小时，有时熬夜\", \"没有发热、胸痛或心慌\", \"休息后疲劳会减轻\"],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\", \"S2\", \"S4\"],\n      \"text\": \"气虚失养，脾阳不振，导致疲劳、四肢不温、纳差\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有头晕、气短等气虚表现？\",\n    \"是否有口淡不渴、喜热饮等阳虚倾向？\",\n    \"饮食偏好及近期饮食变化如何？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌象、脉象及详细病史资料，影响辨证准确性\",\n    \"未提及二便情况及情绪状态，需进一步确认\"\n  ]\n}\n```",
+    "visual_items_matched": 4,
+    "abstentions_on_known_items": 0,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": false,
+    "truncated": false
+  },
+  {
+    "case_id": "synthetic_abdominal_bloating_text_basic",
+    "kind": "text_only",
+    "symptoms": [
+      "最近一周偶有腹胀",
+      "没有恶心和呕吐",
+      "食欲尚可"
+    ],
+    "history": [],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [],
+      "user_symptoms": [
+        "最近一周偶有腹胀",
+        "没有恶心和呕吐",
+        "食欲尚可"
+      ],
+      "additional_history": [],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1"
+          ],
+          "text": "腹胀可能与饮食积滞、气机不畅相关"
+        }
+      ],
+      "questions": [
+        "腹胀是否在饭后加重？",
+        "是否有排气增多或排便异常？",
+        "近期饮食结构是否有变化？"
+      ],
+      "limitations": [
+        "未提供舌象、脉象等关键诊断信息",
+        "无法排除情志因素对脾胃的影响"
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [],\n  \"user_symptoms\": [\"最近一周偶有腹胀\", \"没有恶心和呕吐\", \"食欲尚可\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"text\": \"腹胀可能与饮食积滞、气机不畅相关\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀是否在饭后加重？\",\n    \"是否有排气增多或排便异常？\",\n    \"近期饮食结构是否有变化？\"\n  ],\n  \"limitations\": [\n    \"未提供舌象、脉象等关键诊断信息\",\n    \"无法排除情志因素对脾胃的影响\"\n  ]\n}\n```",
+    "visual_items_matched": 4,
+    "abstentions_on_known_items": 0,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  },
+  {
+    "case_id": "synthetic_abdominal_bloating_text_expanded",
+    "kind": "text_only",
+    "symptoms": [
+      "最近一周偶有腹胀",
+      "没有恶心和呕吐",
+      "食欲尚可"
+    ],
+    "history": [
+      "腹胀主要在吃得较多后出现，排气后减轻",
+      "排便每天一次，未报告便秘或腹泻",
+      "没有腹痛或发热",
+      "近期吃饭较快，未提供体重变化",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "parsed_output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [],
+      "user_symptoms": [
+        "最近一周偶有腹胀",
+        "没有恶心和呕吐",
+        "食欲尚可"
+      ],
+      "additional_history": [
+        "腹胀主要在吃得较多后出现，排气后减轻",
+        "排便每天一次，未报告便秘或腹泻",
+        "没有腹痛或发热",
+        "近期吃饭较快，未提供体重变化",
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "I1"
+          ],
+          "text": "饮食过量导致脾胃运化失常，气机壅滞"
+        }
+      ],
+      "questions": [
+        "腹胀是否伴随嗳气酸腐？",
+        "进食速度加快是否与情绪紧张相关？",
+        "是否有喜热饮或喜冷饮倾向？"
+      ],
+      "limitations": [
+        "缺乏舌象、脉象等关键辨证信息",
+        "未提供体重变化及既往病史"
+      ]
+    },
+    "parse_error": null,
+    "schema_reasons": [],
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [],\n  \"user_symptoms\": [\"最近一周偶有腹胀\", \"没有恶心和呕吐\", \"食欲尚可\"],\n  \"additional_history\": [\"腹胀主要在吃得较多后出现，排气后减轻\", \"排便每天一次，未报告便秘或腹泻\", \"没有腹痛或发热\", \"近期吃饭较快，未提供体重变化\", \"未提供既往病史、用药史、舌象、脉象或检查结果\"],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"I1\"],\n      \"text\": \"饮食过量导致脾胃运化失常，气机壅滞\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀是否伴随嗳气酸腐？\",\n    \"进食速度加快是否与情绪紧张相关？\",\n    \"是否有喜热饮或喜冷饮倾向？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌象、脉象等关键辨证信息\",\n    \"未提供体重变化及既往病史\"\n  ]\n}\n```",
+    "visual_items_matched": 4,
+    "abstentions_on_known_items": 0,
+    "unsupported_visual_assertions": 0,
+    "invalid_basis_ids": [],
+    "clinical_output_on_visual_only": false,
+    "symptoms_exact": true,
+    "history_exact": true,
+    "truncated": false
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "frozen_unix": 1791530364.2192152,
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  },
+  "manifest_sha256": "ca489ad705f71ccfff5b450c1f9eb11554b660af5d83fa7944cbb032c811a8a9",
+  "base": "Original weights + requested JSON schema, separate visual and text stages, no QC/retry/filtering",
+  "enhanced": "Same weights/schema + fact ledger/exact evidence quote + prior face QC + bounded checks + one retry + questions-only fallback",
+  "visual_facts_used_for_diagnosis": false,
+  "same_stage_separation_both_arms": true,
+  "endpoint": "http://127.0.0.1:7860",
+  "generation": "HTTP service: BF16/eager, deterministic, 768 tokens per call; no LoRA",
+  "context": "Each call is a fresh chat session, then deleted; no extra model loaded",
+  "limitations": [
+    "Synthetic symptom variants and known public-image regressions, not independent patients",
+    "No clinical diagnosis ground truth",
+    "Rule acceptance is not hallucination-free or clinically correct",
+    "Unknown/abstention and full-answer coverage reported separately",
+    "Raw baseline requests JSON; not identical to unconstrained browser chat",
+    "Images use chat service EXIF transpose and longest-edge 1600 resize in both arms"
+  ],
+  "metrics": [
+    "independent predeclared phrase rubric",
+    "visual explicit mismatch/unknown/exact against prior references",
+    "exact evidence quote membership, a structural proxy",
+    "full answer and question coverage",
+    "raw first candidate versus retained answer",
+    "actual inference calls and latency"
+  ]
+}

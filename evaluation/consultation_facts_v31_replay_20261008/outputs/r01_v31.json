@@ -1,0 +1,248 @@
+{
+  "user_symptoms": [],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "low_resolution_for_fine_facial_features",
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [],
+    "patches": {
+      "image_left_patch": {
+        "bbox_xyxy": [
+          185,
+          116,
+          208,
+          139
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          222.0,
+          187.0,
+          160.0
+        ],
+        "lab_median": [
+          78.192,
+          8.812,
+          17.875
+        ],
+        "grey_mean": 192.493,
+        "clipped_high_fraction": 0.0227,
+        "clipped_low_fraction": 0.0
+      },
+      "image_right_patch": {
+        "bbox_xyxy": [
+          239,
+          116,
+          262,
+          139
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          210.0,
+          174.0,
+          147.0
+        ],
+        "lab_median": [
+          73.792,
+          9.391,
+          18.531
+        ],
+        "grey_mean": 176.242,
+        "clipped_high_fraction": 0.0,
+        "clipped_low_fraction": 0.0
+      }
+    },
+    "detection_candidates": [
+      {
+        "bbox_xywh": [
+          175,
+          66,
+          97,
+          97
+        ],
+        "paired_eyes": [
+          [
+            15,
+            23,
+            25,
+            25
+          ],
+          [
+            59,
+            24,
+            27,
+            27
+          ]
+        ]
+      },
+      {
+        "bbox_xywh": [
+          284,
+          125,
+          127,
+          127
+        ],
+        "paired_eyes": null
+      }
+    ],
+    "icc_profile_present": true,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "width": 512,
+    "height": 512,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.1617,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 2,
+    "eye_verified_count": 1,
+    "detected_face_bbox_xywh": [
+      175,
+      66,
+      97,
+      97
+    ],
+    "laplacian_variance": 901.742,
+    "face_high_clip_fraction": 0.0009,
+    "face_low_clip_fraction": 0.0094,
+    "measurement_bbox_xywh": [
+      175,
+      66,
+      97,
+      97
+    ],
+    "fixed_reference_roi_used": false,
+    "usable_for_technical_description": true,
+    "cv_latency_sec": 0.15948746260255575
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "clinical_or_normality_claim_unverified"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方\",\n    \"肤色均匀，无明显皮疹、红肿或异常色泽\"\n  ],\n  \"limitations\": [\n    \"无法判断具体年龄、性别、职业等背景信息\",\n    \"无法观察到舌象、脉象等中医诊断相关特征\",\n    \"因头盔遮挡无法评估眼部、鼻部及口周细节\"\n  ]\n}\n```",
+        "latency_sec": 5.908173525240272,
+        "preprocess_sec": 0.03642916912212968,
+        "generation_sec": 5.869604495819658,
+        "output_tokens": 98,
+        "tokens_per_sec": 16.696184567426265,
+        "peak_memory": 16892953600,
+        "peak_reserved_bytes": 17075011584,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 603,
+        "image_grid_thw": [
+          [
+            1,
+            36,
+            36
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。\n只描述面部粗略可见轮廓、朝向或遮挡，不描述头盔服装，不判断无皮疹、无肿胀、无畸形或正常。看不清的细节放入limitations并写“无法判断”。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+        "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+      }
+    },
+    {
+      "attempt": 2,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方\"\n  ],\n  \"limitations\": [\n    \"无法判断肤色具体色调\",\n    \"无法判断皮肤表面细微特征（如皱纹、斑点）\",\n    \"无法判断五官具体形态细节\"\n  ]\n}\n```",
+        "latency_sec": 4.178665350191295,
+        "preprocess_sec": 0.03444386925548315,
+        "generation_sec": 4.1426405208185315,
+        "output_tokens": 67,
+        "tokens_per_sec": 16.173259461760317,
+        "peak_memory": 16893229568,
+        "peak_reserved_bytes": 17077108736,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 641,
+        "image_grid_thw": [
+          [
+            1,
+            36,
+            36
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。\n只描述面部粗略可见轮廓、朝向或遮挡，不描述头盔服装，不判断无皮疹、无肿胀、无畸形或正常。看不清的细节放入limitations并写“无法判断”。\n上次输出未通过检查，原因：[\"clinical_or_normality_claim_unverified\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+        "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+      }
+    }
+  ],
+  "analysis_attempts": [],
+  "visual_facts": [
+    "面部轮廓清晰，朝向正前方"
+  ],
+  "possible_explanations": [],
+  "questions": [],
+  "limitations": [
+    "无法判断肤色具体色调",
+    "无法判断皮肤表面细微特征（如皱纹、斑点）",
+    "无法判断五官具体形态细节",
+    "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+  ],
+  "source_symptoms": {},
+  "visual_action": "technical_description_passed_limited_checks_unverified",
+  "analysis_action": "no_symptoms_analysis_skipped",
+  "model_invocations": 2,
+  "model_latency_sec": 10.086838875431567,
+  "requires_review": true,
+  "guard_version": "v3.1_checked_question_fallback",
+  "symptom_facts": [],
+  "fact_extraction_is_complete": false,
+  "visual_verification_method": "scope_and_resolution_rules_only",
+  "case_id": "r01",
+  "arm": "v3",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "partial_fallback_checks": [],
+  "replayed_from": "D:\\lab\\shizhenGPT\\shizhengpt-evaluation\\evaluation\\consultation_facts_20261008\\outputs\\r01_v3.json",
+  "source_output_sha256": "bebafeff27405e4c39c02a0ad067674eb412770f44789191579074954413a5d2",
+  "new_model_inferences_in_replay": 0
+}

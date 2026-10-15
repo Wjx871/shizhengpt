@@ -1,0 +1,24 @@
+{
+  "cases": 12,
+  "real_model_calls": 52,
+  "accepted_symptom_cases": 6,
+  "retained_visual_cases": 5,
+  "qc_rejected_image_cases": 4,
+  "baseline_truncated_cases": 5,
+  "final_candidate_records": 17,
+  "final_rejected_candidates": 2,
+  "final_guarded_truncated_candidates": 0,
+  "final_retry_cases": 6,
+  "script_sha256": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "note": "Regression evidence, not clinical accuracy. Final visual records are reused from v2. Revalidation made zero new generations."
+}

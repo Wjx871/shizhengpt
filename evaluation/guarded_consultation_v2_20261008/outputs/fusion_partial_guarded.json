@@ -1,0 +1,137 @@
+{
+  "user_symptoms": [
+    "最近容易疲劳",
+    "手脚较凉",
+    "睡眠质量一般",
+    "偶尔食欲不佳"
+  ],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [
+      "single_frontal_region_not_confirmed"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "icc_profile_present": false,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/5467.jpg",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c",
+    "width": 474,
+    "height": 363,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.1236,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 0,
+    "eye_verified_count": 0,
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.09189309226348996
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能与气虚、血虚或脾虚相关\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"手足凉需鉴别阳虚与气血运行障碍\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在活动后加重？\",\n    \"手脚凉是否伴随冷感？\",\n    \"睡眠质量差具体表现为入睡困难还是易醒？\",\n    \"食欲不佳是饭量减少还是消化不良？\",\n    \"疲劳和手足凉是否同时出现？\"\n  ],\n  \"limitations\": [\n    \"未获取舌象信息\",\n    \"未明确疼痛/冷感性质\",\n    \"未区分睡眠障碍类型\"\n  ]\n}\n```",
+        "latency_sec": 10.163812132086605,
+        "preprocess_sec": 0.003058916889131069,
+        "generation_sec": 10.157362048048526,
+        "output_tokens": 179,
+        "tokens_per_sec": 17.622685806930573,
+        "peak_memory": 16663693312,
+        "peak_reserved_bytes": 16726884352,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 348,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n图片处理状态：qc_rejected_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能与气虚、血虚或脾虚相关"
+    },
+    {
+      "basis_ids": [
+        "S2"
+      ],
+      "explanation": "手足凉需鉴别阳虚与气血运行障碍"
+    }
+  ],
+  "questions": [
+    "疲劳是否在活动后加重？",
+    "手脚凉是否伴随冷感？",
+    "睡眠质量差具体表现为入睡困难还是易醒？",
+    "食欲不佳是饭量减少还是消化不良？",
+    "疲劳和手足凉是否同时出现？"
+  ],
+  "limitations": [
+    "图片未通过面部质控，未生成面部观察；有症状时仍可做文字追问。",
+    "未获取舌象信息",
+    "未明确疼痛/冷感性质",
+    "未区分睡眠障碍类型"
+  ],
+  "source_symptoms": {
+    "S1": "最近容易疲劳",
+    "S2": "手脚较凉",
+    "S3": "睡眠质量一般",
+    "S4": "偶尔食欲不佳"
+  },
+  "visual_action": "qc_rejected_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 1,
+  "model_latency_sec": 10.163812132086605,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "fusion_partial",
+  "arm": "guarded_v2",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

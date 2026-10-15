@@ -1,0 +1,45 @@
+{
+  "frozen_at_unix": 1791474250.0030885,
+  "cases": 4,
+  "conditions": 16,
+  "arms": [
+    [
+      "image_basic",
+      "image",
+      false
+    ],
+    [
+      "description_basic",
+      "description",
+      false
+    ],
+    [
+      "description_expanded",
+      "description",
+      true
+    ],
+    [
+      "image_expanded",
+      "image",
+      true
+    ]
+  ],
+  "source_sha256": {
+    "evaluate_representation_probe.py": "0f68b18d0b52cce02a0050abc579f684428b9f0fb15af98238dc0032525d1d87",
+    "infer_image.py": "7a9b07d2eb27b91c1544dfa58aeebe573d96d62dee23e8cbf4cae9d8dc60f9a2"
+  },
+  "output_cap": 768,
+  "max_retries": 0,
+  "wrappers": false,
+  "primary_comparisons": [
+    "image_basic vs description_basic: change visual representation only",
+    "description_basic vs description_expanded: change history only",
+    "image_basic vs image_expanded: change history only"
+  ],
+  "limitations": [
+    "No doctor descriptions or clinical diagnostic reference labels.",
+    "Manual text reveals facts and removes uncertainty: oracle proxy, not equal visual difficulty.",
+    "Three image conditions are the same public person; there are only two synthetic symptom scenarios.",
+    "Expanded history is additional synthetic information, not complete clinical records."
+  ]
+}

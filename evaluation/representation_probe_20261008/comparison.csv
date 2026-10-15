@@ -1,0 +1,17 @@
+﻿case_id,arm,visual_mode,expanded_history,json_parse_ok,schema_ok,truncated,symptoms_exact,history_exact,nonmedical_visual_items_matched,nonmedical_visual_items_total,unsupported_visual_assertions,abstentions_on_known_visual_items,used_history_id,invalid_basis_ids,parse_error,schema_reasons,output_tokens,latency_sec
+p01_full,image_basic,image,False,True,True,False,True,True,4,4,0,0,False,,,,257,20.29560423688963
+p01_full,description_basic,description,False,True,True,False,True,True,3,4,0,1,False,,,,254,14.6587899569422
+p01_full,description_expanded,description,True,True,True,False,True,False,3,4,0,1,False,,,,344,19.924321594182402
+p01_full,image_expanded,image,True,True,True,False,True,False,3,4,0,1,False,,,,238,14.373401945922524
+p02_crop,image_basic,image,False,True,True,False,True,True,0,4,0,4,False,,,,211,12.196834590751678
+p02_crop,description_basic,description,False,True,True,False,True,True,4,4,0,0,False,,,,303,17.48201936110854
+p02_crop,description_expanded,description,True,True,True,False,True,False,4,4,0,0,True,,,,374,21.640199995599687
+p02_crop,image_expanded,image,True,True,True,False,True,False,2,4,0,2,False,,,,218,12.638812073972076
+p03_partial,image_basic,image,False,True,True,False,True,True,1,4,2,1,False,,,,251,14.799823245033622
+p03_partial,description_basic,description,False,True,True,False,True,True,1,4,0,3,False,,,,278,16.033243536949158
+p03_partial,description_expanded,description,True,True,True,False,True,True,1,4,0,3,True,,,,331,19.15987790795043
+p03_partial,image_expanded,image,True,True,True,False,True,True,1,4,2,1,False,,,,294,17.407110224012285
+p04_blue,image_basic,image,False,True,True,False,True,True,0,4,0,4,False,,,,214,12.34686698205769
+p04_blue,description_basic,description,False,True,True,False,True,True,4,4,0,0,False,,,,269,15.489529086276889
+p04_blue,description_expanded,description,True,True,True,False,True,False,4,4,0,0,False,,,,309,17.861664555966854
+p04_blue,image_expanded,image,True,True,True,False,True,False,4,4,0,0,False,,,,232,13.4416434597224

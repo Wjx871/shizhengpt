@@ -1,0 +1,36 @@
+{
+  "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"no\"\n  },\n  \"visual_observations\": [\n    \"静态头部裁剪图，细节分辨率有限，无法确认或排除细微皮肤异常\"\n  ],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"text\": \"疲劳可能与气虚或阳气不足相关\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"text\": \"手脚凉提示可能存在阳虚或气血运行不畅\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有畏寒、夜间盗汗或腰膝酸软等伴随症状？\",\n    \"饮食偏好（如喜热饮/冷饮）、二便情况如何？\"\n  ],\n  \"limitations\": [\n    \"照片经偏蓝成像处理，无法判断真实肤色及皮肤质地异常\",\n    \"细节分辨率有限，无法评估面部细微特征（如舌象、脉象）\"\n  ]\n}\n```",
+  "latency_sec": 15.489529086276889,
+  "preprocess_sec": 0.0049017490819096565,
+  "generation_sec": 15.479595008306205,
+  "output_tokens": 269,
+  "tokens_per_sec": 17.377715622124295,
+  "peak_memory": 16696952832,
+  "peak_reserved_bytes": 16993222656,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 768,
+    "do_sample": false
+  },
+  "input_tokens": 475,
+  "image_grid_thw": null,
+  "truncated": false,
+  "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n补充问诊信息：\n未提供。\n视觉输入：没有附图，仅提供以下人工核对的图像描述：155×172像素的静态头部裁剪图，照片经过偏蓝成像变换。人物面部朝向画面前方，可见眼睛、鼻子、嘴部及微笑表情，头发可见，头部没有戴头盔。不能将变换后的照片颜色当作人物真实肤色；细节分辨率有限，不能确认或排除细微皮肤异常。",
+  "image_path": "",
+  "image_sha256": null,
+  "case_id": "p04_blue",
+  "arm": "description_basic",
+  "visual_mode": "description",
+  "expanded_history": false,
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "clinical_accuracy_not_measured": true
+}

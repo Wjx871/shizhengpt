@@ -1,0 +1,86 @@
+{
+  "symptoms_original": [
+    "没有发热但有时咳嗽",
+    "睡眠正常"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "偶发性咳嗽可能由环境刺激或轻微呼吸道感染引起",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "有时咳嗽"
+          }
+        ],
+        "missing_info": [
+          "是否有接触冷空气/粉尘等刺激物",
+          "咳嗽时是否有痰液产生"
+        ]
+      }
+    ],
+    "questions": [
+      "咳嗽是否在夜间加重？",
+      "是否伴随胸闷或呼吸急促？"
+    ],
+    "limitations": [
+      "仅凭单一症状难以明确病因",
+      "缺乏舌象脉象等关键诊断信息"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"偶发性咳嗽可能由环境刺激或轻微呼吸道感染引起\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"有时咳嗽\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有接触冷空气/粉尘等刺激物\",\n        \"咳嗽时是否有痰液产生\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"咳嗽是否在夜间加重？\",\n    \"是否伴随胸闷或呼吸急促？\"\n  ],\n  \"limitations\": [\n    \"仅凭单一症状难以明确病因\",\n    \"缺乏舌象脉象等关键诊断信息\"\n  ]\n}\n```",
+        "latency_sec": 9.1,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"没有发热但有时咳嗽\", \"S2\": \"睡眠正常\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"没有发热但有时咳嗽\", \"clauses\": [{\"text\": \"没有发热但有时咳嗽\", \"start\": 0, \"end\": 9, \"findings\": [{\"term\": \"fever\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"发热\", \"start\": 2, \"end\": 4}}, {\"term\": \"cough\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"咳嗽\", \"start\": 7, \"end\": 9}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"有时\", \"start\": 5, \"end\": 7}], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"睡眠正常\", \"clauses\": [{\"text\": \"睡眠正常\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠正常\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"正常\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "偶发性咳嗽可能由环境刺激或轻微呼吸道感染引起",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "有时咳嗽"
+              }
+            ],
+            "missing_info": [
+              "是否有接触冷空气/粉尘等刺激物",
+              "咳嗽时是否有痰液产生"
+            ]
+          }
+        ],
+        "questions": [
+          "咳嗽是否在夜间加重？",
+          "是否伴随胸闷或呼吸急促？"
+        ],
+        "limitations": [
+          "仅凭单一症状难以明确病因",
+          "缺乏舌象脉象等关键诊断信息"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "full_answer_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 1,
+  "model_latency_sec": 9.1,
+  "case_id": "t06",
+  "arm": "enhanced",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  },
+  "workflow_version": "v4.1_independent_component_retention",
+  "component_checks": []
+}

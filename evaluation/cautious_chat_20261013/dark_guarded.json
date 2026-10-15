@@ -1,0 +1,17 @@
+{
+  "id": "dark",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "50e3593d-edfe-402b-a958-5b6ec2114902",
+      "answer": "**图片无法可靠判断。** 这张图片没有通过清晰度、曝光或面部完整性检查。请在自然光下重新拍摄清晰、完整的正面照片；如果是舌头或其他部位，这版面部核对流程不能可靠分析。\n\n**目前无法可靠回答。** 当前没有识别到明确的症状事实，也没有可核查的资料支持这个问题的结论。请补充具体情况或提供可靠资料；我不会据此猜测病因、证候或照片中不可见的内容。",
+      "latency_sec": 0.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "image_abstained",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    }
+  ],
+  "functional_check_passed": true
+}

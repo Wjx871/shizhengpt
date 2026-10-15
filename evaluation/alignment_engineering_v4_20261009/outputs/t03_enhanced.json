@@ -1,0 +1,134 @@
+{
+  "symptoms_original": [
+    "昨天头痛，今天已经缓解",
+    "没有头晕"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [],
+    "questions": [
+      "是否有明确诱因（如压力、饮食、睡眠）？",
+      "头痛具体位置（前额/太阳穴/后脑勺等）？"
+    ],
+    "limitations": [
+      "完整解释未通过有限检查，仅保留经过单独检查的追问。"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"头痛可能由外感风寒引起，需确认诱因及伴随症状\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"昨天头痛\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有恶寒发热、鼻塞流涕等外感症状\",\n        \"头痛部位（前额/巅顶/两侧）及性质（胀痛/刺痛/跳痛）\"\n      ]\n    },\n    {\n      \"hypothesis\": \"头痛可能与肝阳上亢相关，需排除高血压病史\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"头痛\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有血压升高史或情绪波动诱发因素\",\n        \"头痛发作时间规律（晨起/午后/夜间）\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"头痛是否伴随恶心呕吐？\",\n    \"疼痛是否向颈部放射？\"\n  ],\n  \"limitations\": [\n    \"无法获取舌脉体征等四诊信息\",\n    \"缺乏既往病史和用药记录\"\n  ]\n}\n```",
+        "latency_sec": 15.5,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"昨天头痛，今天已经缓解\", \"S2\": \"没有头晕\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"昨天头痛，今天已经缓解\", \"clauses\": [{\"text\": \"昨天头痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"headache\", \"polarity\": \"resolved\", \"evidence\": {\"text\": \"头痛\", \"start\": 2, \"end\": 4}, \"state_evidence\": {\"text\": \"今天已经缓解\", \"start\": 5, \"end\": 11}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": [{\"text\": \"昨天\", \"start\": 0, \"end\": 2}]}}, {\"text\": \"今天已经缓解\", \"start\": 5, \"end\": 11, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": [{\"text\": \"今天\", \"start\": 5, \"end\": 7}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"没有头晕\", \"clauses\": [{\"text\": \"没有头晕\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"dizziness\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"头晕\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "头痛可能由外感风寒引起，需确认诱因及伴随症状",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "昨天头痛"
+              }
+            ],
+            "missing_info": [
+              "是否有恶寒发热、鼻塞流涕等外感症状",
+              "头痛部位（前额/巅顶/两侧）及性质（胀痛/刺痛/跳痛）"
+            ]
+          },
+          {
+            "hypothesis": "头痛可能与肝阳上亢相关，需排除高血压病史",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "头痛"
+              }
+            ],
+            "missing_info": [
+              "是否有血压升高史或情绪波动诱发因素",
+              "头痛发作时间规律（晨起/午后/夜间）"
+            ]
+          }
+        ],
+        "questions": [
+          "头痛是否伴随恶心呕吐？",
+          "疼痛是否向颈部放射？"
+        ],
+        "limitations": [
+          "无法获取舌脉体征等四诊信息",
+          "缺乏既往病史和用药记录"
+        ]
+      },
+      "reasons": [
+        "inactive_symptom_used_as_positive_basis"
+      ]
+    },
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"需确认头痛性质及诱因\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"昨天头痛，今天已经缓解\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有明确诱因（如压力、饮食、睡眠）？\",\n        \"头痛具体位置（前额/太阳穴/后脑勺等）？\"\n      ]\n    },\n    {\n      \"hypothesis\": \"需排除紧张性头痛可能性\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"昨天头痛，今天已经缓解\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否伴随肌肉僵硬感？\",\n        \"是否与特定姿势相关？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"是否有明确诱因（如压力、饮食、睡眠）？\",\n    \"头痛具体位置（前额/太阳穴/后脑勺等）？\"\n  ],\n  \"limitations\": [\n    \"无法确认头痛是否为首次发作\",\n    \"缺乏疼痛程度量化描述\"\n  ]\n}\n```",
+        "latency_sec": 14.8,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"昨天头痛，今天已经缓解\", \"S2\": \"没有头晕\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"昨天头痛，今天已经缓解\", \"clauses\": [{\"text\": \"昨天头痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"headache\", \"polarity\": \"resolved\", \"evidence\": {\"text\": \"头痛\", \"start\": 2, \"end\": 4}, \"state_evidence\": {\"text\": \"今天已经缓解\", \"start\": 5, \"end\": 11}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": [{\"text\": \"昨天\", \"start\": 0, \"end\": 2}]}}, {\"text\": \"今天已经缓解\", \"start\": 5, \"end\": 11, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": [{\"text\": \"今天\", \"start\": 5, \"end\": 7}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"没有头晕\", \"clauses\": [{\"text\": \"没有头晕\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"dizziness\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"头晕\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。\n上次未通过有限检查，原因：[\"inactive_symptom_used_as_positive_basis\"]。请重新输出完整JSON，纠正上述问题。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "需确认头痛性质及诱因",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "昨天头痛，今天已经缓解"
+              }
+            ],
+            "missing_info": [
+              "是否有明确诱因（如压力、饮食、睡眠）？",
+              "头痛具体位置（前额/太阳穴/后脑勺等）？"
+            ]
+          },
+          {
+            "hypothesis": "需排除紧张性头痛可能性",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "昨天头痛，今天已经缓解"
+              }
+            ],
+            "missing_info": [
+              "是否伴随肌肉僵硬感？",
+              "是否与特定姿势相关？"
+            ]
+          }
+        ],
+        "questions": [
+          "是否有明确诱因（如压力、饮食、睡眠）？",
+          "头痛具体位置（前额/太阳穴/后脑勺等）？"
+        ],
+        "limitations": [
+          "无法确认头痛是否为首次发作",
+          "缺乏疼痛程度量化描述"
+        ]
+      },
+      "reasons": [
+        "inactive_symptom_used_as_positive_basis"
+      ]
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "questions_only_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 2,
+  "model_latency_sec": 30.3,
+  "case_id": "t03",
+  "arm": "enhanced",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  }
+}

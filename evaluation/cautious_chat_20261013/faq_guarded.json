@@ -1,0 +1,17 @@
+{
+  "id": "faq",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "0846bb94-1996-4587-afed-e9badabb5640",
+      "answer": "可以先提供：主要不适、开始时间、严重程度、出现频率、诱因及缓解因素，再补充既往病史、用药和已有检查结果。不确定的信息可以直接说不清楚。",
+      "latency_sec": 0.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "informational",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    }
+  ],
+  "functional_check_passed": true
+}

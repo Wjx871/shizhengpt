@@ -1,0 +1,182 @@
+[
+  {
+    "id": "t01",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "三天来轻微疲劳，休息后减轻",
+      "睡眠良好",
+      "没有发热"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "严重疲劳",
+      "睡眠质量一般",
+      "睡眠质量差"
+    ]
+  },
+  {
+    "id": "t02",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "睡眠质量一般",
+      "偶有手足凉",
+      "没有入睡困难"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "睡眠质量差",
+      "长期手足凉"
+    ]
+  },
+  {
+    "id": "t03",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "昨天头痛，今天已经缓解",
+      "没有头晕"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "头痛持续多久",
+      "持续头痛"
+    ]
+  },
+  {
+    "id": "t04",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "近十天有时食欲下降，并非每天都有",
+      "没有腹痛"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "长期食欲下降",
+      "严重食欲下降"
+    ]
+  },
+  {
+    "id": "t05",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "四天来偶尔饭后腹胀，排气后减轻",
+      "没有恶心和呕吐",
+      "食欲正常"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "持续腹胀",
+      "长期腹胀"
+    ]
+  },
+  {
+    "id": "t06",
+    "kind": "text_regression_variant",
+    "symptoms": [
+      "没有发热但有时咳嗽",
+      "睡眠正常"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "发热持续多久",
+      "睡眠质量差"
+    ]
+  },
+  {
+    "id": "v01",
+    "kind": "known_visual_regression",
+    "symptoms": [],
+    "image": "evaluation/images/face/public_astronaut.png",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": []
+  },
+  {
+    "id": "v02",
+    "kind": "known_visual_regression",
+    "symptoms": [],
+    "image": "evaluation/images/face/astronaut_original.png",
+    "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa",
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": []
+  },
+  {
+    "id": "v03",
+    "kind": "known_visual_regression",
+    "symptoms": [],
+    "image": "evaluation/images/face/5467.jpg",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c",
+    "expected_visual_status": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": []
+  },
+  {
+    "id": "v04",
+    "kind": "known_visual_regression",
+    "symptoms": [],
+    "image": "evaluation/images/face/astronaut_blue.png",
+    "image_sha256": "c5ae574f597fa73597496427b8902cf5b66b2f5e97d25c9ef8ef8bee10f96d51",
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": []
+  },
+  {
+    "id": "m01",
+    "kind": "fusion_regression_variant",
+    "symptoms": [
+      "睡眠质量一般",
+      "偶有手足凉",
+      "没有入睡困难"
+    ],
+    "image": "evaluation/images/face/public_astronaut.png",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": [
+      "睡眠质量差",
+      "长期手足凉"
+    ]
+  },
+  {
+    "id": "m02",
+    "kind": "fusion_regression_variant",
+    "symptoms": [
+      "四天来偶尔饭后腹胀，排气后减轻",
+      "没有恶心和呕吐",
+      "食欲正常"
+    ],
+    "image": "evaluation/images/face/5467.jpg",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c",
+    "expected_visual_status": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible"
+    },
+    "reference_provenance": "prior_non_clinician_direct_visual_review",
+    "rubric_forbidden_phrases": [
+      "持续腹胀",
+      "长期腹胀"
+    ]
+  }
+]

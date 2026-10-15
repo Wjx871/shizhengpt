@@ -1,0 +1,40 @@
+{
+  "raw_output": "{\"image_type\":\"diagram\",\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"unknown\"},\"clinical_inference\":[]}",
+  "latency_sec": 2.5839311690069735,
+  "preprocess_sec": 0.028503965120762587,
+  "generation_sec": 2.5545190069824457,
+  "output_tokens": 36,
+  "tokens_per_sec": 14.092672593783282,
+  "peak_memory": 17010155520,
+  "peak_reserved_bytes": 17567842304,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 521,
+  "image_grid_thw": [
+    [
+      1,
+      38,
+      40
+    ]
+  ],
+  "truncated": false,
+  "prompt": "只检查图片事实，不做诊断，不推断职业、年龄、性别或健康。输出JSON：image_type为photo/diagram/other；visual_status包含eyes/nose/mouth（visible/not_visible/unknown）与headgear_worn（yes/no/unknown）；clinical_inference为字符串列表，必须为空。visible表示在图内，not_visible表示不在图内，unknown表示无法判断。示意图不是真人病征。",
+  "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/5209.jpg",
+  "image_sha256": "fb1bc3a4c3b5fe8eae288c5db9be15c7dc1cd81a2176e9cc7625f3ec1573d99b",
+  "case_id": "test_v_diagram",
+  "arm": "lora",
+  "task": "vision",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

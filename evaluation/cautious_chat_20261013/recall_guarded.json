@@ -1,0 +1,27 @@
+{
+  "id": "recall",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "15cfc33d-9b13-426c-b6a5-a47c478c7aff",
+      "answer": "已记录你提供的编号：石榴52。",
+      "latency_sec": 0.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "source_recall",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    },
+    {
+      "session_id": "15cfc33d-9b13-426c-b6a5-a47c478c7aff",
+      "answer": "你提供的编号是：石榴52。",
+      "latency_sec": 0.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "source_recall",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    }
+  ],
+  "functional_check_passed": true
+}

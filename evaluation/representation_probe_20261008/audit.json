@@ -1,0 +1,69 @@
+{
+  "conditions": 16,
+  "model_inferences": 16,
+  "clinical_accuracy_measured": false,
+  "description_source": "assistant visual review, not doctor",
+  "arms": {
+    "image_basic": {
+      "conditions": 4,
+      "json_parse_ok": 4,
+      "schema_ok": 4,
+      "symptoms_exact": 4,
+      "history_exact": 4,
+      "nonmedical_visual_items_matched": 5,
+      "nonmedical_visual_items_total": 16,
+      "used_history_id_cases": 0,
+      "unsupported_visual_assertions": 2,
+      "abstentions_on_known_visual_items": 9,
+      "invalid_basis_id_cases": 0,
+      "truncated": 0,
+      "total_model_latency_sec": 59.64
+    },
+    "description_basic": {
+      "conditions": 4,
+      "json_parse_ok": 4,
+      "schema_ok": 4,
+      "symptoms_exact": 4,
+      "history_exact": 4,
+      "nonmedical_visual_items_matched": 12,
+      "nonmedical_visual_items_total": 16,
+      "used_history_id_cases": 0,
+      "unsupported_visual_assertions": 0,
+      "abstentions_on_known_visual_items": 4,
+      "invalid_basis_id_cases": 0,
+      "truncated": 0,
+      "total_model_latency_sec": 63.66
+    },
+    "description_expanded": {
+      "conditions": 4,
+      "json_parse_ok": 4,
+      "schema_ok": 4,
+      "symptoms_exact": 4,
+      "history_exact": 1,
+      "nonmedical_visual_items_matched": 12,
+      "nonmedical_visual_items_total": 16,
+      "used_history_id_cases": 2,
+      "unsupported_visual_assertions": 0,
+      "abstentions_on_known_visual_items": 4,
+      "invalid_basis_id_cases": 0,
+      "truncated": 0,
+      "total_model_latency_sec": 78.59
+    },
+    "image_expanded": {
+      "conditions": 4,
+      "json_parse_ok": 4,
+      "schema_ok": 4,
+      "symptoms_exact": 4,
+      "history_exact": 1,
+      "nonmedical_visual_items_matched": 10,
+      "nonmedical_visual_items_total": 16,
+      "used_history_id_cases": 0,
+      "unsupported_visual_assertions": 2,
+      "abstentions_on_known_visual_items": 4,
+      "invalid_basis_id_cases": 0,
+      "truncated": 0,
+      "total_model_latency_sec": 57.86
+    }
+  },
+  "interpretation": "Visibility/headgear checks are nonmedical engineering labels. Description arms disclose these facts, so higher agreement does not establish diagnostic accuracy or independent visual generalization."
+}

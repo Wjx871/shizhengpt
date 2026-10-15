@@ -1,0 +1,23 @@
+{
+  "model_inferences": 16,
+  "elapsed_sec": 259.7933416366577,
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "source_sha256": {
+    "evaluate_representation_probe.py": "0f68b18d0b52cce02a0050abc579f684428b9f0fb15af98238dc0032525d1d87",
+    "infer_image.py": "7a9b07d2eb27b91c1544dfa58aeebe573d96d62dee23e8cbf4cae9d8dc60f9a2"
+  },
+  "model_load_sec": 5.231447099708021,
+  "conditions": 16,
+  "all_single_call": true,
+  "no_retries": true,
+  "no_guarded_wrapper": true
+}

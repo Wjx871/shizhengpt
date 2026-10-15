@@ -1,0 +1,135 @@
+{
+  "reviewer": "assistant engineering review, not clinician",
+  "clinical_accuracy_not_rated": true,
+  "notes": [
+    {
+      "case_id": "p01_full",
+      "arm": "description_basic",
+      "issue": "sleep_severity_rewritten_in_analysis_or_question",
+      "source": "睡眠质量一般",
+      "evidence": [
+        "睡眠质量差具体表现为入睡困难还是易醒多梦？"
+      ]
+    },
+    {
+      "case_id": "p01_full",
+      "arm": "description_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p01_full",
+      "arm": "image_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p02_crop",
+      "arm": "image_basic",
+      "issue": "sleep_severity_rewritten_in_analysis_or_question",
+      "source": "睡眠质量一般",
+      "evidence": [
+        "睡眠质量差是否表现为入睡困难或易醒？"
+      ]
+    },
+    {
+      "case_id": "p02_crop",
+      "arm": "description_basic",
+      "issue": "sleep_severity_rewritten_in_analysis_or_question",
+      "source": "睡眠质量一般",
+      "evidence": [
+        "睡眠质量差具体表现为入睡困难还是易醒多梦？"
+      ]
+    },
+    {
+      "case_id": "p02_crop",
+      "arm": "description_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p02_crop",
+      "arm": "image_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p04_blue",
+      "arm": "image_basic",
+      "issue": "sleep_severity_rewritten_in_analysis_or_question",
+      "source": "睡眠质量一般",
+      "evidence": [
+        "睡眠质量差是否表现为入睡困难或易醒？"
+      ]
+    },
+    {
+      "case_id": "p04_blue",
+      "arm": "description_expanded",
+      "issue": "sleep_severity_rewritten_in_analysis_or_question",
+      "source": "睡眠质量一般",
+      "evidence": [
+        "睡眠质量差可能影响气血生化"
+      ]
+    },
+    {
+      "case_id": "p04_blue",
+      "arm": "description_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p04_blue",
+      "arm": "image_expanded",
+      "issue": "history_omission_not_symptom_invention",
+      "evidence": [
+        "未提供既往病史、用药史、舌象、脉象或检查结果"
+      ]
+    },
+    {
+      "case_id": "p01_full",
+      "arm": "description_basic",
+      "issue": "unsupported_text_derived_visual_assertion",
+      "source": "描述未提供头发长度；原图中头发未及肩",
+      "evidence": [
+        "头发长度及肩，颜色正常。"
+      ]
+    },
+    {
+      "case_id": "p02_crop",
+      "arm": "description_expanded",
+      "issue": "unsupported_chronic_duration",
+      "source": "最近每晚约睡6小时，有时熬夜；这些不适约一周",
+      "evidence": [
+        "长期熬夜耗伤阴血，可能导致虚热内生，影响睡眠质量。"
+      ]
+    },
+    {
+      "case_id": "p04_blue",
+      "arm": "description_expanded",
+      "issue": "basis_content_mismatch",
+      "source": "S2是手脚较凉；S3才是睡眠质量一般",
+      "evidence": [
+        "basis_ids=[S2]: 睡眠质量差可能影响气血生化"
+      ]
+    },
+    {
+      "case_id": "p03_partial",
+      "arm": "description_expanded",
+      "issue": "basis_content_mismatch",
+      "source": "I1是餐后腹胀及排气后减轻；I4才提到吃饭较快",
+      "evidence": [
+        "basis_ids=[I1]: 腹胀与进食过快导致消化不良相关，需进一步确认是否存在吞气症或胃动力障碍"
+      ]
+    }
+  ]
+}

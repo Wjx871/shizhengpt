@@ -1,0 +1,9 @@
+{
+  "conditions": 9,
+  "guarded_functional_checks_passed": 9,
+  "raw_chat_requests": 11,
+  "guarded_model_invocations": 4,
+  "guarded_photo_detail_abstentions": 3,
+  "clear_image_detail_capability_withheld": true,
+  "no_claim_of_zero_hallucination_or_diagnostic_accuracy": true
+}

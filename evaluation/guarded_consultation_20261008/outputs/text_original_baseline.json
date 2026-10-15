@@ -1,0 +1,34 @@
+{
+  "raw_output": "**【用户自述】**  \n1. 易疲劳  \n2. 手脚凉  \n3. 睡眠质量差  \n4. 偶尔食欲不佳  \n\n---\n\n**【可能的解释】**  \n1. **阳气不足（脾肾阳虚）**：阳气推动力弱则易疲劳；四肢失于温煦故手脚凉；阳虚不助心神则睡眠浅。  \n2. **气血两虚**：气血不能濡养脏腑，导致乏力、睡眠差；血虚不荣则食欲减退。  \n3. **寒湿内阻**：阳气被寒湿困遏，加重四肢不温及消化功能减弱。  \n\n---\n\n**【仍需询问的问题】**  \n1. 是否怕冷？白天/夜间更明显？  \n2. 有无腰膝酸软、夜尿频多？  \n3. 大便是否稀溏？小便颜色？  \n4. 舌苔颜色（白/黄）、厚薄？  \n5. 近期情绪压力变化？  \n\n---\n\n**【不确定性】**  \n1 阳虚与气血虚的鉴别（需结合舌脉）。  \n2 寒湿与阳虚并存的可能性。  \n3 情绪因素对脾胃的影响程度。",
+  "latency_sec": 15.469732335302979,
+  "preprocess_sec": 0.003990492317825556,
+  "generation_sec": 15.460662161931396,
+  "output_tokens": 276,
+  "tokens_per_sec": 17.851758036573074,
+  "peak_memory": 16614251008,
+  "peak_reserved_bytes": 16911433728,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 109,
+  "image_grid_thw": null,
+  "truncated": false,
+  "prompt": "用户明确提供：最近容易疲劳，手脚较凉，睡眠质量一般，偶尔食欲不佳。请从中医角度进行初步分析，区分【用户自述】【可能的解释】【仍需询问的问题】【不确定性】。不要编造其他症状，不要直接确诊或自行给药。请简洁回答。",
+  "image_path": "",
+  "image_sha256": null,
+  "status": "ok",
+  "case_id": "text_original",
+  "arm": "baseline",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

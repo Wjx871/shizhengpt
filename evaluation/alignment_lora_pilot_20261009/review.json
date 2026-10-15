@@ -1,0 +1,2504 @@
+[
+  {
+    "id": "test_v_eye",
+    "task": "vision",
+    "arm": "base",
+    "gold": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "unknown",
+        "mouth": "unknown"
+      },
+      "headgear_worn": "no",
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"image_type\": \"photo\",\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\"\n  },\n  \"headgear_worn\": \"no\",\n  \"clinical_inference\": []\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 3,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 1,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_eye",
+      "task": "vision",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 62,
+      "latency_sec": 8.32545954035595
+    }
+  },
+  {
+    "id": "test_v_eye",
+    "task": "vision",
+    "arm": "lora",
+    "gold": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "{\"image_type\":\"photo\",\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"not_visible\",\"mouth\":\"not_visible\",\"headgear_worn\":\"unknown\"},\"clinical_inference\":[]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 6,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_eye",
+      "task": "vision",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 37,
+      "latency_sec": 2.602408575359732
+    }
+  },
+  {
+    "id": "test_v_diagram",
+    "task": "vision",
+    "arm": "base",
+    "gold": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "no"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"image_type\": \"diagram\",\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"no\"\n  },\n  \"clinical_inference\": []\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 5,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 1,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_diagram",
+      "task": "vision",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 63,
+      "latency_sec": 4.001190558075905
+    }
+  },
+  {
+    "id": "test_v_diagram",
+    "task": "vision",
+    "arm": "lora",
+    "gold": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "{\"image_type\":\"diagram\",\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"unknown\"},\"clinical_inference\":[]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 6,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_diagram",
+      "task": "vision",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 36,
+      "latency_sec": 2.5839311690069735
+    }
+  },
+  {
+    "id": "test_v_eye_reworded",
+    "task": "vision",
+    "arm": "base",
+    "gold": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "unknown",
+        "mouth": "unknown"
+      },
+      "headgear_worn": "no",
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"image_type\": \"photo\",\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\"\n  },\n  \"headgear_worn\": \"no\",\n  \"clinical_inference\": []\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 3,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 1,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_eye_reworded",
+      "task": "vision",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 62,
+      "latency_sec": 3.899592666886747
+    }
+  },
+  {
+    "id": "test_v_eye_reworded",
+    "task": "vision",
+    "arm": "lora",
+    "gold": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "photo",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "{\"image_type\":\"photo\",\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"unknown\",\"mouth\":\"unknown\",\"headgear_worn\":\"unknown\"},\"clinical_inference\":[]}",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 4,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_eye_reworded",
+      "task": "vision",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 35,
+      "latency_sec": 2.479267920833081
+    }
+  },
+  {
+    "id": "test_v_diagram_reworded",
+    "task": "vision",
+    "arm": "base",
+    "gold": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "no"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"image_type\": \"diagram\",\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"no\"\n  },\n  \"clinical_inference\": []\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 5,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 1,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_diagram_reworded",
+      "task": "vision",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 63,
+      "latency_sec": 3.9750341810286045
+    }
+  },
+  {
+    "id": "test_v_diagram_reworded",
+    "task": "vision",
+    "arm": "lora",
+    "gold": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "output": {
+      "image_type": "diagram",
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "clinical_inference": []
+    },
+    "parse_error": null,
+    "raw_output": "{\"image_type\":\"diagram\",\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"unknown\"},\"clinical_inference\":[]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 6,
+      "total_fields": 6,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_v_diagram_reworded",
+      "task": "vision",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 36,
+      "latency_sec": 2.569430857896805
+    }
+  },
+  {
+    "id": "test_s00",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "我的睡眠质量一般",
+          "polarity": "reported",
+          "severity": "一般",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近日有时头晕",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "近日"
+        },
+        {
+          "source_id": "S7",
+          "quote": "否认胸痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "S2",
+        "quote": "我的睡眠质量一般",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "I3",
+        "quote": "近日有时头晕",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "S7",
+        "quote": "否认胸痛",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"我的睡眠质量一般\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"I3\",\n    \"quote\": \"近日有时头晕\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"否认胸痛\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 13,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s00",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 179,
+      "latency_sec": 10.09182109311223
+    }
+  },
+  {
+    "id": "test_s00",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "我的睡眠质量一般",
+          "polarity": "reported",
+          "severity": "一般",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近日有时头晕",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "近日"
+        },
+        {
+          "source_id": "S7",
+          "quote": "否认胸痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "我的睡眠质量一般",
+          "polarity": "reported",
+          "severity": "一般",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近日有时头晕",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "近日"
+        },
+        {
+          "source_id": "S7",
+          "quote": "否认胸痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"S2\",\"quote\":\"我的睡眠质量一般\",\"polarity\":\"reported\",\"severity\":\"一般\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"},{\"source_id\":\"I3\",\"quote\":\"近日有时头晕\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"有时\",\"duration\":\"近日\"},{\"source_id\":\"S7\",\"quote\":\"否认胸痛\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 18,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s00",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 105,
+      "latency_sec": 6.276235604658723
+    }
+  },
+  {
+    "id": "test_c00",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "我的睡眠质量一般",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "我的睡眠质量一般"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "睡眠质量差",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "睡眠质量一般"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"睡眠质量差\",\n  \"basis\": [\n    {\n      \"source_id\": \"I3\",\n      \"quote\": \"睡眠质量一般\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 1,
+      "total_fields": 3,
+      "quote_exact": 0,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c00",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 47,
+      "latency_sec": 2.6643466143868864
+    }
+  },
+  {
+    "id": "test_c00",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "我的睡眠质量一般",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "我的睡眠质量一般"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "近日有时头晕",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近日有时头晕"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"近日有时头晕\",\"basis\":[{\"source_id\":\"S2\",\"quote\":\"近日有时头晕\"}]}",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 0,
+      "total_fields": 3,
+      "quote_exact": 0,
+      "quote_total": 1,
+      "source_ids_exact": 0,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c00",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 25,
+      "latency_sec": 1.5157338650897145
+    }
+  },
+  {
+    "id": "test_s01",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S7",
+          "quote": "近三天睡眠还行",
+          "polarity": "reported",
+          "severity": "还行",
+          "frequency": "not_stated",
+          "duration": "近三天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有咳嗽",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S2",
+          "quote": "偶有食欲下降",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶有",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "S7",
+        "quote": "近三天睡眠还行",
+        "polarity": "improved",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "近三天"
+      },
+      {
+        "source_id": "I1",
+        "quote": "没有咳嗽",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "S2",
+        "quote": "偶有食欲下降",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "偶有",
+        "duration": "not_stated"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"近三天睡眠还行\",\n    \"polarity\": \"improved\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"近三天\"\n  },\n  {\n    \"source_id\": \"I1\",\n    \"quote\": \"没有咳嗽\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"偶有食欲下降\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"偶有\",\n    \"duration\": \"not_stated\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 14,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 2,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s01",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 179,
+      "latency_sec": 10.083399839233607
+    }
+  },
+  {
+    "id": "test_s01",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S7",
+          "quote": "近三天睡眠还行",
+          "polarity": "reported",
+          "severity": "还行",
+          "frequency": "not_stated",
+          "duration": "近三天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有咳嗽",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S2",
+          "quote": "偶有食欲下降",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶有",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "S7",
+          "quote": "近三天睡眠还行",
+          "polarity": "reported",
+          "severity": "还行",
+          "frequency": "not_stated",
+          "duration": "近三天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有咳嗽",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S2",
+          "quote": "偶有食欲下降",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶有",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"S7\",\"quote\":\"近三天睡眠还行\",\"polarity\":\"reported\",\"severity\":\"还行\",\"frequency\":\"not_stated\",\"duration\":\"近三天\"},{\"source_id\":\"I3\",\"quote\":\"没有咳嗽\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"},{\"source_id\":\"S2\",\"quote\":\"偶有食欲下降\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"偶有\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 18,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s01",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 109,
+      "latency_sec": 6.503903978038579
+    }
+  },
+  {
+    "id": "test_c01",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "近三天睡眠还行",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近三天睡眠还行"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "长期严重失眠",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近三天睡眠还行"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"长期严重失眠\",\n  \"basis\": [\n    {\n      \"source_id\": \"S2\",\n      \"quote\": \"近三天睡眠还行\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 2,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c01",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 49,
+      "latency_sec": 2.778250148985535
+    }
+  },
+  {
+    "id": "test_c01",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "近三天睡眠还行",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近三天睡眠还行"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "近三天睡眠还行",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近三天睡眠还行"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"近三天睡眠还行\",\"basis\":[{\"source_id\":\"S2\",\"quote\":\"近三天睡眠还行\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c01",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 29,
+      "latency_sec": 1.7550740530714393
+    }
+  },
+  {
+    "id": "test_s02",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "昨晚睡得不错",
+          "polarity": "reported",
+          "severity": "不错",
+          "frequency": "not_stated",
+          "duration": "昨晚"
+        },
+        {
+          "source_id": "I3",
+          "quote": "偶尔手足凉",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "没有心慌",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "S2",
+        "quote": "昨晚睡得不错",
+        "polarity": "improved",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "I1",
+        "quote": "偶尔手足凉",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "偶尔",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "S7",
+        "quote": "没有心慌",
+        "polarity": "improved",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"昨晚睡得不错\",\n    \"polarity\": \"improved\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"I1\",\n    \"quote\": \"偶尔手足凉\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"偶尔\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"没有心慌\",\n    \"polarity\": \"improved\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 12,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 2,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s02",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 180,
+      "latency_sec": 10.14363972004503
+    }
+  },
+  {
+    "id": "test_s02",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "昨晚睡得不错",
+          "polarity": "reported",
+          "severity": "不错",
+          "frequency": "not_stated",
+          "duration": "昨晚"
+        },
+        {
+          "source_id": "I3",
+          "quote": "偶尔手足凉",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "没有心慌",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "昨晚睡得不错",
+          "polarity": "reported",
+          "severity": "不错",
+          "frequency": "not_stated",
+          "duration": "昨晚"
+        },
+        {
+          "source_id": "I3",
+          "quote": "偶尔手足凉",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "没有心慌",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"S2\",\"quote\":\"昨晚睡得不错\",\"polarity\":\"reported\",\"severity\":\"不错\",\"frequency\":\"not_stated\",\"duration\":\"昨晚\"},{\"source_id\":\"I3\",\"quote\":\"偶尔手足凉\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"偶尔\",\"duration\":\"not_stated\"},{\"source_id\":\"S7\",\"quote\":\"没有心慌\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 18,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s02",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 106,
+      "latency_sec": 6.331604623701423
+    }
+  },
+  {
+    "id": "test_c02",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "昨晚睡得不错",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "昨晚睡得不错"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "偶尔手足凉",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "偶尔手足凉"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"偶尔手足凉\",\n  \"basis\": [\n    {\n      \"source_id\": \"S2\",\n      \"quote\": \"偶尔手足凉\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 0,
+      "total_fields": 3,
+      "quote_exact": 0,
+      "quote_total": 1,
+      "source_ids_exact": 0,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c02",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 49,
+      "latency_sec": 2.7737665278837085
+    }
+  },
+  {
+    "id": "test_c02",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "昨晚睡得不错",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "昨晚睡得不错"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "昨晚睡得不错",
+      "basis": [
+        {
+          "source_id": "I3",
+          "quote": "昨晚睡得不错"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"昨晚睡得不错\",\"basis\":[{\"source_id\":\"I3\",\"quote\":\"昨晚睡得不错\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c02",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 27,
+      "latency_sec": 1.6348446002230048
+    }
+  },
+  {
+    "id": "test_s03",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "I3",
+          "quote": "近一周轻微乏力",
+          "polarity": "reported",
+          "severity": "轻微",
+          "frequency": "not_stated",
+          "duration": "近一周"
+        },
+        {
+          "source_id": "S7",
+          "quote": "昨日头痛，今天已经好转",
+          "polarity": "improved",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "昨日"
+        },
+        {
+          "source_id": "S2",
+          "quote": "否认发烧",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "I3",
+        "quote": "近一周轻微乏力",
+        "polarity": "negative",
+        "severity": "轻微",
+        "frequency": "近一周",
+        "duration": "持续"
+      },
+      {
+        "source_id": "S7",
+        "quote": "昨日头痛，今天已经好转",
+        "polarity": "improved",
+        "severity": "头痛",
+        "frequency": "昨日",
+        "duration": "一天"
+      },
+      {
+        "source_id": "S2",
+        "quote": "否认发烧",
+        "polarity": "negative",
+        "severity": "发烧",
+        "frequency": "未说明",
+        "duration": "未说明"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"I3\",\n    \"quote\": \"近一周轻微乏力\",\n    \"polarity\": \"negative\",\n    \"severity\": \"轻微\",\n    \"frequency\": \"近一周\",\n    \"duration\": \"持续\"\n  },\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"昨日头痛，今天已经好转\",\n    \"polarity\": \"improved\",\n    \"severity\": \"头痛\",\n    \"frequency\": \"昨日\",\n    \"duration\": \"一天\"\n  },\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"否认发烧\",\n    \"polarity\": \"negative\",\n    \"severity\": \"发烧\",\n    \"frequency\": \"未说明\",\n    \"duration\": \"未说明\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 9,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s03",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 167,
+      "latency_sec": 9.408673614729196
+    }
+  },
+  {
+    "id": "test_s03",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "I3",
+          "quote": "近一周轻微乏力",
+          "polarity": "reported",
+          "severity": "轻微",
+          "frequency": "not_stated",
+          "duration": "近一周"
+        },
+        {
+          "source_id": "S7",
+          "quote": "昨日头痛，今天已经好转",
+          "polarity": "improved",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "昨日"
+        },
+        {
+          "source_id": "S2",
+          "quote": "否认发烧",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "I3",
+          "quote": "近一周轻微乏力",
+          "polarity": "reported",
+          "severity": "轻微",
+          "frequency": "not_stated",
+          "duration": "近一周"
+        },
+        {
+          "source_id": "S7",
+          "quote": "昨日头痛，今天已经好转",
+          "polarity": "improved",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "昨日"
+        },
+        {
+          "source_id": "S2",
+          "quote": "否认发烧",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"I3\",\"quote\":\"近一周轻微乏力\",\"polarity\":\"reported\",\"severity\":\"轻微\",\"frequency\":\"not_stated\",\"duration\":\"近一周\"},{\"source_id\":\"S7\",\"quote\":\"昨日头痛，今天已经好转\",\"polarity\":\"improved\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"昨日\"},{\"source_id\":\"S2\",\"quote\":\"否认发烧\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 18,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s03",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 109,
+      "latency_sec": 6.524031883105636
+    }
+  },
+  {
+    "id": "test_c03",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "近一周轻微乏力",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近一周轻微乏力"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "近一周轻微乏力",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近一周轻微乏力"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"近一周轻微乏力\",\n  \"basis\": [\n    {\n      \"source_id\": \"S2\",\n      \"quote\": \"近一周轻微乏力\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c03",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 49,
+      "latency_sec": 2.7773077017627656
+    }
+  },
+  {
+    "id": "test_c03",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "近一周轻微乏力",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近一周轻微乏力"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "近一周轻微乏力",
+      "basis": [
+        {
+          "source_id": "S2",
+          "quote": "近一周轻微乏力"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"近一周轻微乏力\",\"basis\":[{\"source_id\":\"S2\",\"quote\":\"近一周轻微乏力\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c03",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 27,
+      "latency_sec": 1.6376426592469215
+    }
+  },
+  {
+    "id": "test_s04",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "睡眠质量不好",
+          "polarity": "reported",
+          "severity": "不好",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近两天没有腹痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "近两天"
+        },
+        {
+          "source_id": "S7",
+          "quote": "有时恶心",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "S2",
+        "quote": "睡眠质量不好",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "I3",
+        "quote": "近两天没有腹痛",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "S7",
+        "quote": "有时恶心",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"睡眠质量不好\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"I3\",\n    \"quote\": \"近两天没有腹痛\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"有时恶心\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 13,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s04",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 179,
+      "latency_sec": 10.079735277220607
+    }
+  },
+  {
+    "id": "test_s04",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "睡眠质量不好",
+          "polarity": "reported",
+          "severity": "不好",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近两天没有腹痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "近两天"
+        },
+        {
+          "source_id": "S7",
+          "quote": "有时恶心",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "睡眠质量不好",
+          "polarity": "reported",
+          "severity": "不好",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "I3",
+          "quote": "近两天没有腹痛",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "近两天"
+        },
+        {
+          "source_id": "S7",
+          "quote": "有时恶心",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "有时",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"S2\",\"quote\":\"睡眠质量不好\",\"polarity\":\"reported\",\"severity\":\"不好\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"},{\"source_id\":\"I3\",\"quote\":\"近两天没有腹痛\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"近两天\"},{\"source_id\":\"S7\",\"quote\":\"有时恶心\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"有时\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 18,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s04",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 106,
+      "latency_sec": 6.3279099757783115
+    }
+  },
+  {
+    "id": "test_c04",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "睡眠质量不好",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "睡眠质量不好"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "睡眠质量不好",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "睡眠质量不好"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"睡眠质量不好\",\n  \"basis\": [\n    {\n      \"source_id\": \"S7\",\n      \"quote\": \"睡眠质量不好\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c04",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 47,
+      "latency_sec": 2.661246716044843
+    }
+  },
+  {
+    "id": "test_c04",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "睡眠质量不好",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "睡眠质量不好"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "睡眠质量不好",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "睡眠质量不好"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"睡眠质量不好\",\"basis\":[{\"source_id\":\"S7\",\"quote\":\"睡眠质量不好\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c04",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 25,
+      "latency_sec": 1.5154236550442874
+    }
+  },
+  {
+    "id": "test_s05",
+    "task": "symptoms",
+    "arm": "base",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "只有偶尔食欲不佳",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "这几天睡眠良好",
+          "polarity": "reported",
+          "severity": "良好",
+          "frequency": "not_stated",
+          "duration": "这几天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有呕吐",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": [
+      {
+        "source_id": "S2",
+        "quote": "只有偶尔食欲不佳",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "偶尔",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "S7",
+        "quote": "这几天睡眠良好",
+        "polarity": "improved",
+        "severity": "not_stated",
+        "frequency": "几天",
+        "duration": "not_stated"
+      },
+      {
+        "source_id": "I1",
+        "quote": "没有呕吐",
+        "polarity": "negative",
+        "severity": "not_stated",
+        "frequency": "not_stated",
+        "duration": "not_stated"
+      }
+    ],
+    "parse_error": null,
+    "raw_output": "```json\n[\n  {\n    \"source_id\": \"S2\",\n    \"quote\": \"只有偶尔食欲不佳\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"偶尔\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"S7\",\n    \"quote\": \"这几天睡眠良好\",\n    \"polarity\": \"improved\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"几天\",\n    \"duration\": \"not_stated\"\n  },\n  {\n    \"source_id\": \"I1\",\n    \"quote\": \"没有呕吐\",\n    \"polarity\": \"negative\",\n    \"severity\": \"not_stated\",\n    \"frequency\": \"not_stated\",\n    \"duration\": \"not_stated\"\n  }\n]\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 12,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 2,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s05",
+      "task": "symptoms",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 175,
+      "latency_sec": 9.855209078174084
+    }
+  },
+  {
+    "id": "test_s05",
+    "task": "symptoms",
+    "arm": "lora",
+    "gold": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "只有偶尔食欲不佳",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "这几天睡眠良好",
+          "polarity": "reported",
+          "severity": "良好",
+          "frequency": "not_stated",
+          "duration": "这几天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有呕吐",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "output": {
+      "facts": [
+        {
+          "source_id": "S2",
+          "quote": "只有偶尔食欲不佳",
+          "polarity": "reported",
+          "severity": "偶尔",
+          "frequency": "偶尔",
+          "duration": "not_stated"
+        },
+        {
+          "source_id": "S7",
+          "quote": "这几天睡眠良好",
+          "polarity": "reported",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "这几天"
+        },
+        {
+          "source_id": "I3",
+          "quote": "没有呕吐",
+          "polarity": "negative",
+          "severity": "not_stated",
+          "frequency": "not_stated",
+          "duration": "not_stated"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"facts\":[{\"source_id\":\"S2\",\"quote\":\"只有偶尔食欲不佳\",\"polarity\":\"reported\",\"severity\":\"偶尔\",\"frequency\":\"偶尔\",\"duration\":\"not_stated\"},{\"source_id\":\"S7\",\"quote\":\"这几天睡眠良好\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"这几天\"},{\"source_id\":\"I3\",\"quote\":\"没有呕吐\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"}]}",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 16,
+      "total_fields": 18,
+      "quote_exact": 3,
+      "quote_total": 3,
+      "source_ids_exact": 3,
+      "source_ids_total": 3,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_s05",
+      "task": "symptoms",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 104,
+      "latency_sec": 6.209926289971918
+    }
+  },
+  {
+    "id": "test_c05",
+    "task": "citation",
+    "arm": "base",
+    "gold": {
+      "corrected_claim": "只有偶尔食欲不佳",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "只有偶尔食欲不佳"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "偶尔食欲不佳",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "只有偶尔食欲不佳"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"corrected_claim\": \"偶尔食欲不佳\",\n  \"basis\": [\n    {\n      \"source_id\": \"S7\",\n      \"quote\": \"只有偶尔食欲不佳\"\n    }\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": false,
+      "matched_fields": 2,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c05",
+      "task": "citation",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 48,
+      "latency_sec": 2.7180217909626663
+    }
+  },
+  {
+    "id": "test_c05",
+    "task": "citation",
+    "arm": "lora",
+    "gold": {
+      "corrected_claim": "只有偶尔食欲不佳",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "只有偶尔食欲不佳"
+        }
+      ]
+    },
+    "output": {
+      "corrected_claim": "只有偶尔食欲不佳",
+      "basis": [
+        {
+          "source_id": "S7",
+          "quote": "只有偶尔食欲不佳"
+        }
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"corrected_claim\":\"只有偶尔食欲不佳\",\"basis\":[{\"source_id\":\"S7\",\"quote\":\"只有偶尔食欲不佳\"}]}",
+    "scores": {
+      "full_target_exact": true,
+      "matched_fields": 3,
+      "total_fields": 3,
+      "quote_exact": 1,
+      "quote_total": 1,
+      "source_ids_exact": 1,
+      "source_ids_total": 1,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": false,
+      "task_schema_ok": true,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "test_c05",
+      "task": "citation",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 27,
+      "latency_sec": 1.6339742890559137
+    }
+  },
+  {
+    "id": "p01_full_description_basic",
+    "task": "regression",
+    "arm": "base",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "人物微笑，表情自然。",
+        "头发长度及肩，颜色正常。"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1"
+          ],
+          "text": "疲劳可能与气虚或阳气不足相关，需结合其他症状判断"
+        },
+        {
+          "basis_ids": [
+            "S2"
+          ],
+          "text": "手足凉提示可能存在气血运行不畅或阳虚证候"
+        }
+      ],
+      "questions": [
+        "是否伴有头晕、气短等气虚表现？",
+        "睡眠质量差具体表现为入睡困难还是易醒多梦？"
+      ],
+      "limitations": [
+        "未提供舌象、脉象等关键诊断信息",
+        "缺乏季节、环境等外部因素影响"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"人物微笑，表情自然。\",\n    \"头发长度及肩，颜色正常。\"\n  ],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"text\": \"疲劳可能与气虚或阳气不足相关，需结合其他症状判断\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"text\": \"手足凉提示可能存在气血运行不畅或阳虚证候\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有头晕、气短等气虚表现？\",\n    \"睡眠质量差具体表现为入睡困难还是易醒多梦？\"\n  ],\n  \"limitations\": [\n    \"未提供舌象、脉象等关键诊断信息\",\n    \"缺乏季节、环境等外部因素影响\"\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [
+        "sleep_generally_to_poor"
+      ],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": true,
+      "questions_present": true,
+      "id": "p01_full_description_basic",
+      "task": "regression",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 254,
+      "latency_sec": 14.641790848691016
+    }
+  },
+  {
+    "id": "p01_full_description_basic",
+    "task": "regression",
+    "arm": "lora",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "no"
+      },
+      "visual_observations": [
+        "头部朝向画面前方，表情微笑"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [],
+      "limitations": [
+        "未提供补充问诊信息，无法判断头盔与症状关联性"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"no\"},\"visual_observations\":[\"头部朝向画面前方，表情微笑\"],\"user_symptoms\":[\"最近容易疲劳\",\"手脚较凉\",\"睡眠质量一般\",\"偶尔食欲不佳\"],\"additional_history\":[],\"possible_explanations\":[],\"questions\":[],\"limitations\":[\"未提供补充问诊信息，无法判断头盔与症状关联性\"]}",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "p01_full_description_basic",
+      "task": "regression",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 89,
+      "latency_sec": 5.4808569508604705
+    }
+  },
+  {
+    "id": "p02_crop_image_basic",
+    "task": "regression",
+    "arm": "base",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "unknown",
+        "mouth": "unknown",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "未提供面部细节描述，无法进行观察。",
+        "未提供背景信息，无法判断环境相关视觉线索。"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [
+        "是否伴随头晕、气短等气虚表现？",
+        "是否有畏寒、喜热饮等阳虚倾向？",
+        "睡眠质量差是否表现为入睡困难或易醒？"
+      ],
+      "limitations": [
+        "缺乏面部特征、舌象、脉象等关键诊断依据。",
+        "未提供补充问诊信息，无法结合更多信息分析。"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"unknown\",\n    \"mouth\": \"unknown\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"未提供面部细节描述，无法进行观察。\",\n    \"未提供背景信息，无法判断环境相关视觉线索。\"\n  ],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [],\n  \"questions\": [\n    \"是否伴随头晕、气短等气虚表现？\",\n    \"是否有畏寒、喜热饮等阳虚倾向？\",\n    \"睡眠质量差是否表现为入睡困难或易醒？\"\n  ],\n  \"limitations\": [\n    \"缺乏面部特征、舌象、脉象等关键诊断依据。\",\n    \"未提供补充问诊信息，无法结合更多信息分析。\"\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [
+        "sleep_generally_to_poor"
+      ],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": true,
+      "id": "p02_crop_image_basic",
+      "task": "regression",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 211,
+      "latency_sec": 12.176540385000408
+    }
+  },
+  {
+    "id": "p02_crop_image_basic",
+    "task": "regression",
+    "arm": "lora",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "浅色卷发发型"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [
+        "您提到的手脚较凉是否伴随冷感或麻木？",
+        "睡眠质量一般具体表现为入睡困难还是易醒？"
+      ],
+      "limitations": [
+        "未提供补充问诊信息以确认症状细节"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"unknown\"},\"visual_observations\":[\"浅色卷发发型\"],\"user_symptoms\":[\"最近容易疲劳\",\"手脚较凉\",\"睡眠质量一般\",\"偶尔食欲不佳\"],\"additional_history\":[],\"possible_explanations\":[],\"questions\":[\"您提到的手脚较凉是否伴随冷感或麻木？\",\"睡眠质量一般具体表现为入睡困难还是易醒？\"],\"limitations\":[\"未提供补充问诊信息以确认症状细节\"]}",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": true,
+      "id": "p02_crop_image_basic",
+      "task": "regression",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 106,
+      "latency_sec": 6.554393753875047
+    }
+  },
+  {
+    "id": "p03_partial_image_basic",
+    "task": "regression",
+    "arm": "base",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [
+        "耳周皮肤可见散在红色斑疹（箭头标注处）",
+        "局部皮肤稍显粗糙，无明显破溃或渗出"
+      ],
+      "user_symptoms": [
+        "最近一周偶有腹胀",
+        "没有恶心和呕吐",
+        "食欲尚可"
+      ],
+      "additional_history": [],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1"
+          ],
+          "text": "腹胀可能与消化功能紊乱相关，需结合舌脉进一步判断虚实"
+        }
+      ],
+      "questions": [
+        "腹胀是否与饮食相关？如进食油腻/生冷食物后加重？",
+        "是否有排便异常（便秘/腹泻）或排气增多现象？"
+      ],
+      "limitations": [
+        "无法通过静态图像判断舌象及脉象特征",
+        "耳部皮肤表现与腹胀的关联性需结合全身症状综合分析"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"unknown\"\n  },\n  \"visual_observations\": [\n    \"耳周皮肤可见散在红色斑疹（箭头标注处）\",\n    \"局部皮肤稍显粗糙，无明显破溃或渗出\"\n  ],\n  \"user_symptoms\": [\"最近一周偶有腹胀\", \"没有恶心和呕吐\", \"食欲尚可\"],\n  \"additional_history\": [],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"text\": \"腹胀可能与消化功能紊乱相关，需结合舌脉进一步判断虚实\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀是否与饮食相关？如进食油腻/生冷食物后加重？\",\n    \"是否有排便异常（便秘/腹泻）或排气增多现象？\"\n  ],\n  \"limitations\": [\n    \"无法通过静态图像判断舌象及脉象特征\",\n    \"耳部皮肤表现与腹胀的关联性需结合全身症状综合分析\"\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": true,
+      "questions_present": true,
+      "id": "p03_partial_image_basic",
+      "task": "regression",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 251,
+      "latency_sec": 14.772033126093447
+    }
+  },
+  {
+    "id": "p03_partial_image_basic",
+    "task": "regression",
+    "arm": "lora",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "not_visible",
+        "nose": "not_visible",
+        "mouth": "not_visible",
+        "headgear_worn": "unknown"
+      },
+      "visual_observations": [],
+      "user_symptoms": [
+        "最近一周偶有腹胀",
+        "没有恶心和呕吐",
+        "食欲尚可"
+      ],
+      "additional_history": [],
+      "possible_explanations": [],
+      "questions": [],
+      "limitations": [
+        "图像描述中未提及面部特征，无法判断口唇颜色、鼻部形态等关键信息"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"visual_status\":{\"eyes\":\"not_visible\",\"nose\":\"not_visible\",\"mouth\":\"not_visible\",\"headgear_worn\":\"unknown\"},\"visual_observations\":[],\"user_symptoms\":[\"最近一周偶有腹胀\",\"没有恶心和呕吐\",\"食欲尚可\"],\"additional_history\":[],\"possible_explanations\":[],\"questions\":[],\"limitations\":[\"图像描述中未提及面部特征，无法判断口唇颜色、鼻部形态等关键信息\"]}",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": false,
+      "id": "p03_partial_image_basic",
+      "task": "regression",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 89,
+      "latency_sec": 5.736326413694769
+    }
+  },
+  {
+    "id": "p04_blue_description_expanded",
+    "task": "regression",
+    "arm": "base",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "no"
+      },
+      "visual_observations": [
+        "静态头部裁剪图，细节分辨率有限，无法确认或排除细微皮肤异常。"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [
+        "这些不适约一周，工作忙时更明显",
+        "最近每晚约睡6小时，有时熬夜",
+        "没有发热、胸痛或心慌",
+        "休息后疲劳会减轻"
+      ],
+      "possible_explanations": [
+        {
+          "basis_ids": [
+            "S1",
+            "S2"
+          ],
+          "text": "疲劳与阳气不足相关，需结合舌脉进一步辨证"
+        },
+        {
+          "basis_ids": [
+            "S2"
+          ],
+          "text": "睡眠质量差可能影响气血生化"
+        }
+      ],
+      "questions": [
+        "是否伴有畏寒肢冷或夜间盗汗？",
+        "饮食偏好（如喜热饮/冷饮）及二便情况如何？",
+        "近期压力来源及情绪波动情况？"
+      ],
+      "limitations": [
+        "无法通过照片判断真实肤色及潜在皮肤问题",
+        "缺乏舌象、脉象及详细病史资料"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"no\"\n  },\n  \"visual_observations\": [\n    \"静态头部裁剪图，细节分辨率有限，无法确认或排除细微皮肤异常。\"\n  ],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [\"这些不适约一周，工作忙时更明显\", \"最近每晚约睡6小时，有时熬夜\", \"没有发热、胸痛或心慌\", \"休息后疲劳会减轻\"],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\", \"S2\"],\n      \"text\": \"疲劳与阳气不足相关，需结合舌脉进一步辨证\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"text\": \"睡眠质量差可能影响气血生化\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有畏寒肢冷或夜间盗汗？\",\n    \"饮食偏好（如喜热饮/冷饮）及二便情况如何？\",\n    \"近期压力来源及情绪波动情况？\"\n  ],\n  \"limitations\": [\n    \"无法通过照片判断真实肤色及潜在皮肤问题\",\n    \"缺乏舌象、脉象及详细病史资料\"\n  ]\n}\n```",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [
+        "sleep_generally_to_poor"
+      ],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": true,
+      "questions_present": true,
+      "id": "p04_blue_description_expanded",
+      "task": "regression",
+      "arm": "base",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 309,
+      "latency_sec": 17.867733320221305
+    }
+  },
+  {
+    "id": "p04_blue_description_expanded",
+    "task": "regression",
+    "arm": "lora",
+    "gold": null,
+    "output": {
+      "visual_status": {
+        "eyes": "visible",
+        "nose": "visible",
+        "mouth": "visible",
+        "headgear_worn": "no"
+      },
+      "visual_observations": [
+        "微笑表情",
+        "头发可见"
+      ],
+      "user_symptoms": [
+        "最近容易疲劳",
+        "手脚较凉",
+        "睡眠质量一般",
+        "偶尔食欲不佳"
+      ],
+      "additional_history": [
+        "这些不适约一周，工作忙时更明显",
+        "最近每晚约睡6小时，有时熬夜",
+        "没有发热、胸痛或心慌",
+        "休息后疲劳会减轻"
+      ],
+      "possible_explanations": [],
+      "questions": [
+        "是否有怕冷、喜热饮？",
+        "是否伴随头晕、气短？"
+      ],
+      "limitations": [
+        "肤色经偏蓝处理，无法判断真实肤色；微笑表情可能影响唇周观察"
+      ]
+    },
+    "parse_error": null,
+    "raw_output": "{\"visual_status\":{\"eyes\":\"visible\",\"nose\":\"visible\",\"mouth\":\"visible\",\"headgear_worn\":\"no\"},\"visual_observations\":[\"微笑表情\",\"头发可见\"],\"user_symptoms\":[\"最近容易疲劳\",\"手脚较凉\",\"睡眠质量一般\",\"偶尔食欲不佳\"],\"additional_history\":[\"这些不适约一周，工作忙时更明显\",\"最近每晚约睡6小时，有时熬夜\",\"没有发热、胸痛或心慌\",\"休息后疲劳会减轻\"],\"possible_explanations\":[],\"questions\":[\"是否有怕冷、喜热饮？\",\"是否伴随头晕、气短？\"],\"limitations\":[\"肤色经偏蓝处理，无法判断真实肤色；微笑表情可能影响唇周观察\"]}",
+    "scores": {
+      "full_target_exact": null,
+      "matched_fields": 0,
+      "total_fields": 0,
+      "quote_exact": 0,
+      "quote_total": 0,
+      "source_ids_exact": 0,
+      "source_ids_total": 0,
+      "visual_unsupported_assertions": 0,
+      "invalid_basis_ids": [],
+      "symptom_degree_risks": [],
+      "regression_schema_compatible": true,
+      "task_schema_ok": false,
+      "explanation_present": false,
+      "questions_present": true,
+      "id": "p04_blue_description_expanded",
+      "task": "regression",
+      "arm": "lora",
+      "json_parse_ok": true,
+      "truncated": false,
+      "output_tokens": 142,
+      "latency_sec": 8.737506581936032
+    }
+  }
+]

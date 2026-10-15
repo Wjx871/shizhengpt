@@ -1,0 +1,65 @@
+[
+  {
+    "id": "f01",
+    "symptoms": [
+      "最近四天有点疲乏，休息后能减轻",
+      "睡眠正常",
+      "没有咳嗽和发热"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "严重疲乏",
+      "睡眠质量差"
+    ],
+    "kind": "post_v4_forward_synthetic_proxy"
+  },
+  {
+    "id": "f02",
+    "symptoms": [
+      "前天头疼，现在已经缓解",
+      "今天有轻微乏力",
+      "没有心慌"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "头疼持续多久",
+      "严重乏力"
+    ],
+    "kind": "post_v4_forward_synthetic_proxy"
+  },
+  {
+    "id": "f03",
+    "symptoms": [
+      "近六天睡眠良好",
+      "偶尔午后轻微疲劳",
+      "食欲正常"
+    ],
+    "image": null,
+    "rubric_forbidden_phrases": [
+      "睡眠质量一般",
+      "睡眠质量差",
+      "严重疲劳"
+    ],
+    "kind": "post_v4_forward_synthetic_proxy"
+  },
+  {
+    "id": "f04",
+    "symptoms": [
+      "最近五天偶有腹胀",
+      "没有腹痛或发热",
+      "睡眠尚可"
+    ],
+    "image": "evaluation/images/face/5467.jpg",
+    "rubric_forbidden_phrases": [
+      "持续腹胀",
+      "睡眠质量差"
+    ],
+    "expected_visual_status": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible"
+    },
+    "kind": "post_v4_forward_synthetic_proxy",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c"
+  }
+]

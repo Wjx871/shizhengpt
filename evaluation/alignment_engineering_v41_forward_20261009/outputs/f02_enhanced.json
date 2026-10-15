@@ -1,0 +1,204 @@
+{
+  "symptoms_original": [
+    "前天头疼，现在已经缓解",
+    "今天有轻微乏力",
+    "没有心慌"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "气虚体质导致短暂乏力",
+        "evidence": [
+          {
+            "source_id": "S2",
+            "quote": "今天有轻微乏力"
+          }
+        ],
+        "missing_info": [
+          "是否容易疲劳、气短？",
+          "是否有食欲减退、便溏？"
+        ]
+      }
+    ],
+    "questions": [
+      "是否有鼻塞、流涕等感冒症状？",
+      "是否容易疲劳、气短？"
+    ],
+    "limitations": [
+      "完整候选未通过检查；此处仅保留逐项通过有限核对的内容，医学解释仍需复核。"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"近期外感风寒后余邪未清，导致轻微乏力\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"前天头疼，现在已经缓解\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有鼻塞、流涕等感冒症状？\",\n        \"头痛是否伴随畏风、怕冷？\"\n      ]\n    },\n    {\n      \"hypothesis\": \"气虚体质导致短暂乏力\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S2\",\n          \"quote\": \"今天有轻微乏力\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否容易疲劳、气短？\",\n        \"是否有食欲减退、便溏？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"是否有鼻塞、流涕等感冒症状？\",\n    \"是否容易疲劳、气短？\"\n  ],\n  \"limitations\": [\n    \"仅凭文字描述无法获取舌脉等体征信息\",\n    \"缺乏既往病史及家族史等关键背景\"\n  ]\n}\n```",
+        "latency_sec": 14.7,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"前天头疼，现在已经缓解\", \"S2\": \"今天有轻微乏力\", \"S3\": \"没有心慌\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"前天头疼，现在已经缓解\", \"clauses\": [{\"text\": \"前天头疼\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"headache\", \"polarity\": \"resolved\", \"evidence\": {\"text\": \"头疼\", \"start\": 2, \"end\": 4}, \"state_evidence\": {\"text\": \"现在已经缓解\", \"start\": 5, \"end\": 11}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}, {\"text\": \"现在已经缓解\", \"start\": 5, \"end\": 11, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"今天有轻微乏力\", \"clauses\": [{\"text\": \"今天有轻微乏力\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"乏力\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"今天\", \"start\": 0, \"end\": 2}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有心慌\", \"clauses\": [{\"text\": \"没有心慌\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"palpitations\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"心慌\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "近期外感风寒后余邪未清，导致轻微乏力",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "前天头疼，现在已经缓解"
+              }
+            ],
+            "missing_info": [
+              "是否有鼻塞、流涕等感冒症状？",
+              "头痛是否伴随畏风、怕冷？"
+            ]
+          },
+          {
+            "hypothesis": "气虚体质导致短暂乏力",
+            "evidence": [
+              {
+                "source_id": "S2",
+                "quote": "今天有轻微乏力"
+              }
+            ],
+            "missing_info": [
+              "是否容易疲劳、气短？",
+              "是否有食欲减退、便溏？"
+            ]
+          }
+        ],
+        "questions": [
+          "是否有鼻塞、流涕等感冒症状？",
+          "是否容易疲劳、气短？"
+        ],
+        "limitations": [
+          "仅凭文字描述无法获取舌脉等体征信息",
+          "缺乏既往病史及家族史等关键背景"
+        ]
+      },
+      "reasons": [
+        "inactive_symptom_used_as_positive_basis"
+      ]
+    },
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"头痛缓解后可能存在余邪未清或气血失调\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"前天头疼，现在已经缓解\"\n        }\n      ],\n      \"missing_info\": [\n        \"头痛具体部位（太阳穴/后脑/巅顶等）\",\n        \"头痛发作时伴随症状（恶心/畏光/耳鸣等）\"\n      ]\n    },\n    {\n      \"hypothesis\": \"轻微乏力需排除气虚或湿困可能\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S2\",\n          \"quote\": \"今天有轻微乏力\"\n        }\n      ],\n      \"missing_info\": [\n        \"乏力持续时间（晨起加重/全天持续）\",\n        \"是否伴有肢体沉重感\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"头痛是否在特定姿势下诱发？\",\n    \"乏力是否影响日常活动能力？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌脉体征等客观诊断依据\",\n    \"症状描述存在语义模糊性性\"\n  ]\n}\n```",
+        "latency_sec": 15.0,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"前天头疼，现在已经缓解\", \"S2\": \"今天有轻微乏力\", \"S3\": \"没有心慌\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"前天头疼，现在已经缓解\", \"clauses\": [{\"text\": \"前天头疼\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"headache\", \"polarity\": \"resolved\", \"evidence\": {\"text\": \"头疼\", \"start\": 2, \"end\": 4}, \"state_evidence\": {\"text\": \"现在已经缓解\", \"start\": 5, \"end\": 11}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}, {\"text\": \"现在已经缓解\", \"start\": 5, \"end\": 11, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"今天有轻微乏力\", \"clauses\": [{\"text\": \"今天有轻微乏力\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"乏力\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"今天\", \"start\": 0, \"end\": 2}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有心慌\", \"clauses\": [{\"text\": \"没有心慌\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"palpitations\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"心慌\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。\n上次未通过有限检查，原因：[\"inactive_symptom_used_as_positive_basis\"]。请重新输出完整JSON，纠正上述问题。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "头痛缓解后可能存在余邪未清或气血失调",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "前天头疼，现在已经缓解"
+              }
+            ],
+            "missing_info": [
+              "头痛具体部位（太阳穴/后脑/巅顶等）",
+              "头痛发作时伴随症状（恶心/畏光/耳鸣等）"
+            ]
+          },
+          {
+            "hypothesis": "轻微乏力需排除气虚或湿困可能",
+            "evidence": [
+              {
+                "source_id": "S2",
+                "quote": "今天有轻微乏力"
+              }
+            ],
+            "missing_info": [
+              "乏力持续时间（晨起加重/全天持续）",
+              "是否伴有肢体沉重感"
+            ]
+          }
+        ],
+        "questions": [
+          "头痛是否在特定姿势下诱发？",
+          "乏力是否影响日常活动能力？"
+        ],
+        "limitations": [
+          "缺乏舌脉体征等客观诊断依据",
+          "症状描述存在语义模糊性性"
+        ]
+      },
+      "reasons": [
+        "inactive_symptom_used_as_positive_basis"
+      ]
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "partial_checked_content_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 2,
+  "model_latency_sec": 29.7,
+  "workflow_version": "v4.1_independent_component_retention",
+  "component_checks": [
+    {
+      "attempt": 1,
+      "explanations": [
+        {
+          "item": 1,
+          "reasons": [
+            "inactive_symptom_used_as_positive_basis"
+          ]
+        },
+        {
+          "item": 2,
+          "reasons": []
+        }
+      ],
+      "questions": [
+        {
+          "item": 1,
+          "reasons": []
+        },
+        {
+          "item": 2,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "explanations": [
+        {
+          "item": 1,
+          "reasons": [
+            "inactive_symptom_used_as_positive_basis"
+          ]
+        },
+        {
+          "item": 2,
+          "reasons": []
+        }
+      ],
+      "questions": [
+        {
+          "item": 1,
+          "reasons": []
+        },
+        {
+          "item": 2,
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "selected_component_attempt": 1,
+  "case_id": "f02",
+  "arm": "enhanced",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_alignment_v41.py": "dfa57a6483990920c29615bb6fef604d52224e06ae3912ff4c887b671d06d153",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v41.py": "edd491852ce726722bfb537b47f21a65523ae1d618614c12318eb065b82236c4"
+  }
+}

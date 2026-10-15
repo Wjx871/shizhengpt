@@ -1,0 +1,22 @@
+{
+  "cases": 12,
+  "model_inferences": 32,
+  "elapsed_sec": 240.17447304725647,
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "source_sha256": {
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "guarded_consultation_v3.py": "625483f4f1bb40be71a88b5a8a4d5a0a4496ae02f0e35907cd09c3560ee30493",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_consultation_facts.py": "b5a25e95788a8c6097b83d817fa72ed97a33999a01a36ceade3503d77d3de132"
+  }
+}

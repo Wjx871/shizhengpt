@@ -1,0 +1,847 @@
+[
+  {
+    "id": "f01",
+    "arm": "base",
+    "symptoms": [
+      "最近四天有点疲乏，休息后能减轻",
+      "睡眠正常",
+      "没有咳嗽和发热"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "气虚证可能性较大",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "疲乏症状休息后缓解符合气虚特点"
+            },
+            {
+              "source_id": "S1",
+              "quote": "未提及明显寒热倾向"
+            }
+          ],
+          "missing_info": [
+            "是否有自汗/盗汗现象",
+            "舌脉特征"
+          ]
+        }
+      ],
+      "questions": [
+        "是否伴有活动后气短或易出汗？",
+        "近期饮食睡眠情况如何？"
+      ],
+      "limitations": [
+        "缺乏舌象脉象等关键诊断依据",
+        "症状描述过于简略"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "气虚证可能性较大",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "疲乏症状休息后缓解符合气虚特点"
+                },
+                {
+                  "source_id": "S1",
+                  "quote": "未提及明显寒热倾向"
+                }
+              ],
+              "missing_info": [
+                "是否有自汗/盗汗现象",
+                "舌脉特征"
+              ]
+            }
+          ],
+          "questions": [
+            "是否伴有活动后气短或易出汗？",
+            "近期饮食睡眠情况如何？"
+          ],
+          "limitations": [
+            "缺乏舌象脉象等关键诊断依据",
+            "症状描述过于简略"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 2,
+      "invalid_evidence_items": 2,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f01",
+    "arm": "enhanced",
+    "symptoms": [
+      "最近四天有点疲乏，休息后能减轻",
+      "睡眠正常",
+      "没有咳嗽和发热"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "气虚证可能性需考虑",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "疲乏，休息后能减轻"
+            }
+          ],
+          "missing_info": [
+            "是否有活动后气短、自汗等气虚表现"
+          ]
+        },
+        {
+          "hypothesis": "亚健康状态待排除",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "疲乏，休息后能减轻"
+            }
+          ],
+          "missing_info": [
+            "近期工作压力变化情况"
+          ]
+        }
+      ],
+      "questions": [
+        "是否有活动后气短、自汗等气虚表现？",
+        "近期工作压力变化情况如何？"
+      ],
+      "limitations": [
+        "缺乏舌脉体征等客观体征信息",
+        "症状描述未包含饮食、二便等关键信息"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "气虚证可能性需考虑",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "疲乏，休息后能减轻"
+                }
+              ],
+              "missing_info": [
+                "是否有活动后气短、自汗等气虚表现"
+              ]
+            },
+            {
+              "hypothesis": "亚健康状态待排除",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "疲乏，休息后能减轻"
+                }
+              ],
+              "missing_info": [
+                "近期工作压力变化情况"
+              ]
+            }
+          ],
+          "questions": [
+            "是否有活动后气短、自汗等气虚表现？",
+            "近期工作压力变化情况如何？"
+          ],
+          "limitations": [
+            "缺乏舌脉体征等客观体征信息",
+            "症状描述未包含饮食、二便等关键信息"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 2,
+      "invalid_evidence_items": 0,
+      "questions": 2,
+      "explanations": 2,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f02",
+    "arm": "base",
+    "symptoms": [
+      "前天头疼，现在已经缓解",
+      "今天有轻微乏力",
+      "没有心慌"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "外感风寒表证残留",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "前天头疼已缓解，提示外邪未完全清除"
+            },
+            {
+              "source_id": "S2",
+              "quote": "当前轻微乏力为气虚表现"
+            }
+          ],
+          "missing_info": [
+            "是否伴有鼻塞、流涕等呼吸道症状",
+            "舌苔颜色及厚薄情况"
+          ]
+        }
+      ],
+      "questions": [
+        "头痛发作时的具体部位（前额/两侧/后脑）？",
+        "是否有怕冷或发热反复现象？"
+      ],
+      "limitations": [
+        "缺乏脉象及舌象信息影响辨证准确性",
+        "症状持续时间不足两天无法判断病程阶段"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "外感风寒表证残留",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "前天头疼已缓解，提示外邪未完全清除"
+                },
+                {
+                  "source_id": "S2",
+                  "quote": "当前轻微乏力为气虚表现"
+                }
+              ],
+              "missing_info": [
+                "是否伴有鼻塞、流涕等呼吸道症状",
+                "舌苔颜色及厚薄情况"
+              ]
+            }
+          ],
+          "questions": [
+            "头痛发作时的具体部位（前额/两侧/后脑）？",
+            "是否有怕冷或发热反复现象？"
+          ],
+          "limitations": [
+            "缺乏脉象及舌象信息影响辨证准确性",
+            "症状持续时间不足两天无法判断病程阶段"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 2,
+      "invalid_evidence_items": 2,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f02",
+    "arm": "enhanced",
+    "symptoms": [
+      "前天头疼，现在已经缓解",
+      "今天有轻微乏力",
+      "没有心慌"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "气虚体质导致短暂乏力",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "quote": "今天有轻微乏力"
+            }
+          ],
+          "missing_info": [
+            "是否容易疲劳、气短？",
+            "是否有食欲减退、便溏？"
+          ]
+        }
+      ],
+      "questions": [
+        "是否有鼻塞、流涕等感冒症状？",
+        "是否容易疲劳、气短？"
+      ],
+      "limitations": [
+        "完整候选未通过检查；此处仅保留逐项通过有限核对的内容，医学解释仍需复核。"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "近期外感风寒后余邪未清，导致轻微乏力",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "前天头疼，现在已经缓解"
+                }
+              ],
+              "missing_info": [
+                "是否有鼻塞、流涕等感冒症状？",
+                "头痛是否伴随畏风、怕冷？"
+              ]
+            },
+            {
+              "hypothesis": "气虚体质导致短暂乏力",
+              "evidence": [
+                {
+                  "source_id": "S2",
+                  "quote": "今天有轻微乏力"
+                }
+              ],
+              "missing_info": [
+                "是否容易疲劳、气短？",
+                "是否有食欲减退、便溏？"
+              ]
+            }
+          ],
+          "questions": [
+            "是否有鼻塞、流涕等感冒症状？",
+            "是否容易疲劳、气短？"
+          ],
+          "limitations": [
+            "仅凭文字描述无法获取舌脉等体征信息",
+            "缺乏既往病史及家族史等关键背景"
+          ]
+        },
+        "reasons": [
+          "inactive_symptom_used_as_positive_basis"
+        ]
+      },
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "头痛缓解后可能存在余邪未清或气血失调",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "前天头疼，现在已经缓解"
+                }
+              ],
+              "missing_info": [
+                "头痛具体部位（太阳穴/后脑/巅顶等）",
+                "头痛发作时伴随症状（恶心/畏光/耳鸣等）"
+              ]
+            },
+            {
+              "hypothesis": "轻微乏力需排除气虚或湿困可能",
+              "evidence": [
+                {
+                  "source_id": "S2",
+                  "quote": "今天有轻微乏力"
+                }
+              ],
+              "missing_info": [
+                "乏力持续时间（晨起加重/全天持续）",
+                "是否伴有肢体沉重感"
+              ]
+            }
+          ],
+          "questions": [
+            "头痛是否在特定姿势下诱发？",
+            "乏力是否影响日常活动能力？"
+          ],
+          "limitations": [
+            "缺乏舌脉体征等客观诊断依据",
+            "症状描述存在语义模糊性性"
+          ]
+        },
+        "reasons": [
+          "inactive_symptom_used_as_positive_basis"
+        ]
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 1,
+      "invalid_evidence_items": 0,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f03",
+    "arm": "base",
+    "symptoms": [
+      "近六天睡眠良好",
+      "偶尔午后轻微疲劳",
+      "食欲正常"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "气阴两虚（需排除其他证型）",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "近六天睡眠良好（提示近期无明显阳虚或痰湿扰动）"
+            },
+            {
+              "source_id": "S2",
+              "quote": "午后轻微疲劳（气虚常见表现）"
+            }
+          ],
+          "missing_info": [
+            "是否伴随口干、盗汗等阴虚症状？",
+            "舌象颜色及苔质（如舌红少苔为阴虚，舌淡胖为气虚）"
+          ]
+        }
+      ],
+      "questions": [
+        "是否有口干、夜间盗汗等阴虚表现？",
+        "舌象颜色及苔质如何？"
+      ],
+      "limitations": [
+        "仅凭症状描述无法确认脉象（如细数脉支持阴虚，沉弱脉支持气虚）",
+        "未提及二便情况（如小便短赤或大便溏薄可能影响辨证）"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "气阴两虚（需排除其他证型）",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "近六天睡眠良好（提示近期无明显阳虚或痰湿扰动）"
+                },
+                {
+                  "source_id": "S2",
+                  "quote": "午后轻微疲劳（气虚常见表现）"
+                }
+              ],
+              "missing_info": [
+                "是否伴随口干、盗汗等阴虚症状？",
+                "舌象颜色及苔质（如舌红少苔为阴虚，舌淡胖为气虚）"
+              ]
+            }
+          ],
+          "questions": [
+            "是否有口干、夜间盗汗等阴虚表现？",
+            "舌象颜色及苔质如何？"
+          ],
+          "limitations": [
+            "仅凭症状描述无法确认脉象（如细数脉支持阴虚，沉弱脉支持气虚）",
+            "未提及二便情况（如小便短赤或大便溏薄可能影响辨证）"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 2,
+      "invalid_evidence_items": 2,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f03",
+    "arm": "enhanced",
+    "symptoms": [
+      "近六天睡眠良好",
+      "偶尔午后轻微疲劳",
+      "食欲正常"
+    ],
+    "visual_reference": null,
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "潜在阴虚或气虚证候需进一步确认",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "quote": "偶尔午后轻微疲劳"
+            }
+          ],
+          "missing_info": [
+            "是否有手足心热/夜间盗汗（阴虚）？",
+            "是否有易出汗/气短懒言（气虚）？"
+          ]
+        }
+      ],
+      "questions": [
+        "是否伴有口干舌燥？",
+        "疲劳是否影响日常活动？"
+      ],
+      "limitations": [
+        "仅凭三症状难以明确辨证分型",
+        "缺乏舌脉体征等关键诊断依据"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "潜在阴虚或气虚证候需进一步确认",
+              "evidence": [
+                {
+                  "source_id": "S2",
+                  "quote": "偶尔午后轻微疲劳"
+                }
+              ],
+              "missing_info": [
+                "是否有手足心热/夜间盗汗（阴虚）？",
+                "是否有易出汗/气短懒言（气虚）？"
+              ]
+            }
+          ],
+          "questions": [
+            "是否伴有口干舌燥？",
+            "疲劳是否影响日常活动？"
+          ],
+          "limitations": [
+            "仅凭三症状难以明确辨证分型",
+            "缺乏舌脉体征等关键诊断依据"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 1,
+      "invalid_evidence_items": 0,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 0,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 0
+    }
+  },
+  {
+    "id": "f04",
+    "arm": "base",
+    "symptoms": [
+      "最近五天偶有腹胀",
+      "没有腹痛或发热",
+      "睡眠尚可"
+    ],
+    "visual_reference": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible"
+    },
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "脾胃气滞证可能性大",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "偶有腹胀（5天）"
+            },
+            {
+              "source_id": "S2",
+              "quote": "无腹痛/发热"
+            }
+          ],
+          "missing_info": [
+            "腹胀是否与饮食相关？",
+            "是否伴有嗳气、肠鸣音异常？"
+          ]
+        }
+      ],
+      "questions": [
+        "腹胀是否在饭后加重？",
+        "是否有排气增多或减少现象？"
+      ],
+      "limitations": [
+        "缺乏舌脉信息影响辨证准确性",
+        "症状持续时间较短需排除器质性疾病"
+      ]
+    },
+    "retained_visual": {
+      "visual_status": {
+        "eyes": "unknown",
+        "nose": "visible",
+        "mouth": "visible"
+      },
+      "observations": [
+        "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+      ],
+      "limitations": [
+        "无法获取患者整体面部其他部位信息以全面评估气色"
+      ]
+    },
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "脾胃气滞证可能性大",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "偶有腹胀（5天）"
+                },
+                {
+                  "source_id": "S2",
+                  "quote": "无腹痛/发热"
+                }
+              ],
+              "missing_info": [
+                "腹胀是否与饮食相关？",
+                "是否伴有嗳气、肠鸣音异常？"
+              ]
+            }
+          ],
+          "questions": [
+            "腹胀是否在饭后加重？",
+            "是否有排气增多或减少现象？"
+          ],
+          "limitations": [
+            "缺乏舌脉信息影响辨证准确性",
+            "症状持续时间较短需排除器质性疾病"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "visual_candidates": [
+      {
+        "parsed": {
+          "visual_status": {
+            "eyes": "unknown",
+            "nose": "visible",
+            "mouth": "visible"
+          },
+          "observations": [
+            "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+          ],
+          "limitations": [
+            "无法获取患者整体面部其他部位信息以全面评估气色"
+          ]
+        },
+        "reasons": []
+      }
+    ],
+    "qc_reasons": [],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 2,
+      "invalid_evidence_items": 2,
+      "questions": 2,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 1,
+      "visual_explicit_mismatch": 2,
+      "visual_reference_items": 3
+    }
+  },
+  {
+    "id": "f04",
+    "arm": "enhanced",
+    "symptoms": [
+      "最近五天偶有腹胀",
+      "没有腹痛或发热",
+      "睡眠尚可"
+    ],
+    "visual_reference": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible"
+    },
+    "retained_analysis": {
+      "possible_explanations": [
+        {
+          "hypothesis": "功能性消化不良可能性需考虑",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "最近五天偶有腹胀"
+            }
+          ],
+          "missing_info": [
+            "腹胀是否伴随嗳气/反酸",
+            "饮食后症状是否加重"
+          ]
+        }
+      ],
+      "questions": [
+        "腹胀是否在进食油腻食物后加重？",
+        "夜间睡眠质量具体表现（易醒/多梦等）？",
+        "近期饮食是否包含生冷/辛辣刺激性食物？"
+      ],
+      "limitations": [
+        "完整候选未通过检查；此处仅保留逐项通过有限核对的内容，医学解释仍需复核。"
+      ]
+    },
+    "retained_visual": null,
+    "analysis_candidates": [
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "功能性消化不良可能性需考虑",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "最近五天偶有腹胀"
+                }
+              ],
+              "missing_info": [
+                "腹胀是否伴随嗳气/反酸",
+                "饮食后症状是否加重"
+              ]
+            },
+            {
+              "hypothesis": "胃肠功能紊乱待排除",
+              "evidence": [
+                {
+                  "source_id": "S2",
+                  "quote": "睡眠尚可"
+                }
+              ],
+              "missing_info": [
+                "近期饮食结构变化情况",
+                "排便习惯改变（次数/性状）"
+              ]
+            }
+          ],
+          "questions": [
+            "腹胀是否在进食油腻食物后加重？",
+            "夜间睡眠质量具体表现（易醒/多梦等）？",
+            "近期饮食是否包含生冷/辛辣刺激性食物？"
+          ],
+          "limitations": [
+            "缺乏舌象脉象等体征信息",
+            "未获取既往病史及用药史"
+          ]
+        },
+        "reasons": [
+          "evidence_quote_not_in_source"
+        ]
+      },
+      {
+        "parsed": {
+          "possible_explanations": [
+            {
+              "hypothesis": "腹胀可能由饮食因素引起",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "最近五天偶有腹胀"
+                }
+              ],
+              "missing_info": [
+                "是否食用过易产气食物（如豆类、碳酸饮料）？",
+                "腹胀是否与特定饮食时间相关？"
+              ]
+            },
+            {
+              "hypothesis": "功能性消化不良可能性待排除",
+              "evidence": [
+                {
+                  "source_id": "S1",
+                  "quote": "最近五天偶有腹胀"
+                },
+                {
+                  "source_id": "S2",
+                  "quote": "没有腹痛或发热"
+                }
+              ],
+              "missing_info": [
+                "腹胀是否伴随早饱感？",
+                "是否有嗳气、反酸等其他消化道症状？"
+              ]
+            }
+          ],
+          "questions": [
+            "腹胀是否在进食后加重？",
+            "近期饮食结构是否有变化？"
+          ],
+          "limitations": [
+            "缺乏舌象、脉象等体征信息",
+            "未获取二便情况及情绪状态"
+          ]
+        },
+        "reasons": [
+          "inactive_symptom_used_as_positive_basis"
+        ]
+      }
+    ],
+    "visual_candidates": [],
+    "qc_reasons": [
+      "single_frontal_region_not_confirmed"
+    ],
+    "metrics": {
+      "phrase_screen_hits": [],
+      "evidence_items": 1,
+      "invalid_evidence_items": 0,
+      "questions": 3,
+      "explanations": 1,
+      "visual_exact": 0,
+      "visual_unknown": 3,
+      "visual_explicit_mismatch": 0,
+      "visual_reference_items": 3
+    }
+  }
+]

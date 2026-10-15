@@ -1,0 +1,125 @@
+[
+  {
+    "id": "face_original",
+    "image": "evaluation/images/face/astronaut_original.png",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa"
+  },
+  {
+    "id": "face_dark",
+    "image": "evaluation/images/face/astronaut_dark.png",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "9e6237c4cb870b288731cabaa13fd413aa4603bdefac4d2544af1dd488110a51"
+  },
+  {
+    "id": "face_blue",
+    "image": "evaluation/images/face/astronaut_blue.png",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "c5ae574f597fa73597496427b8902cf5b66b2f5e97d25c9ef8ef8bee10f96d51"
+  },
+  {
+    "id": "face_bright",
+    "image": "evaluation/images/face/astronaut_bright.png",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "3aa5e7e7c16b623a3938c5ca4e9c6b212d2cf4bd2ec13c6f26fb68d7ac7efd97"
+  },
+  {
+    "id": "face_partial",
+    "image": "evaluation/images/face/5467.jpg",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c"
+  },
+  {
+    "id": "non_face_shapes",
+    "image": "evaluation/images/face/../general/shapes.png",
+    "symptoms": [],
+    "kind": "face",
+    "group": "development_regression",
+    "image_sha256": "70cd4c24a6ab0d15640f1b35849ffa9077c297a03224504f2998ac294d3ca0a9"
+  },
+  {
+    "id": "text_original",
+    "image": null,
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "kind": "text",
+    "group": "development_regression"
+  },
+  {
+    "id": "text_new_negations",
+    "image": null,
+    "symptoms": [
+      "近两天有点疲劳",
+      "睡眠尚可",
+      "没有发热",
+      "没有胸痛"
+    ],
+    "kind": "text",
+    "group": "new_synthetic_condition"
+  },
+  {
+    "id": "fusion_original",
+    "image": "evaluation/images/face/astronaut_original.png",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "kind": "fusion",
+    "group": "development_regression",
+    "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa"
+  },
+  {
+    "id": "fusion_partial",
+    "image": "evaluation/images/face/5467.jpg",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "kind": "fusion",
+    "group": "development_regression",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c"
+  },
+  {
+    "id": "fusion_no_image",
+    "image": null,
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "kind": "fusion",
+    "group": "development_regression"
+  },
+  {
+    "id": "fusion_full_photo_new_text",
+    "image": "evaluation/images/face/public_astronaut.png",
+    "symptoms": [
+      "近两天有点疲劳",
+      "睡眠尚可",
+      "没有发热",
+      "没有胸痛"
+    ],
+    "kind": "fusion",
+    "group": "new_input_combination_same_public_person",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+  }
+]

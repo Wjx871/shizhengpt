@@ -1,0 +1,140 @@
+{
+  "symptoms_original": [
+    "近十天有时食欲下降，并非每天都有",
+    "没有腹痛"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "食欲下降可能由消化系统功能紊乱引起",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "近十天有时食欲下降"
+          }
+        ],
+        "missing_info": [
+          "是否有伴随恶心/反酸/嗳气等胃部不适",
+          "近期饮食结构是否有变化（如节食/暴饮暴食）"
+        ]
+      }
+    ],
+    "questions": [
+      "最近饮食量相比之前减少了多少？",
+      "是否伴有体重明显变化？"
+    ],
+    "limitations": [
+      "仅凭症状描述无法排除器质性疾病（如肝胆疾病）",
+      "缺乏舌象脉象等四诊信息"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"近期食欲波动可能与饮食习惯或情绪相关\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"近十天有时食欲下降\"\n        }\n      ],\n      \"missing_info\": [\n        \"具体饮食变化（如进食量减少、偏好改变）\",\n        \"近期情绪状态（焦虑/压力等）\"\n      ]\n    },\n    {\n      \"hypothesis\": \"需排除消化系统功能性异常\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"近十天有时食欲下降\"\n        },\n        {\n          \"source_id\": \"S2\",\n          \"quote\": \"并非每天都有\"\n        }\n      ],\n      \"missing_info\": [\n        \"伴随症状（恶心、反酸等）\",\n        \"体重变化情况\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"最近饮食内容是否有明显改变？\",\n    \"近期是否有情绪波动或压力事件？\"\n  ],\n  \"limitations\": [\n    \"仅凭文字描述无法获取舌脉体征等关键信息\",\n    \"未提及二便情况及睡眠质量\"\n  ]\n}\n```",
+        "latency_sec": 15.5,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"近十天有时食欲下降，并非每天都有\", \"S2\": \"没有腹痛\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"近十天有时食欲下降，并非每天都有\", \"clauses\": [{\"text\": \"近十天有时食欲下降\", \"start\": 0, \"end\": 9, \"findings\": [{\"term\": \"poor_appetite\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"食欲下降\", \"start\": 5, \"end\": 9}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"有时\", \"start\": 3, \"end\": 5}], \"time\": [{\"text\": \"近十天\", \"start\": 0, \"end\": 3}]}}, {\"text\": \"并非每天都有\", \"start\": 10, \"end\": 16, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"每天\", \"start\": 12, \"end\": 14}], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"没有腹痛\", \"clauses\": [{\"text\": \"没有腹痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"abdominal_pain\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"腹痛\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "近期食欲波动可能与饮食习惯或情绪相关",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "近十天有时食欲下降"
+              }
+            ],
+            "missing_info": [
+              "具体饮食变化（如进食量减少、偏好改变）",
+              "近期情绪状态（焦虑/压力等）"
+            ]
+          },
+          {
+            "hypothesis": "需排除消化系统功能性异常",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "近十天有时食欲下降"
+              },
+              {
+                "source_id": "S2",
+                "quote": "并非每天都有"
+              }
+            ],
+            "missing_info": [
+              "伴随症状（恶心、反酸等）",
+              "体重变化情况"
+            ]
+          }
+        ],
+        "questions": [
+          "最近饮食内容是否有明显改变？",
+          "近期是否有情绪波动或压力事件？"
+        ],
+        "limitations": [
+          "仅凭文字描述无法获取舌脉体征等关键信息",
+          "未提及二便情况及睡眠质量"
+        ]
+      },
+      "reasons": [
+        "evidence_quote_not_in_source"
+      ]
+    },
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"食欲下降可能由消化系统功能紊乱引起\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"近十天有时食欲下降\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有伴随恶心/反酸/嗳气等胃部不适\",\n        \"近期饮食结构是否有变化（如节食/暴饮暴食）\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"最近饮食量相比之前减少了多少？\",\n    \"是否伴有体重明显变化？\"\n  ],\n  \"limitations\": [\n    \"仅凭症状描述无法排除器质性疾病（如肝胆疾病）\",\n    \"缺乏舌象脉象等四诊信息\"\n  ]\n}\n```",
+        "latency_sec": 10.2,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"近十天有时食欲下降，并非每天都有\", \"S2\": \"没有腹痛\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"近十天有时食欲下降，并非每天都有\", \"clauses\": [{\"text\": \"近十天有时食欲下降\", \"start\": 0, \"end\": 9, \"findings\": [{\"term\": \"poor_appetite\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"食欲下降\", \"start\": 5, \"end\": 9}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"有时\", \"start\": 3, \"end\": 5}], \"time\": [{\"text\": \"近十天\", \"start\": 0, \"end\": 3}]}}, {\"text\": \"并非每天都有\", \"start\": 10, \"end\": 16, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"每天\", \"start\": 12, \"end\": 14}], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"没有腹痛\", \"clauses\": [{\"text\": \"没有腹痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"abdominal_pain\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"腹痛\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。\n上次未通过有限检查，原因：[\"evidence_quote_not_in_source\"]。请重新输出完整JSON，纠正上述问题。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "食欲下降可能由消化系统功能紊乱引起",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "近十天有时食欲下降"
+              }
+            ],
+            "missing_info": [
+              "是否有伴随恶心/反酸/嗳气等胃部不适",
+              "近期饮食结构是否有变化（如节食/暴饮暴食）"
+            ]
+          }
+        ],
+        "questions": [
+          "最近饮食量相比之前减少了多少？",
+          "是否伴有体重明显变化？"
+        ],
+        "limitations": [
+          "仅凭症状描述无法排除器质性疾病（如肝胆疾病）",
+          "缺乏舌象脉象等四诊信息"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "full_answer_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 2,
+  "model_latency_sec": 25.7,
+  "case_id": "t04",
+  "arm": "enhanced",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  },
+  "workflow_version": "v4.1_independent_component_retention",
+  "component_checks": []
+}

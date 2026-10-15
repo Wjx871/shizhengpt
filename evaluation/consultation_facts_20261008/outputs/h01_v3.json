@@ -1,0 +1,213 @@
+{
+  "user_symptoms": [
+    "近三天轻微乏力",
+    "否认发烧",
+    "睡眠正常"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需要核实轻微乏力的具体原因，如是否存在潜在感染、慢性疲劳或其他系统性疾病\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量正常具体指入睡时间、睡眠深度、夜间觉醒次数等如何？\",\n    \"近期是否有过过度劳累、情绪波动或饮食改变等可能影响体力的因素？\",\n    \"是否伴随其他症状如头晕、心悸、肌肉酸痛等？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色、舌象等非文字描述的体征\",\n    \"需排除用户未主动提及的潜在症状\"\n  ]\n}\n```",
+        "latency_sec": 9.348873855080456,
+        "preprocess_sec": 0.01051200833171606,
+        "generation_sec": 9.335065010935068,
+        "output_tokens": 156,
+        "tokens_per_sec": 16.71118517302901,
+        "peak_memory": 16874723328,
+        "peak_reserved_bytes": 16993222656,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 849,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近三天轻微乏力\nS2：否认发烧\nS3：睡眠正常\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"近三天轻微乏力\", \"clauses\": [{\"text\": \"近三天轻微乏力\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"乏力\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"近三天\", \"start\": 0, \"end\": 3}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"否认发烧\", \"clauses\": [{\"text\": \"否认发烧\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"fever\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"发烧\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"睡眠正常\", \"clauses\": [{\"text\": \"睡眠正常\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠正常\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"正常\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "需要核实轻微乏力的具体原因，如是否存在潜在感染、慢性疲劳或其他系统性疾病"
+    }
+  ],
+  "questions": [
+    "睡眠质量正常具体指入睡时间、睡眠深度、夜间觉醒次数等如何？",
+    "近期是否有过过度劳累、情绪波动或饮食改变等可能影响体力的因素？",
+    "是否伴随其他症状如头晕、心悸、肌肉酸痛等？"
+  ],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "无法通过图片判断面色、舌象等非文字描述的体征",
+    "需排除用户未主动提及的潜在症状",
+    "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+  ],
+  "source_symptoms": {
+    "S1": "近三天轻微乏力",
+    "S2": "否认发烧",
+    "S3": "睡眠正常"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 1,
+  "model_latency_sec": 9.348873855080456,
+  "requires_review": true,
+  "guard_version": "v3_fact_slots_and_question_prefix",
+  "symptom_facts": [
+    {
+      "id": "S1",
+      "raw": "近三天轻微乏力",
+      "clauses": [
+        {
+          "text": "近三天轻微乏力",
+          "start": 0,
+          "end": 7,
+          "findings": [
+            {
+              "term": "fatigue",
+              "polarity": "reported",
+              "evidence": {
+                "text": "乏力",
+                "start": 5,
+                "end": 7
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [
+              {
+                "text": "轻微",
+                "start": 3,
+                "end": 5
+              }
+            ],
+            "frequency": [],
+            "time": [
+              {
+                "text": "近三天",
+                "start": 0,
+                "end": 3
+              }
+            ]
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S2",
+      "raw": "否认发烧",
+      "clauses": [
+        {
+          "text": "否认发烧",
+          "start": 0,
+          "end": 4,
+          "findings": [
+            {
+              "term": "fever",
+              "polarity": "negative",
+              "evidence": {
+                "text": "发烧",
+                "start": 2,
+                "end": 4
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S3",
+      "raw": "睡眠正常",
+      "clauses": [
+        {
+          "text": "睡眠正常",
+          "start": 0,
+          "end": 4,
+          "findings": [
+            {
+              "term": "sleep_quality",
+              "polarity": "reported",
+              "evidence": {
+                "text": "睡眠正常",
+                "start": 0,
+                "end": 4
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [
+              {
+                "text": "正常",
+                "start": 2,
+                "end": 4
+              }
+            ],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    }
+  ],
+  "fact_extraction_is_complete": false,
+  "visual_verification_method": "scope_and_resolution_rules_only",
+  "case_id": "h01",
+  "arm": "v3",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

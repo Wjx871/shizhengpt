@@ -1,0 +1,117 @@
+[
+  {
+    "id": "p01_full",
+    "scenario": "synthetic_fatigue",
+    "image": "evaluation/images/face/public_astronaut.png",
+    "description": "公开人物静态照片。人物头部和上半身可见，头部朝向画面前方，眼睛、鼻子和嘴部可见，表情为微笑。头发可见，头上没有戴头盔；画面下方另有一个头盔。服装与背景不提供医学信息。照片未作医学校准，皮肤细微异常无法据此确认。",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "expanded_history": [
+      "这些不适约一周，工作忙时更明显",
+      "最近每晚约睡6小时，有时熬夜",
+      "没有发热、胸痛或心慌",
+      "休息后疲劳会减轻",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible",
+      "headgear_worn": "no"
+    },
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "description_source": "assistant_direct_visual_review_non_clinician",
+    "clinical_ground_truth_available": false,
+    "history_is_synthetic": true
+  },
+  {
+    "id": "p02_crop",
+    "scenario": "synthetic_fatigue",
+    "image": "evaluation/images/face/astronaut_original.png",
+    "description": "155×172像素的静态头部裁剪图。人物面部朝向画面前方，可见眼睛、鼻子、嘴部及微笑表情，头发可见，头部没有戴头盔。细节分辨率有限，不能据此确认细微皮肤异常，也不能排除异常。照片颜色未校准。",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "expanded_history": [
+      "这些不适约一周，工作忙时更明显",
+      "最近每晚约睡6小时，有时熬夜",
+      "没有发热、胸痛或心慌",
+      "休息后疲劳会减轻",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible",
+      "headgear_worn": "no"
+    },
+    "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa",
+    "description_source": "assistant_direct_visual_review_non_clinician",
+    "clinical_ground_truth_available": false,
+    "history_is_synthetic": true
+  },
+  {
+    "id": "p03_partial",
+    "scenario": "synthetic_abdominal_bloating",
+    "image": "evaluation/images/face/5467.jpg",
+    "description": "局部面部照片，画面主要显示一侧脸颊及耳部，照片中有两个黑色箭头，左部有明显明亮区域。眼睛、鼻子和嘴部不在画面内，头顶部不在画面内，因此不能判断是否戴头盔。不能描述对侧脸颊或补全未显示的五官，箭头区域的医学性质未知，照片颜色未校准。",
+    "symptoms": [
+      "最近一周偶有腹胀",
+      "没有恶心和呕吐",
+      "食欲尚可"
+    ],
+    "expanded_history": [
+      "腹胀主要在吃得较多后出现，排气后减轻",
+      "排便每天一次，未报告便秘或腹泻",
+      "没有腹痛或发热",
+      "近期吃饭较快，未提供体重变化",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "expected_visual_status": {
+      "eyes": "not_visible",
+      "nose": "not_visible",
+      "mouth": "not_visible",
+      "headgear_worn": "unknown"
+    },
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c",
+    "description_source": "assistant_direct_visual_review_non_clinician",
+    "clinical_ground_truth_available": false,
+    "history_is_synthetic": true
+  },
+  {
+    "id": "p04_blue",
+    "scenario": "synthetic_fatigue",
+    "image": "evaluation/images/face/astronaut_blue.png",
+    "description": "155×172像素的静态头部裁剪图，照片经过偏蓝成像变换。人物面部朝向画面前方，可见眼睛、鼻子、嘴部及微笑表情，头发可见，头部没有戴头盔。不能将变换后的照片颜色当作人物真实肤色；细节分辨率有限，不能确认或排除细微皮肤异常。",
+    "symptoms": [
+      "最近容易疲劳",
+      "手脚较凉",
+      "睡眠质量一般",
+      "偶尔食欲不佳"
+    ],
+    "expanded_history": [
+      "这些不适约一周，工作忙时更明显",
+      "最近每晚约睡6小时，有时熬夜",
+      "没有发热、胸痛或心慌",
+      "休息后疲劳会减轻",
+      "未提供既往病史、用药史、舌象、脉象或检查结果"
+    ],
+    "expected_visual_status": {
+      "eyes": "visible",
+      "nose": "visible",
+      "mouth": "visible",
+      "headgear_worn": "no"
+    },
+    "image_sha256": "c5ae574f597fa73597496427b8902cf5b66b2f5e97d25c9ef8ef8bee10f96d51",
+    "description_source": "assistant_direct_visual_review_non_clinician",
+    "clinical_ground_truth_available": false,
+    "history_is_synthetic": true
+  }
+]

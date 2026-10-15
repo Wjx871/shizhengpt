@@ -1,0 +1,18 @@
+{
+  "cases": 12,
+  "new_model_inferences": 10,
+  "elapsed_sec": 109.87440705299377,
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "visual_stage_reused_from": "/root/private_data/shizhengpt-evaluation/evaluation/guarded_consultation_v2_20261008",
+  "script_sha256": "7d0c5ac7d3a1642b9680aa1f5aac1334da76bb9ca695b70ced22258d25b17876",
+  "changed": "Question presupposition checks and neutral questioning instructions; six analyses regenerated."
+}

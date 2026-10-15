@@ -1,0 +1,220 @@
+{
+  "user_symptoms": [
+    "近两周有时食欲下降",
+    "并非每天都有",
+    "没有腹痛"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "explanation_unsupported_symptom_nausea"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需确认食欲下降的具体表现（如饭量减少程度、伴随恶心/胀气等）\"\n    }\n  ],\n  \"questions\": [\n    \"食欲下降是否伴随饭后饱胀感？\",\n    \"是否有进食后恶心或反酸等症状？\",\n    \"每日饮食量与之前相比变化幅度？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等体征\",\n    \"未提供体重变化等关键指标\"\n  ]\n}\n```",
+        "latency_sec": 7.899973678868264,
+        "preprocess_sec": 0.005757187958806753,
+        "generation_sec": 7.891620110720396,
+        "output_tokens": 132,
+        "tokens_per_sec": 16.726603428449906,
+        "peak_memory": 16863217664,
+        "peak_reserved_bytes": 17169383424,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 829,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近两周有时食欲下降\nS2：并非每天都有\nS3：没有腹痛\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"近两周有时食欲下降\", \"clauses\": [{\"text\": \"近两周有时食欲下降\", \"start\": 0, \"end\": 9, \"findings\": [{\"term\": \"poor_appetite\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"食欲下降\", \"start\": 5, \"end\": 9}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"有时\", \"start\": 3, \"end\": 5}], \"time\": [{\"text\": \"近两周\", \"start\": 0, \"end\": 3}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"并非每天都有\", \"clauses\": [{\"text\": \"并非每天都有\", \"start\": 0, \"end\": 6, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"每天\", \"start\": 2, \"end\": 4}], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有腹痛\", \"clauses\": [{\"text\": \"没有腹痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"abdominal_pain\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"腹痛\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    },
+    {
+      "attempt": 2,
+      "reasons": [
+        "unfilled_template_placeholder"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"需要核实的可能解释\"\n    }\n  ],\n  \"questions\": [\n    \"食欲下降具体指哪些食物或餐次？\",\n    \"是否有伴随恶心、反酸等消化不适？\",\n    \"近期饮食习惯或压力情况如何？\"\n  ],\n  \"limitations\": [\n    \"无法基于图片颜色进行辨证\",\n    \"未提供舌脉等其他四诊信息\"\n  ]\n}\n```",
+        "latency_sec": 6.948003253899515,
+        "preprocess_sec": 0.005451560020446777,
+        "generation_sec": 6.940256732981652,
+        "output_tokens": 115,
+        "tokens_per_sec": 16.569992209869454,
+        "peak_memory": 16885858816,
+        "peak_reserved_bytes": 17169383424,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 868,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近两周有时食欲下降\nS2：并非每天都有\nS3：没有腹痛\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"近两周有时食欲下降\", \"clauses\": [{\"text\": \"近两周有时食欲下降\", \"start\": 0, \"end\": 9, \"findings\": [{\"term\": \"poor_appetite\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"食欲下降\", \"start\": 5, \"end\": 9}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"有时\", \"start\": 3, \"end\": 5}], \"time\": [{\"text\": \"近两周\", \"start\": 0, \"end\": 3}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"并非每天都有\", \"clauses\": [{\"text\": \"并非每天都有\", \"start\": 0, \"end\": 6, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"每天\", \"start\": 2, \"end\": 4}], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有腹痛\", \"clauses\": [{\"text\": \"没有腹痛\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"abdominal_pain\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"腹痛\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。\n上次输出未通过检查，原因：[\"explanation_unsupported_symptom_nausea\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [],
+  "questions": [],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "模型分析未通过检查，保留症状原文并建议补充信息。",
+    "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+  ],
+  "source_symptoms": {
+    "S1": "近两周有时食欲下降",
+    "S2": "并非每天都有",
+    "S3": "没有腹痛"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "analysis_output_rejected_after_retry",
+  "model_invocations": 2,
+  "model_latency_sec": 14.847976932767779,
+  "requires_review": false,
+  "guard_version": "v3_fact_slots_and_question_prefix",
+  "symptom_facts": [
+    {
+      "id": "S1",
+      "raw": "近两周有时食欲下降",
+      "clauses": [
+        {
+          "text": "近两周有时食欲下降",
+          "start": 0,
+          "end": 9,
+          "findings": [
+            {
+              "term": "poor_appetite",
+              "polarity": "reported",
+              "evidence": {
+                "text": "食欲下降",
+                "start": 5,
+                "end": 9
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [
+              {
+                "text": "有时",
+                "start": 3,
+                "end": 5
+              }
+            ],
+            "time": [
+              {
+                "text": "近两周",
+                "start": 0,
+                "end": 3
+              }
+            ]
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S2",
+      "raw": "并非每天都有",
+      "clauses": [
+        {
+          "text": "并非每天都有",
+          "start": 0,
+          "end": 6,
+          "findings": [],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [
+              {
+                "text": "每天",
+                "start": 2,
+                "end": 4
+              }
+            ],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S3",
+      "raw": "没有腹痛",
+      "clauses": [
+        {
+          "text": "没有腹痛",
+          "start": 0,
+          "end": 4,
+          "findings": [
+            {
+              "term": "abdominal_pain",
+              "polarity": "negative",
+              "evidence": {
+                "text": "腹痛",
+                "start": 2,
+                "end": 4
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    }
+  ],
+  "fact_extraction_is_complete": false,
+  "visual_verification_method": "scope_and_resolution_rules_only",
+  "case_id": "h05",
+  "arm": "v3",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

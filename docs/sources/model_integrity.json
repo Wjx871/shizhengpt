@@ -1,0 +1,9 @@
+{
+  "tensors": 729,
+  "shards": 4,
+  "dtype_tensor_counts": {
+    "BF16": 729
+  },
+  "index_total_size_bytes": 16584333312,
+  "complete": true
+}

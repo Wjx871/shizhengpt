@@ -1,0 +1,79 @@
+{
+  "user_symptoms": [],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [
+      "single_frontal_region_not_confirmed"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "icc_profile_present": false,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/../general/shapes.png",
+    "image_sha256": "70cd4c24a6ab0d15640f1b35849ffa9077c297a03224504f2998ac294d3ca0a9",
+    "width": 512,
+    "height": 384,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.7931,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 0,
+    "eye_verified_count": 0,
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.053183346055448055
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [],
+  "visual_facts": [],
+  "possible_explanations": [],
+  "questions": [],
+  "limitations": [
+    "图片未通过面部质控，未生成面部观察；有症状时仍可做文字追问。"
+  ],
+  "source_symptoms": {},
+  "visual_action": "qc_rejected_visual_generation_skipped",
+  "analysis_action": "no_symptoms_analysis_skipped",
+  "model_invocations": 0,
+  "model_latency_sec": 0,
+  "requires_review": false,
+  "status": "ok",
+  "case_id": "non_face_shapes",
+  "arm": "guarded",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

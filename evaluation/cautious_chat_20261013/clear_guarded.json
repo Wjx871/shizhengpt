@@ -1,0 +1,17 @@
+{
+  "id": "clear",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "ba32b97d-b270-4d73-a7fd-af7e6e1e5924",
+      "answer": "**图片信息尚不能确认。** 基础面部定位和画质检查已通过，但目前没有独立核验肤色、病变和各部位细节的能力，无法可靠判断这些内容，也不能仅凭照片给出诊断。\n\n**目前无法可靠回答。** 当前没有识别到明确的症状事实，也没有可核查的资料支持这个问题的结论。请补充具体情况或提供可靠资料；我不会据此猜测病因、证候或照片中不可见的内容。",
+      "latency_sec": 0.9,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "visual_details_abstained",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 0
+    }
+  ],
+  "functional_check_passed": true
+}

@@ -1,0 +1,27 @@
+{
+  "id": "correction",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "28353fc2-653f-48e0-9f13-0b56f9e6158a",
+      "answer": "**你提供的信息**\n- 我今天有发热\n\n**待核实的可能方向**\n- 外感风热证（需核实）\n  - 依据：S1「发热」\n这些方向尚未经过医学核验，不能据此确定病因或证候。\n\n**还需要补充**\n1. 体温最高达多少摄氏度？\n2. 是否伴有恶寒或怕冷？",
+      "latency_sec": 9.0,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "limited_answer",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 1
+    },
+    {
+      "session_id": "28353fc2-653f-48e0-9f13-0b56f9e6158a",
+      "answer": "**你提供的信息**\n- 更正，之前说错，我今天没有发热\n\n**目前无法可靠确定病因或证候。** 现有信息不足，或候选解释没有通过依据和不确定性检查。\n\n**还需要补充**\n1. 是否有其他伴随症状？",
+      "latency_sec": 10.9,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "explanation_abstained",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 2
+    }
+  ],
+  "functional_check_passed": true
+}

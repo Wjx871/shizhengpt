@@ -1,0 +1,119 @@
+{
+  "symptoms_original": [
+    "三天来轻微疲劳，休息后减轻",
+    "睡眠良好",
+    "没有发热"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [],
+    "questions": [
+      "是否有其他伴随症状（如头晕、食欲变化）？"
+    ],
+    "limitations": [
+      "完整解释未通过有限检查，仅保留经过单独检查的追问。"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"疲劳可能由短期亚健康状态引起\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"三天来轻微疲劳，休息后减轻\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有其他伴随症状（如头晕、注意力下降）？\",\n        \"近期是否有过度劳累或作息紊乱史？\"\n      ]\n    },\n    {\n      \"hypothesis\": \"排除急性感染因素\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S3\",\n          \"quote\": \"没有发热\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否接触过感冒/流感患者？\",\n        \"近期饮食及睡眠质量变化情况？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"是否有其他伴随症状（如头晕、注意力下降）？\",\n    \"近期是否有过度劳累或作息紊乱史？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌象、脉象等非语言信息\",\n    \"未获取既往病史及家族史\"\n  ]\n}\n```",
+        "latency_sec": 14.4,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"三天来轻微疲劳，休息后减轻\", \"S2\": \"睡眠良好\", \"S3\": \"没有发热\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"三天来轻微疲劳，休息后减轻\", \"clauses\": [{\"text\": \"三天来轻微疲劳\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"疲劳\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"三天\", \"start\": 0, \"end\": 2}]}}, {\"text\": \"休息后减轻\", \"start\": 8, \"end\": 13, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"睡眠良好\", \"clauses\": [{\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"良好\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有发热\", \"clauses\": [{\"text\": \"没有发热\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"fever\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"发热\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "疲劳可能由短期亚健康状态引起",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "三天来轻微疲劳，休息后减轻"
+              }
+            ],
+            "missing_info": [
+              "是否有其他伴随症状（如头晕、注意力下降）？",
+              "近期是否有过度劳累或作息紊乱史？"
+            ]
+          },
+          {
+            "hypothesis": "排除急性感染因素",
+            "evidence": [
+              {
+                "source_id": "S3",
+                "quote": "没有发热"
+              }
+            ],
+            "missing_info": [
+              "是否接触过感冒/流感患者？",
+              "近期饮食及睡眠质量变化情况？"
+            ]
+          }
+        ],
+        "questions": [
+          "是否有其他伴随症状（如头晕、注意力下降）？",
+          "近期是否有过度劳累或作息紊乱史？"
+        ],
+        "limitations": [
+          "缺乏舌象、脉象等非语言信息",
+          "未获取既往病史及家族史"
+        ]
+      },
+      "reasons": [
+        "inactive_symptom_used_as_positive_basis"
+      ]
+    },
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"\",\n      \"evidence\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"三天来轻微疲劳，休息后减轻\"\n        }\n      ],\n      \"missing_info\": [\n        \"是否有其他伴随症状（如头晕、食欲变化）？\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"是否有其他伴随症状（如头晕、食欲变化）？\"\n  ],\n  \"limitations\": [\n    \"仅凭单一症状难以进行中医辨证分析\",\n    \"缺乏舌象、脉象等关键诊断信息\"\n  ]\n}\n```",
+        "latency_sec": 8.3,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"三天来轻微疲劳，休息后减轻\", \"S2\": \"睡眠良好\", \"S3\": \"没有发热\"}\n先核对事实：[{\"id\": \"S1\", \"raw\": \"三天来轻微疲劳，休息后减轻\", \"clauses\": [{\"text\": \"三天来轻微疲劳\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"疲劳\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [{\"text\": \"轻微\", \"start\": 3, \"end\": 5}], \"frequency\": [], \"time\": [{\"text\": \"三天\", \"start\": 0, \"end\": 2}]}}, {\"text\": \"休息后减轻\", \"start\": 8, \"end\": 13, \"findings\": [], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"睡眠良好\", \"clauses\": [{\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"良好\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有发热\", \"clauses\": [{\"text\": \"没有发热\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"fever\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"发热\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n症状原文最权威；保持程度、频率、时间与否定。已缓解不适不能当作当前患病依据。证据quote逐字引用原文，不改写、不编造，source_id必须对应此原文。\n未知或可能伴随症状只能写进missing_info或以“是否有……”追问，不能在hypothesis中认定已存在。不把睡眠良好或一般说成差。历史不适可询问是否再次出现，不能预设仍持续。\n上次未通过有限检查，原因：[\"inactive_symptom_used_as_positive_basis\"]。请重新输出完整JSON，纠正上述问题。",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "三天来轻微疲劳，休息后减轻"
+              }
+            ],
+            "missing_info": [
+              "是否有其他伴随症状（如头晕、食欲变化）？"
+            ]
+          }
+        ],
+        "questions": [
+          "是否有其他伴随症状（如头晕、食欲变化）？"
+        ],
+        "limitations": [
+          "仅凭单一症状难以进行中医辨证分析",
+          "缺乏舌象、脉象等关键诊断信息"
+        ]
+      },
+      "reasons": [
+        "explanation_schema"
+      ]
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "questions_only_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 2,
+  "model_latency_sec": 22.700000000000003,
+  "case_id": "t01",
+  "arm": "enhanced",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  }
+}

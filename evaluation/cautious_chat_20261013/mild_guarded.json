@@ -1,0 +1,17 @@
+{
+  "id": "mild",
+  "mode": "guarded",
+  "responses": [
+    {
+      "session_id": "4e38ba31-7e03-4af9-9e9e-860d6357a4d5",
+      "answer": "**你提供的信息**\n- 我最近三天有轻微疲劳，休息后减轻\n- 睡眠良好，没有发热\n\n**待核实的可能方向**\n- 需排除亚健康状态可能性\n  - 依据：S1「轻微疲劳」\n这些方向尚未经过医学核验，不能据此确定病因或证候。\n\n**还需要补充**\n1. 疲劳是否在晨起后明显？\n2. 是否伴随眼干口燥等阴虚表现？",
+      "latency_sec": 14.7,
+      "truncated": false,
+      "mode": "guarded",
+      "guard_status": "limited_answer",
+      "workflow_version": "cautious_chat_v1_20261013",
+      "model_invocations": 1
+    }
+  ],
+  "functional_check_passed": true
+}

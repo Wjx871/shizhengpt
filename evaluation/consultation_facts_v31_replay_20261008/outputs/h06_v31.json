@@ -1,0 +1,246 @@
+{
+  "user_symptoms": [
+    "睡眠良好",
+    "最近五天白天有点疲乏",
+    "没有咳嗽"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "explanation_added_severity",
+        "explanation_unsupported_symptom_sleep_quality"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"需确认睡眠良好的具体表现（如入睡时间、夜间觉醒次数等）\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量一般具体指什么？\",\n    \"是否有夜间易醒或多梦的情况？\",\n    \"疲劳感是否伴随注意力下降或记忆力减退？\",\n    \"近期是否有过熬夜或工作压力增大的情况？\",\n    \"疲劳感是否在休息后完全缓解？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色/舌象等视觉信息\",\n    \"未提供脉象、二便、饮食等关键四诊信息\"\n  ]\n}\n```",
+        "latency_sec": 9.5850487658754,
+        "preprocess_sec": 0.005842055194079876,
+        "generation_sec": 9.576113526709378,
+        "output_tokens": 160,
+        "tokens_per_sec": 16.708239679253314,
+        "peak_memory": 16882651648,
+        "peak_reserved_bytes": 17169383424,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 862,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：睡眠良好\nS2：最近五天白天有点疲乏\nS3：没有咳嗽\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"睡眠良好\", \"clauses\": [{\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"良好\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"最近五天白天有点疲乏\", \"clauses\": [{\"text\": \"最近五天白天有点疲乏\", \"start\": 0, \"end\": 10, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"疲乏\", \"start\": 8, \"end\": 10}}], \"qualifiers\": {\"severity\": [{\"text\": \"有点\", \"start\": 6, \"end\": 8}], \"frequency\": [], \"time\": [{\"text\": \"最近五天\", \"start\": 0, \"end\": 4}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有咳嗽\", \"clauses\": [{\"text\": \"没有咳嗽\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"cough\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"咳嗽\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    },
+    {
+      "attempt": 2,
+      "reasons": [
+        "explanation_added_severity",
+        "explanation_unsupported_symptom_sleep_quality"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"需确认睡眠质量良好的具体表现\"\n    }\n  ],\n  \"questions\": [\n    \"睡眠质量具体指什么？\",\n    \"是否有夜间易醒或多梦的情况？\",\n    \"白天疲乏是否伴随注意力下降或记忆力减退？\"\n  ],\n  \"limitations\": [\n    \"无法基于图片颜色进行辨证\",\n    \"未提供脉象/舌象等其他诊断依据\"\n  ]\n}\n```",
+        "latency_sec": 7.104806066956371,
+        "preprocess_sec": 0.005605047103017569,
+        "generation_sec": 7.096859467215836,
+        "output_tokens": 117,
+        "tokens_per_sec": 16.48616554131939,
+        "peak_memory": 16909633024,
+        "peak_reserved_bytes": 17353932800,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 907,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：睡眠良好\nS2：最近五天白天有点疲乏\nS3：没有咳嗽\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"睡眠良好\", \"clauses\": [{\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"sleep_quality\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"睡眠良好\", \"start\": 0, \"end\": 4}}], \"qualifiers\": {\"severity\": [{\"text\": \"良好\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"最近五天白天有点疲乏\", \"clauses\": [{\"text\": \"最近五天白天有点疲乏\", \"start\": 0, \"end\": 10, \"findings\": [{\"term\": \"fatigue\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"疲乏\", \"start\": 8, \"end\": 10}}], \"qualifiers\": {\"severity\": [{\"text\": \"有点\", \"start\": 6, \"end\": 8}], \"frequency\": [], \"time\": [{\"text\": \"最近五天\", \"start\": 0, \"end\": 4}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"没有咳嗽\", \"clauses\": [{\"text\": \"没有咳嗽\", \"start\": 0, \"end\": 4, \"findings\": [{\"term\": \"cough\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"咳嗽\", \"start\": 2, \"end\": 4}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。\n上次输出未通过检查，原因：[\"explanation_added_severity\", \"explanation_unsupported_symptom_sleep_quality\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [],
+  "questions": [
+    "睡眠质量具体指什么？",
+    "是否有夜间易醒或多梦的情况？",
+    "白天疲乏是否伴随注意力下降或记忆力减退？"
+  ],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。",
+    "完整分析未通过检查；仅保留单独通过有限检查的追问，不展示被拒绝的解释。"
+  ],
+  "source_symptoms": {
+    "S1": "睡眠良好",
+    "S2": "最近五天白天有点疲乏",
+    "S3": "没有咳嗽"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "questions_only_after_explanation_rejection_requires_review",
+  "model_invocations": 2,
+  "model_latency_sec": 16.68985483283177,
+  "requires_review": true,
+  "guard_version": "v3.1_checked_question_fallback",
+  "symptom_facts": [
+    {
+      "id": "S1",
+      "raw": "睡眠良好",
+      "clauses": [
+        {
+          "text": "睡眠良好",
+          "start": 0,
+          "end": 4,
+          "findings": [
+            {
+              "term": "sleep_quality",
+              "polarity": "reported",
+              "evidence": {
+                "text": "睡眠良好",
+                "start": 0,
+                "end": 4
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [
+              {
+                "text": "良好",
+                "start": 2,
+                "end": 4
+              }
+            ],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S2",
+      "raw": "最近五天白天有点疲乏",
+      "clauses": [
+        {
+          "text": "最近五天白天有点疲乏",
+          "start": 0,
+          "end": 10,
+          "findings": [
+            {
+              "term": "fatigue",
+              "polarity": "reported",
+              "evidence": {
+                "text": "疲乏",
+                "start": 8,
+                "end": 10
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [
+              {
+                "text": "有点",
+                "start": 6,
+                "end": 8
+              }
+            ],
+            "frequency": [],
+            "time": [
+              {
+                "text": "最近五天",
+                "start": 0,
+                "end": 4
+              }
+            ]
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S3",
+      "raw": "没有咳嗽",
+      "clauses": [
+        {
+          "text": "没有咳嗽",
+          "start": 0,
+          "end": 4,
+          "findings": [
+            {
+              "term": "cough",
+              "polarity": "negative",
+              "evidence": {
+                "text": "咳嗽",
+                "start": 2,
+                "end": 4
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    }
+  ],
+  "fact_extraction_is_complete": false,
+  "visual_verification_method": "scope_and_resolution_rules_only",
+  "case_id": "h06",
+  "arm": "v3",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "partial_fallback_checks": [
+    {
+      "source_analysis_attempt": 2,
+      "reasons": []
+    }
+  ],
+  "selected_questions_from_analysis_attempt": 2,
+  "replayed_from": "D:\\lab\\shizhenGPT\\shizhengpt-evaluation\\evaluation\\consultation_facts_20261008\\outputs\\h06_v3.json",
+  "source_output_sha256": "754cf5f29de3ae732515920a7aef82adefc4f759adc71b07982587a395e30ab3",
+  "new_model_inferences_in_replay": 0
+}

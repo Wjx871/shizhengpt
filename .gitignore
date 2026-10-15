@@ -1,0 +1,46 @@
+# Runtime and local credentials
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+.DS_Store
+
+# Model weights, datasets, uploads and transport archives stay local.
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.tar
+*.tar.gz
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.pdf
+*.xlsx
+*.xls
+
+# Explicitly include synthetic engineering experiment records only.
+/evaluation/*
+!/evaluation/alignment_engineering_v4_20261009/
+!/evaluation/alignment_engineering_v41_forward_20261009/
+!/evaluation/alignment_engineering_v41_replay_20261009/
+!/evaluation/alignment_lora_pilot_20261009/
+!/evaluation/cautious_chat_20261013/
+!/evaluation/consultation_facts_20261008/
+!/evaluation/consultation_facts_v31_replay_20261008/
+!/evaluation/guarded_consultation_20261008/
+!/evaluation/guarded_consultation_final_20261008/
+!/evaluation/guarded_consultation_v2_20261008/
+!/evaluation/representation_probe_20261008/
+!/evaluation/representation_probe_controls_20261008/
+
+# Download transport headers are environment-specific.
+/docs/sources/hf_weight_headers.json

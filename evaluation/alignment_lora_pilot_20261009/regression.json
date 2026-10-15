@@ -1,0 +1,34 @@
+[
+  {
+    "id": "p01_full_description_basic",
+    "task": "regression",
+    "image": null,
+    "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n补充问诊信息：\n未提供。\n视觉输入：没有附图，仅提供以下人工核对的图像描述：公开人物静态照片。人物头部和上半身可见，头部朝向画面前方，眼睛、鼻子和嘴部可见，表情为微笑。头发可见，头上没有戴头盔；画面下方另有一个头盔。服装与背景不提供医学信息。照片未作医学校准，皮肤细微异常无法据此确认。",
+    "answer": null,
+    "historical_output_sha256": "eb226c5a8453f94e0bc5576be2dbe4e97df73026418c43beeae77f6c9abd7ab7"
+  },
+  {
+    "id": "p02_crop_image_basic",
+    "task": "regression",
+    "image": "evaluation/images/face/astronaut_original.png",
+    "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n补充问诊信息：\n未提供。\n视觉输入：已附本次原始测试图。",
+    "answer": null,
+    "historical_output_sha256": "2431f8a945aed0dc5c1e39e23425ac3764b66edb2a459f78babfe25b843f0172"
+  },
+  {
+    "id": "p03_partial_image_basic",
+    "task": "regression",
+    "image": "evaluation/images/face/5467.jpg",
+    "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近一周偶有腹胀\nS2：没有恶心和呕吐\nS3：食欲尚可\n补充问诊信息：\n未提供。\n视觉输入：已附本次原始测试图。",
+    "answer": null,
+    "historical_output_sha256": "90c162ecf3cc14647bdd5e7e9673526319cdda3795bc7bff0e8d81acd4e0e24e"
+  },
+  {
+    "id": "p04_blue_description_expanded",
+    "task": "regression",
+    "image": null,
+    "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n补充问诊信息：\nI1：这些不适约一周，工作忙时更明显\nI2：最近每晚约睡6小时，有时熬夜\nI3：没有发热、胸痛或心慌\nI4：休息后疲劳会减轻\nI5：未提供既往病史、用药史、舌象、脉象或检查结果\n视觉输入：没有附图，仅提供以下人工核对的图像描述：155×172像素的静态头部裁剪图，照片经过偏蓝成像变换。人物面部朝向画面前方，可见眼睛、鼻子、嘴部及微笑表情，头发可见，头部没有戴头盔。不能将变换后的照片颜色当作人物真实肤色；细节分辨率有限，不能确认或排除细微皮肤异常。",
+    "answer": null,
+    "historical_output_sha256": "72043f0f3d24bd898433fad08e4af7236f7833faec4b99d0592456bbc4938cee"
+  }
+]

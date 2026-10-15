@@ -1,0 +1,40 @@
+{
+  "raw_output": "### 【视觉事实】  \n11:00  \n- **整体面色**：图片为纯色背景，无真实面部图像，无法观察实际肤色、光泽、明暗等特征。  \n- **无法确认具体面部区域（如额头、脸颊、鼻部等）**：因缺乏真实图像，无法判断左右差异或局部细节。  \n- **成像因素**：图片为两个独立纯色图形（红色方块与蓝色圆圈），无真实面部信息，无法分析光照、色温、白平衡等对诊断的影响。  \n\n### 【中医理论解释】  \n因缺乏真实面部图像，无法依据中医理论（如五色辨证、气血状态等）进行解释。  \n\n### 【无法确定的信息】  \n所有面部特征（肤色、光泽、明暗、左右差异等）均无法确认，因图片为纯色图形，无真实面部数据。  \n\n### 【可能影响判断的成像因素】  \n1 无真实面部图像，无法评估光照、色温、白平衡、美颜、化妆、阴影等对诊断的影响。  \n2 纯色图形无法反映皮肤纹理、毛细血管等细节，无法用于中医望诊分析。",
+  "latency_sec": 14.731934763956815,
+  "preprocess_sec": 0.02042432175949216,
+  "generation_sec": 14.706776984967291,
+  "output_tokens": 254,
+  "tokens_per_sec": 17.270949322181817,
+  "peak_memory": 16778366976,
+  "peak_reserved_bytes": 16911433728,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 417,
+  "image_grid_thw": [
+    [
+      1,
+      28,
+      36
+    ]
+  ],
+  "truncated": false,
+  "prompt": "请仅根据图片中直接可见的信息分析人物面部视觉特征。重点观察整体面色、明暗、光泽、额头、左脸颊、右脸颊、鼻部、眼周、唇色和左右差异。左右以人物自身为准，如无法确认请说明。分成【视觉事实】【中医理论解释】【无法确定的信息】【可能影响判断的成像因素】。考虑光照、色温、白平衡、美颜、化妆、阴影和压缩。不要强行诊断，不要虚构症状。不适合面诊的图片请说明信息不足。请简洁回答。",
+  "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/../general/shapes.png",
+  "image_sha256": "70cd4c24a6ab0d15640f1b35849ffa9077c297a03224504f2998ac294d3ca0a9",
+  "status": "ok",
+  "case_id": "non_face_shapes",
+  "arm": "baseline",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

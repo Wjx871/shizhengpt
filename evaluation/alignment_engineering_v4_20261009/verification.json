@@ -1,0 +1,10 @@
+{
+  "actual_new_inferences": 40,
+  "replay_new_inferences": 0,
+  "all_frozen_hashes_match": true,
+  "server_code_sha256": {
+    "chat_server.py": "b3287fbe0867cb0536f255002618da98ee795b14fe000ee7623c356f8686e05e",
+    "infer_image.py": "7a9b07d2eb27b91c1544dfa58aeebe573d96d62dee23e8cbf4cae9d8dc60f9a2",
+    "inference.yaml": "e1159fd3a7678184ab2fccb4baa5d444bf91ab09a9db4b6c969ef10f397d32c6"
+  }
+}

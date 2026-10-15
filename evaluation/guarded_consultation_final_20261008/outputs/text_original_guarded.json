@@ -1,0 +1,158 @@
+{
+  "user_symptoms": [
+    "最近容易疲劳",
+    "手脚较凉",
+    "睡眠质量一般",
+    "偶尔食欲不佳"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能与气虚、血虚或阳气不足相关\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"手脚凉需区分是阳虚失温还是气血运行不畅\"\n    },\n    {\n      \"basis_ids\": [\"S4\"],\n      \"explanation\": \"食欲不佳可能涉及脾胃虚弱或肝胃不和\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在活动后加重？\",\n    \"手脚凉是全天持续还是特定时段明显？\",\n    \"食欲不佳时是否有腹胀或嗳气现象？\",\n    \"睡眠质量一般具体表现为入睡困难/易醒/多梦等哪一种？\",\n    \"近期是否有体重变化或排便异常？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断寒热属性\",\n    \"缺乏舌象和脉象信息\"\n  ]\n}\n```",
+        "latency_sec": 16.60238649463281,
+        "preprocess_sec": 0.025644135661423206,
+        "generation_sec": 16.572126165032387,
+        "output_tokens": 218,
+        "tokens_per_sec": 13.154618654785867,
+        "peak_memory": 16671715328,
+        "peak_reserved_bytes": 16724787200,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 382,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。",
+        "image_path": "",
+        "image_sha256": null
+      },
+      "prior_guard_reasons": [
+        "question_presupposes_sleep_severity_changed_or_added"
+      ]
+    },
+    {
+      "attempt": 2,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能由多种因素引起，需进一步明确具体诱因\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"手足凉可能与阳气不足或气血运行异常相关\"\n    },\n    {\n      \"basis_ids\": [\"S4\"],\n      \"explanation\": \"食欲不佳可能涉及脾胃功能失调\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在特定时间段加重？\",\n    \"手足凉是否伴随其他不适（如麻木/刺痛）？\",\n    \"食欲不佳时是否有腹胀/口苦等伴随症状？\",\n    \"睡眠质量一般具体表现为入睡困难/易醒还是多梦？\",\n    \"近期饮食作息是否有明显变化？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色特征\",\n    \"缺乏舌象及脉象信息\"\n  ]\n}\n```",
+        "latency_sec": 12.2609643926844,
+        "preprocess_sec": 0.004582482855767012,
+        "generation_sec": 12.251994797959924,
+        "output_tokens": 214,
+        "tokens_per_sec": 17.466543491810256,
+        "peak_memory": 16681900544,
+        "peak_reserved_bytes": 16741564416,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 422,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n上次输出未通过检查，原因：[\"question_presupposes_sleep_severity_changed_or_added\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "",
+        "image_sha256": null
+      },
+      "prior_guard_reasons": [
+        "question_presupposes_sleep_severity_changed_or_added"
+      ]
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能由多种因素引起，需进一步明确具体诱因"
+    },
+    {
+      "basis_ids": [
+        "S2"
+      ],
+      "explanation": "手足凉可能与阳气不足或气血运行异常相关"
+    },
+    {
+      "basis_ids": [
+        "S4"
+      ],
+      "explanation": "食欲不佳可能涉及脾胃功能失调"
+    }
+  ],
+  "questions": [
+    "疲劳是否在特定时间段加重？",
+    "手足凉是否伴随其他不适（如麻木/刺痛）？",
+    "食欲不佳时是否有腹胀/口苦等伴随症状？",
+    "睡眠质量一般具体表现为入睡困难/易醒还是多梦？",
+    "近期饮食作息是否有明显变化？"
+  ],
+  "limitations": [
+    "照片技术描述未经医学核验；症状原文由程序保留。",
+    "没有图片，未进行视觉分析。",
+    "无法通过图片判断面色特征",
+    "缺乏舌象及脉象信息"
+  ],
+  "source_symptoms": {
+    "S1": "最近容易疲劳",
+    "S2": "手脚较凉",
+    "S3": "睡眠质量一般",
+    "S4": "偶尔食欲不佳"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 2,
+  "model_latency_sec": 28.86335088731721,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "text_original",
+  "arm": "guarded_final",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "visual_reused_from": "/root/private_data/shizhengpt-evaluation/evaluation/guarded_consultation_v2_20261008/outputs/text_original_guarded.json",
+  "new_inferences_in_final_run": 2,
+  "selected_analysis_attempt": 2,
+  "analysis_revalidated_without_new_generation": true
+}

@@ -1,0 +1,36 @@
+{
+  "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"visible\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\",\n    \"headgear_worn\": \"no\"\n  },\n  \"visual_observations\": [\n    \"静态头部裁剪图，细节分辨率有限，无法确认细微皮肤异常或排除潜在问题。\",\n    \"微笑表情可能影响唇周肌肉形态判断，但无其他面部动态信息辅助。\"\n  ],\n  \"user_symptoms\": [\"最近容易疲劳\", \"手脚较凉\", \"睡眠质量一般\", \"偶尔食欲不佳\"],\n  \"additional_history\": [\"这些不适约一周，工作忙时更明显\", \"最近每晚约睡6小时，有时熬夜\", \"没有发热、胸痛或心慌\", \"休息后疲劳会减轻\"],\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\", \"S2\"],\n      \"text\": \"疲劳与阳气不足或气血运行不畅相关，需结合舌脉进一步辨证。\"\n    },\n    {\n      \"basis_ids\": [\"S2\", \"S3\", \"I2\"],\n      \"text\": \"长期熬夜耗伤阴血，可能导致虚热内生，影响睡眠质量。\"\n    }\n  ],\n  \"questions\": [\n    \"是否伴有头晕、健忘等脑力活动相关的症状？\",\n    \"饮食偏好如何？有无喜冷饮或辛辣食物？\",\n    \"工作压力是否伴随情绪波动（如焦虑、烦躁）？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌象、脉象及详细体格检查信息，无法进行四诊合参。\",\n    \"补充问诊中未提及二便情况、月经周期（女性）等关键信息。\"\n  ]\n}\n```",
+  "latency_sec": 21.640199995599687,
+  "preprocess_sec": 0.003443047869950533,
+  "generation_sec": 21.629921111278236,
+  "output_tokens": 374,
+  "tokens_per_sec": 17.29086287813549,
+  "peak_memory": 16719353344,
+  "peak_reserved_bytes": 16890462208,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 768,
+    "do_sample": false
+  },
+  "input_tokens": 533,
+  "image_grid_thw": null,
+  "truncated": false,
+  "prompt": "这是研究用合成问诊输入，图片人物与症状没有真实病例关联。仅依据本次提供的信息回答。\n把图像或图像描述中的可见信息与用户症状分开。不得从照片猜测年龄、性别、职业、健康状态、脉象、舌象或真实肤色；未显示的部位不能补全。\n如果图像描述代替图片，应明确观察依据是提供的描述，不要声称自己看到了图片。不得将信息不足写成确诊，不提供药物、剂量或治疗。\n用户症状和补充问诊信息保持原字串；可能解释只能引用实际提供的S/I编号，不能根据服装或面色推断脏腑病变。\n追问不能预设未知症状，也应考虑补充问诊信息；仍未明确的内容可以继续询问。\n只输出一个JSON对象，字段为：\nvisual_status：对象，eyes/nose/mouth各为visible、not_visible或unknown，headgear_worn为yes、no或unknown；判定仅针对画面可见区域或提供的描述。\nvisual_observations：最多2条简短字符串；\nuser_symptoms：症状原文字符串列表；additional_history：实际提供的补充信息原文列表，未提供则为空；\npossible_explanations：最多2个对象，每个只有basis_ids（S/I编号列表）及text（需要核实的可能解释字符串）；信息不足可为空；\nquestions：最多3条追问字符串；limitations：最多2条字符串。不要填写格式占位答案。\n用户原始症状：\nS1：最近容易疲劳\nS2：手脚较凉\nS3：睡眠质量一般\nS4：偶尔食欲不佳\n补充问诊信息：\nI1：这些不适约一周，工作忙时更明显\nI2：最近每晚约睡6小时，有时熬夜\nI3：没有发热、胸痛或心慌\nI4：休息后疲劳会减轻\nI5：未提供既往病史、用药史、舌象、脉象或检查结果\n视觉输入：没有附图，仅提供以下人工核对的图像描述：155×172像素的静态头部裁剪图。人物面部朝向画面前方，可见眼睛、鼻子、嘴部及微笑表情，头发可见，头部没有戴头盔。细节分辨率有限，不能据此确认细微皮肤异常，也不能排除异常。照片颜色未校准。",
+  "image_path": "",
+  "image_sha256": null,
+  "case_id": "p02_crop",
+  "arm": "description_expanded",
+  "visual_mode": "description",
+  "expanded_history": true,
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "clinical_accuracy_not_measured": true
+}

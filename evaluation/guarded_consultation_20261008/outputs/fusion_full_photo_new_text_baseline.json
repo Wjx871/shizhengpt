@@ -1,0 +1,40 @@
+{
+  "raw_output": "【视觉观察】  \n未提供图片，无法进行视觉观察。\n\n【用户自述】  \n近两天疲劳，睡眠正常，无发热、胸痛。\n\n【中医角度综合分析】  \n1 �疲劳属“虚劳”范畴，可能与气虚、脾虚或气血不足相关  \n   - 气虚则推动无力，常见神疲乏力；脾主运化，脾虚则气血生化不足  \n   - 但无发热提示非外感实证，结合睡眠正常，更倾向内伤虚损  \n2 需排除过度劳累、情志不畅等诱因导致肝郁脾虚  \n\n【仍需询问的问题】  \n1 近期饮食作息是否规律？有无熬夜/过劳史  \n2 是否伴有食欲减退、腹胀便溏（脾虚表现）  \n3 有无情绪焦虑、压力过大（肝郁影响脾胃）  \n4 是否有月经量少色淡、面色萎黄（血虚征象）  \n\n【不确定性】  \n1 �疲劳程度分级不明确（轻度疲劳 vs 明显乏力）  \n2 未提及舌脉信息（舌淡苔白为气虚，舌红少苔为阴虚）  \n3 无伴随症状（如头晕目眩提示血虚，心悸提示心血不足）  \n4 未区分工作性质（航天员高强度训练易耗气伤津）  \n\n建议补充上述信息后进一步辨证，暂不建议自行用药。",
+  "latency_sec": 18.238287528976798,
+  "preprocess_sec": 0.031001039780676365,
+  "generation_sec": 18.201437019277364,
+  "output_tokens": 313,
+  "tokens_per_sec": 17.19644441636657,
+  "peak_memory": 16891681280,
+  "peak_reserved_bytes": 17058234368,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 453,
+  "image_grid_thw": [
+    [
+      1,
+      36,
+      36
+    ]
+  ],
+  "truncated": false,
+  "prompt": "请综合图片中直接观察到的信息（如果没有图片请明确说明）和用户明确提供的信息，按照【视觉观察】【用户自述】【中医角度综合分析】【仍需询问的问题】【不确定性】分析。禁止自行添加用户没有描述的症状，不能仅凭图文确诊。用户明确提供：近两天有点疲劳，睡眠尚可，没有发热，没有胸痛。请简洁回答。",
+  "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/public_astronaut.png",
+  "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+  "status": "ok",
+  "case_id": "fusion_full_photo_new_text",
+  "arm": "baseline",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

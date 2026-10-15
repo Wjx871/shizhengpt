@@ -1,0 +1,108 @@
+{
+  "user_symptoms": [
+    "近两天有点疲劳",
+    "睡眠尚可",
+    "没有发热",
+    "没有胸痛"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能由近期过度劳累、作息紊乱或潜在慢性疾病引起\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否伴随头晕、注意力下降？\",\n    \"最近是否有增加工作强度或体力消耗？\",\n    \"疲劳出现前是否有饮食异常或睡眠质量变化？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断疲劳原因\",\n    \"需排除器质性疾病导致的疲劳\"\n  ]\n}\n```",
+        "latency_sec": 6.918232555035502,
+        "preprocess_sec": 0.002920780796557665,
+        "generation_sec": 6.912876364775002,
+        "output_tokens": 122,
+        "tokens_per_sec": 17.64822536414201,
+        "peak_memory": 16656625664,
+        "peak_reserved_bytes": 16911433728,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 320,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n{\"source_symptoms\": {\"S1\": \"近两天有点疲劳\", \"S2\": \"睡眠尚可\", \"S3\": \"没有发热\", \"S4\": \"没有胸痛\"}, \"image_present\": false, \"visual_action\": \"no_image_visual_generation_skipped\", \"unverified_technical_visual_facts\": [], \"allow_colour_based_medical_inference\": false}",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能由近期过度劳累、作息紊乱或潜在慢性疾病引起"
+    }
+  ],
+  "questions": [
+    "疲劳是否伴随头晕、注意力下降？",
+    "最近是否有增加工作强度或体力消耗？",
+    "疲劳出现前是否有饮食异常或睡眠质量变化？"
+  ],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "无法通过图片判断疲劳原因",
+    "需排除器质性疾病导致的疲劳"
+  ],
+  "source_symptoms": {
+    "S1": "近两天有点疲劳",
+    "S2": "睡眠尚可",
+    "S3": "没有发热",
+    "S4": "没有胸痛"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 1,
+  "model_latency_sec": 6.918232555035502,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "text_new_negations",
+  "arm": "guarded",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

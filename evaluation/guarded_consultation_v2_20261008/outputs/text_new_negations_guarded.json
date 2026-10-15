@@ -1,0 +1,135 @@
+{
+  "user_symptoms": [
+    "近两天有点疲劳",
+    "睡眠尚可",
+    "没有发热",
+    "没有胸痛"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "invalid_json: Extra data: line 20 column 1 (char 322)"
+      ],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能由多种因素引起，需进一步明确具体诱因和伴随症状\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否在特定时间段加重？\",\n    \"是否有体力活动后气短或心悸现象？\",\n    \"近期饮食和睡眠质量是否有变化？\",\n    \"是否存在情绪波动或压力事件？\",\n    \"疲劳是否影响日常活动能力？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色特征\",\n    \"缺乏脉象、舌象等体征信息\"\n  ]\n}\n``` \n\n**分析说明**：  \n1 仅基于提供的症状数据进行逻辑推导，未添加任何假设性诊断  \n2 追问问题围绕疲劳的潜在诱因展开，符合中医\"四诊合参\"原则  \n3 遵循用户要求严格限制基础数据范围，未涉及视觉辨证要素  \n4 列出的限制项明确说明当前信息获取的局限性",
+        "latency_sec": 12.944703706074506,
+        "preprocess_sec": 0.0030674622394144535,
+        "generation_sec": 12.937235830817372,
+        "output_tokens": 228,
+        "tokens_per_sec": 17.623548258808775,
+        "peak_memory": 16663536128,
+        "peak_reserved_bytes": 16710107136,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 347,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近两天有点疲劳\nS2：睡眠尚可\nS3：没有发热\nS4：没有胸痛\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    },
+    {
+      "attempt": 2,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能由多种因素引起，需进一步明确具体诱因\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否伴随头晕/乏力/注意力下降等症状？\",\n    \"近期是否有过度劳累、熬夜或情绪压力？\",\n    \"饮食睡眠情况是否与以往有明显变化？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断面色特征\",\n    \"缺乏脉象、舌象等体征信息\"\n  ]\n}\n```",
+        "latency_sec": 7.2081148899160326,
+        "preprocess_sec": 0.00281476229429245,
+        "generation_sec": 7.202786965761334,
+        "output_tokens": 126,
+        "tokens_per_sec": 17.49322874589306,
+        "peak_memory": 16674318336,
+        "peak_reserved_bytes": 16726884352,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 397,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：近两天有点疲劳\nS2：睡眠尚可\nS3：没有发热\nS4：没有胸痛\n图片处理状态：no_image_visual_generation_skipped\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n上次输出未通过检查，原因：[\"invalid_json: Extra data: line 20 column 1 (char 322)\"]\n请重新回答，严格使用规定JSON字段和类型。不要补充任何输入未提供的事实。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能由多种因素引起，需进一步明确具体诱因"
+    }
+  ],
+  "questions": [
+    "疲劳是否伴随头晕/乏力/注意力下降等症状？",
+    "近期是否有过度劳累、熬夜或情绪压力？",
+    "饮食睡眠情况是否与以往有明显变化？"
+  ],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "无法通过图片判断面色特征",
+    "缺乏脉象、舌象等体征信息"
+  ],
+  "source_symptoms": {
+    "S1": "近两天有点疲劳",
+    "S2": "睡眠尚可",
+    "S3": "没有发热",
+    "S4": "没有胸痛"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 2,
+  "model_latency_sec": 20.15281859599054,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "text_new_negations",
+  "arm": "guarded_v2",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

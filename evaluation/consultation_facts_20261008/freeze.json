@@ -1,0 +1,11 @@
+{
+  "source_sha256": {
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "guarded_consultation_v3.py": "625483f4f1bb40be71a88b5a8a4d5a0a4496ae02f0e35907cd09c3560ee30493",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_consultation_facts.py": "b5a25e95788a8c6097b83d817fa72ed97a33999a01a36ceade3503d77d3de132"
+  },
+  "frozen_at_unix": 1791458565.8069525,
+  "protocol": "No rule/prompt changes after real outputs. Synthetic text holdout only; repeated public images are not independent patients. Same model/config/caps/retry count in both arms."
+}

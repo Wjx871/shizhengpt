@@ -1,0 +1,129 @@
+[
+  {
+    "id": "h01",
+    "symptoms": [
+      "近三天轻微乏力",
+      "否认发烧",
+      "睡眠正常"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h02",
+    "symptoms": [
+      "最近一周偶有腹胀",
+      "没有恶心和呕吐",
+      "食欲尚可"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h03",
+    "symptoms": [
+      "有时头晕",
+      "没有心慌",
+      "没有胸部疼痛"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h04",
+    "symptoms": [
+      "昨天头疼，今天已经缓解",
+      "没有发热"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h05",
+    "symptoms": [
+      "近两周有时食欲下降",
+      "并非每天都有",
+      "没有腹痛"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h06",
+    "symptoms": [
+      "睡眠良好",
+      "最近五天白天有点疲乏",
+      "没有咳嗽"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h07",
+    "symptoms": [
+      "最近一个月偶有手足凉",
+      "没有便秘和腹泻",
+      "睡眠质量一般"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h08",
+    "symptoms": [
+      "近四天有点腹胀",
+      "没有发烧但偶尔咳嗽",
+      "睡眠尚可"
+    ],
+    "image": null,
+    "kind": "text",
+    "group": "frozen_new_synthetic_text_condition"
+  },
+  {
+    "id": "h09",
+    "symptoms": [
+      "最近一周偶有腹胀",
+      "没有恶心和呕吐",
+      "食欲尚可"
+    ],
+    "image": "evaluation/images/face/astronaut_jpeg.png",
+    "kind": "fusion",
+    "group": "frozen_new_synthetic_text_condition",
+    "image_sha256": "4bd68c1e9b8ba13332d5fb53ee74349531ecfd62188b6150079d896c224a842a"
+  },
+  {
+    "id": "h10",
+    "symptoms": [
+      "有时头晕",
+      "没有心慌",
+      "没有胸部疼痛"
+    ],
+    "image": "evaluation/images/face/5467.jpg",
+    "kind": "fusion",
+    "group": "frozen_new_synthetic_text_condition",
+    "image_sha256": "2f01333bc59fc608d61756609f57dc37516795d582fb9126312491bffc8a019c"
+  },
+  {
+    "id": "r01",
+    "symptoms": [],
+    "image": "evaluation/images/face/public_astronaut.png",
+    "kind": "visual_regression",
+    "group": "known_visual_regression",
+    "image_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+  },
+  {
+    "id": "r02",
+    "symptoms": [],
+    "image": "evaluation/images/face/astronaut_original.png",
+    "kind": "visual_regression",
+    "group": "known_visual_regression",
+    "image_sha256": "10daeb968e634e6c156fae11e11c293069df2a625fcc1cc3c124a5ea1297cdfa"
+  }
+]

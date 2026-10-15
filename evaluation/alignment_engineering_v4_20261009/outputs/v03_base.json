@@ -1,0 +1,58 @@
+{
+  "symptoms_original": [],
+  "visual": {
+    "visual_status": {
+      "eyes": "unknown",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "observations": [
+      "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+    ],
+    "limitations": [
+      "无法获取患者整体面部其他部位信息以全面评估气色"
+    ]
+  },
+  "analysis": null,
+  "visual_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\"\n  },\n  \"observations\": [\n    \"耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）\"\n  ],\n  \"limitations\": [\n    \"无法获取患者整体面部其他部位信息以全面评估气色\"\n  ]\n}\n```",
+        "latency_sec": 5.5,
+        "truncated": false,
+        "prompt": "只输出JSON对象：{\"visual_status\":{\"eyes\":\"visible/not_visible/unknown\",\"nose\":\"visible/not_visible/unknown\",\"mouth\":\"visible/not_visible/unknown\"},\"observations\":[\"简短观察\"],\"limitations\":[\"局限\"]}。\n每项状态只选visible、not_visible或unknown，最多2条观察和2条局限。只观察照片，不做问诊和诊断。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/5467.jpg"
+      },
+      "parsed": {
+        "visual_status": {
+          "eyes": "unknown",
+          "nose": "visible",
+          "mouth": "visible"
+        },
+        "observations": [
+          "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+        ],
+        "limitations": [
+          "无法获取患者整体面部其他部位信息以全面评估气色"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "analysis_attempts": [],
+  "visual_action": "limited_checks_passed_unverified",
+  "analysis_action": "no_symptoms",
+  "clinical_verification": false,
+  "qc": null,
+  "model_invocations": 1,
+  "model_latency_sec": 5.5,
+  "case_id": "v03",
+  "arm": "base",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  }
+}

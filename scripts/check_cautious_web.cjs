@@ -1,0 +1,25 @@
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
+const path=require('path');const fs=require('fs');
+(async()=>{
+ const root=path.resolve(__dirname,'..'),out=path.join(root,'evaluation','cautious_web_20261013');fs.mkdirSync(out,{recursive:true});
+ const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1280,height:900}});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:7860');await page.getByText('模型已连接').waitFor();
+ if(await page.getByLabel('回答模式').inputValue()!=='guarded')throw Error('Wrong default');
+ await page.getByLabel('消息',{exact:true}).fill('问诊前需要提供什么信息？');await page.getByRole('button',{name:'发送消息'}).click();
+ await page.locator('.assistant .meta').waitFor({timeout:180000});
+ const faq=await page.locator('.assistant .bubble').innerText();if(!faq.includes('开始时间'))throw Error('Useful FAQ failed');
+ await page.getByRole('button',{name:'新对话'}).click();
+ await page.locator('#file').setInputFiles(path.join(root,'evaluation','images','face','public_astronaut.png'));
+ await page.getByRole('button',{name:'发送消息'}).click();await page.locator('.assistant .meta').waitFor({timeout:180000});
+ const photo=await page.locator('.assistant .bubble').innerText();if(!photo.includes('无法可靠判断')&&!photo.includes('无法可靠判断这些内容'))throw Error('Abstention not shown');
+ await page.screenshot({path:path.join(out,'cautious-photo.png')});
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(out,'cautious-mobile.png')});
+ const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile overflow');
+ await page.getByLabel('回答模式').selectOption('raw');if(await page.locator('.row').count())throw Error('Mode switch must clear context');
+ await page.getByLabel('消息',{exact:true}).fill('你好，请简单打个招呼。');await page.getByRole('button',{name:'发送消息'}).click();await page.locator('.assistant .meta').waitFor({timeout:180000});
+ const raw=await page.locator('.assistant .bubble').innerText();if(!raw.includes('原始模型 · 未核对'))throw Error('Raw mode not labelled');
+ await page.getByLabel('回答模式').selectOption('guarded');
+ if(errors.length)throw Error(JSON.stringify(errors));fs.writeFileSync(path.join(out,'checks.json'),JSON.stringify({faq,photo,raw,overflow,errors,raw_model_calls:1},null,2));
+ console.log(JSON.stringify({passed:true,overflow,errors}));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

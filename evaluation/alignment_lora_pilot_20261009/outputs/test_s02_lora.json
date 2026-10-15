@@ -1,0 +1,34 @@
+{
+  "raw_output": "{\"facts\":[{\"source_id\":\"S2\",\"quote\":\"昨晚睡得不错\",\"polarity\":\"reported\",\"severity\":\"不错\",\"frequency\":\"not_stated\",\"duration\":\"昨晚\"},{\"source_id\":\"I3\",\"quote\":\"偶尔手足凉\",\"polarity\":\"reported\",\"severity\":\"not_stated\",\"frequency\":\"偶尔\",\"duration\":\"not_stated\"},{\"source_id\":\"S7\",\"quote\":\"没有心慌\",\"polarity\":\"negative\",\"severity\":\"not_stated\",\"frequency\":\"not_stated\",\"duration\":\"not_stated\"}]}",
+  "latency_sec": 6.331604623701423,
+  "preprocess_sec": 0.0017022830434143543,
+  "generation_sec": 6.32773857889697,
+  "output_tokens": 106,
+  "tokens_per_sec": 16.75164020737367,
+  "peak_memory": 16630013440,
+  "peak_reserved_bytes": 17567842304,
+  "dtype": "bfloat16",
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "input_tokens": 162,
+  "image_grid_thw": null,
+  "truncated": false,
+  "prompt": "按原文提取事实，不做诊断。仅输出JSON：facts列表，按输入顺序，每项有source_id、quote（完整原文）、polarity（reported/negative/improved）、severity、frequency、duration。程度、频率和时间使用原文词句；未说明填not_stated。已缓解或好转为improved，否认/没有为negative。不把一般改成差，不把偶尔改成经常，不增加病程。\n来源：\nS2：昨晚睡得不错\nI3：偶尔手足凉\nS7：没有心慌",
+  "image_path": "",
+  "image_sha256": null,
+  "case_id": "test_s02",
+  "arm": "lora",
+  "task": "symptoms",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

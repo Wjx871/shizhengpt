@@ -1,0 +1,160 @@
+{
+  "symptoms_original": [
+    "四天来偶尔饭后腹胀，排气后减轻",
+    "没有恶心和呕吐",
+    "食欲正常"
+  ],
+  "visual": {
+    "visual_status": {
+      "eyes": "unknown",
+      "nose": "visible",
+      "mouth": "visible"
+    },
+    "observations": [
+      "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+    ],
+    "limitations": [
+      "无法获取患者整体面部其他部位信息以全面评估气色"
+    ]
+  },
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "脾胃气滞证（功能性消化不良）",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "饭后腹胀、排气后缓解提示气机阻滞"
+          },
+          {
+            "source_id": "S2",
+            "quote": "无恶心呕吐排除胃气上逆重症"
+          }
+        ],
+        "missing_info": [
+          "腹胀部位（中脘/胁下）、是否嗳气酸腐、舌苔颜色"
+        ]
+      },
+      {
+        "hypothesis": "饮食积滞证（食积停滞）",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "饭后胀满与进食相关"
+          },
+          {
+            "source_id": "S2",
+            "quote": "食欲正常提示非长期积滞"
+          }
+        ],
+        "missing_info": [
+          "排便情况（便秘/溏泄）、矢气气味、腹部按压痛感"
+        ]
+      }
+    ],
+    "questions": [
+      "腹胀主要集中在哪个部位？",
+      "排气后是否仍有残留胀感？"
+    ],
+    "limitations": [
+      "缺乏舌脉信息影响辨证准确性",
+      "未提及二便情况无法判断湿热/虚实"
+    ]
+  },
+  "visual_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_status\": {\n    \"eyes\": \"unknown\",\n    \"nose\": \"visible\",\n    \"mouth\": \"visible\"\n  },\n  \"observations\": [\n    \"耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）\"\n  ],\n  \"limitations\": [\n    \"无法获取患者整体面部其他部位信息以全面评估气色\"\n  ]\n}\n```",
+        "latency_sec": 5.5,
+        "truncated": false,
+        "prompt": "只输出JSON对象：{\"visual_status\":{\"eyes\":\"visible/not_visible/unknown\",\"nose\":\"visible/not_visible/unknown\",\"mouth\":\"visible/not_visible/unknown\"},\"observations\":[\"简短观察\"],\"limitations\":[\"局限\"]}。\n每项状态只选visible、not_visible或unknown，最多2条观察和2条局限。只观察照片，不做问诊和诊断。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/5467.jpg"
+      },
+      "parsed": {
+        "visual_status": {
+          "eyes": "unknown",
+          "nose": "visible",
+          "mouth": "visible"
+        },
+        "observations": [
+          "耳部皮肤可见红斑及色素沉着，局部有疑似毛细血管扩张现象（箭头指示处）"
+        ],
+        "limitations": [
+          "无法获取患者整体面部其他部位信息以全面评估气色"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"脾胃气滞证（功能性消化不良）\",\n      \"evidence\": [\n        {\"source_id\": \"S1\", \"quote\": \"饭后腹胀、排气后缓解提示气机阻滞\"},\n        {\"source_id\": \"S2\", \"quote\": \"无恶心呕吐排除胃气上逆重症\"}\n      ],\n      \"missing_info\": [\"腹胀部位（中脘/胁下）、是否嗳气酸腐、舌苔颜色\"]\n    },\n    {\n      \"hypothesis\": \"饮食积滞证（食积停滞）\",\n      \"evidence\": [\n        {\"source_id\": \"S1\", \"quote\": \"饭后胀满与进食相关\"},\n        {\"source_id\": \"S2\", \"quote\": \"食欲正常提示非长期积滞\"}\n      ],\n      \"missing_info\": [\"排便情况（便秘/溏泄）、矢气气味、腹部按压痛感\"]\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要集中在哪个部位？\",\n    \"排气后是否仍有残留胀感？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌脉信息影响辨证准确性\",\n    \"未提及二便情况无法判断湿热/虚实\"\n  ]\n}\n```",
+        "latency_sec": 15.6,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"四天来偶尔饭后腹胀，排气后减轻\", \"S2\": \"没有恶心和呕吐\", \"S3\": \"食欲正常\"}",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "脾胃气滞证（功能性消化不良）",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "饭后腹胀、排气后缓解提示气机阻滞"
+              },
+              {
+                "source_id": "S2",
+                "quote": "无恶心呕吐排除胃气上逆重症"
+              }
+            ],
+            "missing_info": [
+              "腹胀部位（中脘/胁下）、是否嗳气酸腐、舌苔颜色"
+            ]
+          },
+          {
+            "hypothesis": "饮食积滞证（食积停滞）",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "饭后胀满与进食相关"
+              },
+              {
+                "source_id": "S2",
+                "quote": "食欲正常提示非长期积滞"
+              }
+            ],
+            "missing_info": [
+              "排便情况（便秘/溏泄）、矢气气味、腹部按压痛感"
+            ]
+          }
+        ],
+        "questions": [
+          "腹胀主要集中在哪个部位？",
+          "排气后是否仍有残留胀感？"
+        ],
+        "limitations": [
+          "缺乏舌脉信息影响辨证准确性",
+          "未提及二便情况无法判断湿热/虚实"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "visual_action": "limited_checks_passed_unverified",
+  "analysis_action": "full_answer_requires_review",
+  "clinical_verification": false,
+  "qc": null,
+  "model_invocations": 2,
+  "model_latency_sec": 21.1,
+  "case_id": "m02",
+  "arm": "base",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  }
+}

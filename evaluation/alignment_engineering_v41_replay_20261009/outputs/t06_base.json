@@ -1,0 +1,126 @@
+{
+  "symptoms_original": [
+    "没有发热但有时咳嗽",
+    "睡眠正常"
+  ],
+  "visual": null,
+  "analysis": {
+    "possible_explanations": [
+      {
+        "hypothesis": "外感风寒表证未解，肺气失宣",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "咳嗽无发热提示表邪未完全入里"
+          },
+          {
+            "source_id": "S1",
+            "quote": "咳嗽为肺气上逆之象"
+          }
+        ],
+        "missing_info": [
+          "咳嗽性质（干咳/痰咳）",
+          "痰液颜色及质地"
+        ]
+      },
+      {
+        "hypothesis": "阴虚肺燥证候",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "quote": "无发热提示非实热证"
+          },
+          {
+            "source_id": "S1",
+            "quote": "咳嗽可能为阴虚致燥"
+          }
+        ],
+        "missing_info": [
+          "夜间是否盗汗",
+          "口咽是否干燥"
+        ]
+      }
+    ],
+    "questions": [
+      "咳嗽是否有痰？痰色白或黄？",
+      "是否伴有咽干、声音嘶哑？"
+    ],
+    "limitations": [
+      "缺乏舌脉信息影响辨证准确性",
+      "睡眠正常提示暂无心肝火旺表现"
+    ]
+  },
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"hypothesis\": \"外感风寒表证未解，肺气失宣\",\n      \"evidence\": [\n        {\"source_id\": \"S1\", \"quote\": \"咳嗽无发热提示表邪未完全入里\"},\n        {\"source_id\": \"S1\", \"quote\": \"咳嗽为肺气上逆之象\"}\n      ],\n      \"missing_info\": [\n        \"咳嗽性质（干咳/痰咳）\",\n        \"痰液颜色及质地\"\n      ]\n    },\n    {\n      \"hypothesis\": \"阴虚肺燥证候\",\n      \"evidence\": [\n        {\"source_id\": \"S1\", \"quote\": \"无发热提示非实热证\"},\n        {\"source_id\": \"S1\", \"quote\": \"咳嗽可能为阴虚致燥\"}\n      ],\n      \"missing_info\": [\n        \"夜间是否盗汗\",\n        \"口咽是否干燥\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"咳嗽是否有痰？痰色白或黄？\",\n    \"是否伴有咽干、声音嘶哑？\"\n  ],\n  \"limitations\": [\n    \"缺乏舌脉信息影响辨证准确性\",\n    \"睡眠正常提示暂无心肝火旺表现\"\n  ]\n}\n```",
+        "latency_sec": 15.5,
+        "truncated": false,
+        "prompt": "这是研究用合成问诊输入。根据以下用户信息给出可能解释和追问。\n只输出JSON对象：\n{\"possible_explanations\":[{\"hypothesis\":\"需要进一步核实的可能解释\",\"evidence\":[{\"source_id\":\"S1\",\"quote\":\"逐字引用原文中的依据\"}],\"missing_info\":[\"需要补充的信息\"]}],\"questions\":[\"追问\"],\"limitations\":[\"局限\"]}。\n最多2个解释，每个最多2条证据和2条缺失信息，最多3个追问和2条局限。示例是格式，不是答案。\n解释不是确诊，不提供药物剂量。没有充分信息时解释可为空，但有症状时应提出有用问题。\n原始症状：{\"S1\": \"没有发热但有时咳嗽\", \"S2\": \"睡眠正常\"}",
+        "image_path": null
+      },
+      "parsed": {
+        "possible_explanations": [
+          {
+            "hypothesis": "外感风寒表证未解，肺气失宣",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "咳嗽无发热提示表邪未完全入里"
+              },
+              {
+                "source_id": "S1",
+                "quote": "咳嗽为肺气上逆之象"
+              }
+            ],
+            "missing_info": [
+              "咳嗽性质（干咳/痰咳）",
+              "痰液颜色及质地"
+            ]
+          },
+          {
+            "hypothesis": "阴虚肺燥证候",
+            "evidence": [
+              {
+                "source_id": "S1",
+                "quote": "无发热提示非实热证"
+              },
+              {
+                "source_id": "S1",
+                "quote": "咳嗽可能为阴虚致燥"
+              }
+            ],
+            "missing_info": [
+              "夜间是否盗汗",
+              "口咽是否干燥"
+            ]
+          }
+        ],
+        "questions": [
+          "咳嗽是否有痰？痰色白或黄？",
+          "是否伴有咽干、声音嘶哑？"
+        ],
+        "limitations": [
+          "缺乏舌脉信息影响辨证准确性",
+          "睡眠正常提示暂无心肝火旺表现"
+        ]
+      },
+      "reasons": []
+    }
+  ],
+  "visual_action": "no_image",
+  "analysis_action": "full_answer_requires_review",
+  "clinical_verification": false,
+  "model_invocations": 1,
+  "model_latency_sec": 15.5,
+  "case_id": "t06",
+  "arm": "base",
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v4.py": "f4bf6288f252a9696f4f2158531e24f8123d110c07c94d804e231799a6814d86"
+  }
+}

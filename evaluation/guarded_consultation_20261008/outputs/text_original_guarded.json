@@ -1,0 +1,116 @@
+{
+  "user_symptoms": [
+    "最近容易疲劳",
+    "手脚较凉",
+    "睡眠质量一般",
+    "偶尔食欲不佳"
+  ],
+  "image_present": false,
+  "cv_facts": {
+    "image_present": false,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [],
+    "reject_reasons": [
+      "no_image_received"
+    ],
+    "patches": {},
+    "detection_candidates": [],
+    "usable_for_technical_description": false,
+    "cv_latency_sec": 0.0
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"疲劳可能与气虚、血虚或脾虚相关\"\n    },\n    {\n      \"basis_ids\": [\"S2\"],\n      \"explanation\": \"手足不温需鉴别阳虚或气血运行障碍\"\n    }\n  ],\n  \"questions\": [\n    \"疲劳是否伴随气短、自汗？\",\n    \"手脚凉是全天持续还是遇冷加重？\",\n    \"睡眠质量差具体表现为入睡困难/易醒/多梦？\",\n    \"食欲不佳时是否有腹胀、嗳气？\",\n    \"近期有无体重变化或情绪波动？\"\n  ],\n  \"limitations\": [\n    \"无法通过图片判断寒热属性\",\n    \"缺乏舌象和脉象信息\"\n  ]\n}\n```",
+        "latency_sec": 10.3261119578965,
+        "preprocess_sec": 0.01137323584407568,
+        "generation_sec": 10.311281417962164,
+        "output_tokens": 182,
+        "tokens_per_sec": 17.65057053752384,
+        "peak_memory": 16656625664,
+        "peak_reserved_bytes": 16911433728,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 320,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n{\"source_symptoms\": {\"S1\": \"最近容易疲劳\", \"S2\": \"手脚较凉\", \"S3\": \"睡眠质量一般\", \"S4\": \"偶尔食欲不佳\"}, \"image_present\": false, \"visual_action\": \"no_image_visual_generation_skipped\", \"unverified_technical_visual_facts\": [], \"allow_colour_based_medical_inference\": false}",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "疲劳可能与气虚、血虚或脾虚相关"
+    },
+    {
+      "basis_ids": [
+        "S2"
+      ],
+      "explanation": "手足不温需鉴别阳虚或气血运行障碍"
+    }
+  ],
+  "questions": [
+    "疲劳是否伴随气短、自汗？",
+    "手脚凉是全天持续还是遇冷加重？",
+    "睡眠质量差具体表现为入睡困难/易醒/多梦？",
+    "食欲不佳时是否有腹胀、嗳气？",
+    "近期有无体重变化或情绪波动？"
+  ],
+  "limitations": [
+    "未提供图片，未进行视觉分析。",
+    "无法通过图片判断寒热属性",
+    "缺乏舌象和脉象信息"
+  ],
+  "source_symptoms": {
+    "S1": "最近容易疲劳",
+    "S2": "手脚较凉",
+    "S3": "睡眠质量一般",
+    "S4": "偶尔食欲不佳"
+  },
+  "visual_action": "no_image_visual_generation_skipped",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 1,
+  "model_latency_sec": 10.3261119578965,
+  "requires_review": true,
+  "status": "ok",
+  "case_id": "text_original",
+  "arm": "guarded",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

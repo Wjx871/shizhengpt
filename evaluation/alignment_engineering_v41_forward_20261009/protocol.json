@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "consultation_alignment_v4.py": "62b00e35d4cb2e5c48e80996e1542c9b1b944b75d4e1ccdaa89f6b8730623bdb",
+    "consultation_alignment_v41.py": "dfa57a6483990920c29615bb6fef604d52224e06ae3912ff4c887b671d06d153",
+    "consultation_facts.py": "e589a2ab4f640933e7711f34c885bab53761d11dfd21adf99fea02429e94bda5",
+    "guarded_consultation.py": "b8c8bece1e9380365c22720cc2273cb3e65fa2bee2d6a5e4b401777e77d97f17",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b",
+    "evaluate_alignment_v41.py": "edd491852ce726722bfb537b47f21a65523ae1d618614c12318eb065b82236c4"
+  },
+  "manifest_sha256": "102d6a9d0990bc171e90073bd720ac1ecc56bdb2f02eeab39cd2414ca23b1904",
+  "frozen_unix": 1791530702.2999413,
+  "comparison": "Schema-constrained base versus v4.1 component-retention workflow, same deterministic service/stage separation as v4",
+  "development_context": "Designed after early v4 t01 and t03 failures. New synthetic phrasings; known image reused. Not independent clinical validation.",
+  "limits": "Rule checks are bounded; component retention does not prove clinical validity. No weight changes."
+}

@@ -1,0 +1,350 @@
+{
+  "user_symptoms": [
+    "最近一周偶有腹胀",
+    "没有恶心和呕吐",
+    "食欲尚可"
+  ],
+  "image_present": true,
+  "cv_facts": {
+    "image_present": true,
+    "measurement_type": "image_space_only",
+    "not_a_medical_assessment": true,
+    "allow_medical_colour_inference": false,
+    "coordinate_frame": "displayed image left/right; anatomical side and mirroring unknown",
+    "parameters": {
+      "scale_factor": 1.05,
+      "min_neighbors": 5,
+      "min_face_px": 80,
+      "min_laplacian_variance": 50,
+      "soft_blur_variance": 170,
+      "max_clipped_fraction": 0.3,
+      "max_monochrome_fraction": 0.98,
+      "detail_warning_face_px": 200
+    },
+    "warnings": [
+      "low_resolution_for_fine_facial_features",
+      "no_colour_card_or_capture_calibration",
+      "patches_are_geometric_not_segmented_skin",
+      "pose_occlusion_and_mirroring_not_verified",
+      "RGB_is_assumed_sRGB_not_physically_calibrated"
+    ],
+    "reject_reasons": [],
+    "patches": {
+      "image_left_patch": {
+        "bbox_xyxy": [
+          36,
+          96,
+          59,
+          119
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          224.0,
+          187.0,
+          163.0
+        ],
+        "lab_median": [
+          78.503,
+          8.953,
+          16.812
+        ],
+        "grey_mean": 193.267,
+        "clipped_high_fraction": 0.0813,
+        "clipped_low_fraction": 0.0
+      },
+      "image_right_patch": {
+        "bbox_xyxy": [
+          91,
+          96,
+          114,
+          119
+        ],
+        "pixel_count": 529,
+        "rgb_median": [
+          205.0,
+          174.0,
+          146.0
+        ],
+        "lab_median": [
+          73.029,
+          7.672,
+          18.625
+        ],
+        "grey_mean": 174.51,
+        "clipped_high_fraction": 0.0,
+        "clipped_low_fraction": 0.0
+      }
+    },
+    "detection_candidates": [
+      {
+        "bbox_xywh": [
+          26,
+          45,
+          98,
+          98
+        ],
+        "paired_eyes": [
+          [
+            14,
+            23,
+            25,
+            25
+          ],
+          [
+            56,
+            24,
+            29,
+            29
+          ]
+        ]
+      }
+    ],
+    "icc_profile_present": false,
+    "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/astronaut_jpeg.png",
+    "image_sha256": "4bd68c1e9b8ba13332d5fb53ee74349531ecfd62188b6150079d896c224a842a",
+    "width": 155,
+    "height": 172,
+    "exif_orientation": 1,
+    "monochrome_fraction": 0.0203,
+    "detector": {
+      "opencv_version": "4.12.0",
+      "type": "Haar frontal face plus paired eyes",
+      "face_xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+      "eye_xml_sha256": "e32f9c67935c33e9d1331eb14fa58554ff17835c03742663bcb97a892e936a57"
+    },
+    "raw_face_count": 1,
+    "eye_verified_count": 1,
+    "detected_face_bbox_xywh": [
+      26,
+      45,
+      98,
+      98
+    ],
+    "laplacian_variance": 560.152,
+    "face_high_clip_fraction": 0.0011,
+    "face_low_clip_fraction": 0.0097,
+    "measurement_bbox_xywh": [
+      26,
+      45,
+      98,
+      98
+    ],
+    "fixed_reference_roi_used": false,
+    "usable_for_technical_description": true,
+    "cv_latency_sec": 0.0669674170203507
+  },
+  "medical_status": "unknown",
+  "model_description_verified": false,
+  "guard_checks_are_medical_verification": false,
+  "visual_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"visual_facts\": [\n    \"面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角\"\n  ],\n  \"limitations\": [\n    \"因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征\",\n    \"无法观察到耳部、鼻部、口唇等关键区域细节\"\n  ]\n}\n```",
+        "latency_sec": 4.513857997953892,
+        "preprocess_sec": 0.009539560880511999,
+        "generation_sec": 4.502499977126718,
+        "output_tokens": 79,
+        "tokens_per_sec": 17.54580797364358,
+        "peak_memory": 16655305216,
+        "peak_reserved_bytes": 16747855872,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 256,
+          "do_sample": false
+        },
+        "input_tokens": 315,
+        "image_grid_thw": [
+          [
+            1,
+            12,
+            12
+          ]
+        ],
+        "truncated": false,
+        "prompt": "只描述本次照片直接可见的面部技术信息，不做中医辨证。照片通过基础质控，不代表所有部位都可见。\n不得猜测年龄、性别、职业、疾病、证候、健康状态、舌象、脉象、身体活动或未提供的症状；不得补全未显示的部位。\n颜色仅描述照片，不代表真实肤色。分辨率不足时避免细微皮肤判断。不复述程序数值。\n只输出JSON，两个键：visual_facts（简短字符串列表，最多3项），limitations（字符串列表，最多3项）。看不清就明确说明。\n本次已提供照片。图片左右仅指画面左右，不能确认人物解剖左右。照片颜色没有校准。面部区域分辨率偏低，应避免细节断言。\n请填写实际观察结果，输出格式为：{\"visual_facts\":[],\"limitations\":[]}。不要复述输入状态。\n只描述面部粗略可见轮廓、朝向或遮挡，不描述头盔服装，不判断无皮疹、无肿胀、无畸形或正常。看不清的细节放入limitations并写“无法判断”。",
+        "image_path": "/root/private_data/shizhengpt-evaluation/evaluation/images/face/astronaut_jpeg.png",
+        "image_sha256": "4bd68c1e9b8ba13332d5fb53ee74349531ecfd62188b6150079d896c224a842a"
+      }
+    }
+  ],
+  "analysis_attempts": [
+    {
+      "attempt": 1,
+      "reasons": [],
+      "model_result": {
+        "raw_output": "```json\n{\n  \"possible_explanations\": [\n    {\n      \"basis_ids\": [\"S1\"],\n      \"explanation\": \"腹胀可能与饮食因素（如过食生冷、油腻）、脾胃运化功能失调或气机阻滞相关\"\n    }\n  ],\n  \"questions\": [\n    \"腹胀主要发生在餐后还是空腹时？\",\n    \"腹胀是否伴随排气增多或排便异常？\",\n    \"腹胀是否在特定体位（如弯腰、平躺时加重？\"\n  ],\n  \"limitations\": [\n    \"未提供舌象/脉象等关键四诊信息\",\n    \"面部照片未显示舌苔/齿痕等重要体征\"\n  ]\n}\n```",
+        "latency_sec": 9.242754365783185,
+        "preprocess_sec": 0.006662141066044569,
+        "generation_sec": 9.232931626029313,
+        "output_tokens": 156,
+        "tokens_per_sec": 16.89604194189066,
+        "peak_memory": 16909490688,
+        "peak_reserved_bytes": 17047748608,
+        "dtype": "bfloat16",
+        "generation_config": {
+          "max_new_tokens": 512,
+          "do_sample": false
+        },
+        "input_tokens": 905,
+        "image_grid_thw": null,
+        "truncated": false,
+        "prompt": "依据输入中S编号对应的用户原始症状，给出需要进一步核实的可能解释及追问。图片观察仅是未核验的技术描述，禁止据此做面色辨证。\n不得将可能解释写成确诊。不得新增或改写用户症状、程度、频率、否定或持续时间。不要重复转述用户症状，使用S编号引用依据。\n追问也不能预设未提供的事实。例如用户说睡眠质量一般，不应问睡眠质量差具体表现是什么，应中性询问睡眠质量一般具体指什么。\n不要新增视觉事实，不要猜测年龄、性别、脉象或舌象。不要提供药物、剂量或治疗方案。\n只输出JSON，三个键：possible_explanations（最多3个对象，每个对象有basis_ids字符串列表及explanation字符串），questions（最多5个字符串），limitations（最多3个字符串）。\nbasis_ids只能使用输入中实际存在的S编号，不允许以照片颜色作为辨证依据。questions可以询问尚不清楚的症状，不能把问题当成既有事实。信息不足时可以不给出可能解释，但仍应提出有用问题。\n用户原始症状（仅这些内容为已提供事实）：\nS1：最近一周偶有腹胀\nS2：没有恶心和呕吐\nS3：食欲尚可\n图片处理状态：technical_description_passed_limited_checks_unverified\n未核验的照片技术观察，仅供说明照片条件，不作为证候依据：面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角\n请输出实际分析，格式为：{\"possible_explanations\":[{\"basis_ids\":[\"S1\"],\"explanation\":\"需要核实的可能解释\"}],\"questions\":[],\"limitations\":[]}。示例是格式说明，不是答案；请根据原始症状填写，提出有用追问。\n有限词表提取的事实槽位（遗漏处以症状原文为准）：[{\"id\": \"S1\", \"raw\": \"最近一周偶有腹胀\", \"clauses\": [{\"text\": \"最近一周偶有腹胀\", \"start\": 0, \"end\": 8, \"findings\": [{\"term\": \"bloating\", \"polarity\": \"reported\", \"evidence\": {\"text\": \"腹胀\", \"start\": 6, \"end\": 8}}], \"qualifiers\": {\"severity\": [], \"frequency\": [{\"text\": \"偶有\", \"start\": 4, \"end\": 6}], \"time\": [{\"text\": \"最近一周\", \"start\": 0, \"end\": 4}]}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S2\", \"raw\": \"没有恶心和呕吐\", \"clauses\": [{\"text\": \"没有恶心和呕吐\", \"start\": 0, \"end\": 7, \"findings\": [{\"term\": \"nausea\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"恶心\", \"start\": 2, \"end\": 4}}, {\"term\": \"vomiting\", \"polarity\": \"negative\", \"evidence\": {\"text\": \"呕吐\", \"start\": 5, \"end\": 7}}], \"qualifiers\": {\"severity\": [], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}, {\"id\": \"S3\", \"raw\": \"食欲尚可\", \"clauses\": [{\"text\": \"食欲尚可\", \"start\": 0, \"end\": 4, \"findings\": [], \"qualifiers\": {\"severity\": [{\"text\": \"尚可\", \"start\": 2, \"end\": 4}], \"frequency\": [], \"time\": []}}], \"coverage\": \"bounded_lexicon_requires_review\"}]\n只解释用户明确报告的当前症状，否定或已缓解的症状不能作为现有患病依据。不重复转述症状。\n优先开放追问，例如“睡眠质量一般具体指什么？”；未知症状用“是否有……”询问，不能问“胸痛是否持续”或“发热多久”来预设它存在。解释不要补充原文没有的严重程度、频率和病程。",
+        "image_path": "",
+        "image_sha256": null
+      }
+    }
+  ],
+  "visual_facts": [
+    "面部轮廓清晰，朝向正前方，头发覆盖头顶及两侧额角"
+  ],
+  "possible_explanations": [
+    {
+      "basis_ids": [
+        "S1"
+      ],
+      "explanation": "腹胀可能与饮食因素（如过食生冷、油腻）、脾胃运化功能失调或气机阻滞相关"
+    }
+  ],
+  "questions": [
+    "腹胀主要发生在餐后还是空腹时？",
+    "腹胀是否伴随排气增多或排便异常？",
+    "腹胀是否在特定体位（如弯腰、平躺时加重？"
+  ],
+  "limitations": [
+    "因分辨率限制，无法判断具体肤色、毛发质地及面部细微特征",
+    "无法观察到耳部、鼻部、口唇等关键区域细节",
+    "未提供舌象/脉象等关键四诊信息",
+    "面部照片未显示舌苔/齿痕等重要体征",
+    "事实槽位仅覆盖有限词表；图像断言未经过独立视觉核验。"
+  ],
+  "source_symptoms": {
+    "S1": "最近一周偶有腹胀",
+    "S2": "没有恶心和呕吐",
+    "S3": "食欲尚可"
+  },
+  "visual_action": "technical_description_passed_limited_checks_unverified",
+  "analysis_action": "generated_analysis_requires_review",
+  "model_invocations": 2,
+  "model_latency_sec": 13.756612363737077,
+  "requires_review": true,
+  "guard_version": "v3_fact_slots_and_question_prefix",
+  "symptom_facts": [
+    {
+      "id": "S1",
+      "raw": "最近一周偶有腹胀",
+      "clauses": [
+        {
+          "text": "最近一周偶有腹胀",
+          "start": 0,
+          "end": 8,
+          "findings": [
+            {
+              "term": "bloating",
+              "polarity": "reported",
+              "evidence": {
+                "text": "腹胀",
+                "start": 6,
+                "end": 8
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [
+              {
+                "text": "偶有",
+                "start": 4,
+                "end": 6
+              }
+            ],
+            "time": [
+              {
+                "text": "最近一周",
+                "start": 0,
+                "end": 4
+              }
+            ]
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S2",
+      "raw": "没有恶心和呕吐",
+      "clauses": [
+        {
+          "text": "没有恶心和呕吐",
+          "start": 0,
+          "end": 7,
+          "findings": [
+            {
+              "term": "nausea",
+              "polarity": "negative",
+              "evidence": {
+                "text": "恶心",
+                "start": 2,
+                "end": 4
+              }
+            },
+            {
+              "term": "vomiting",
+              "polarity": "negative",
+              "evidence": {
+                "text": "呕吐",
+                "start": 5,
+                "end": 7
+              }
+            }
+          ],
+          "qualifiers": {
+            "severity": [],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    },
+    {
+      "id": "S3",
+      "raw": "食欲尚可",
+      "clauses": [
+        {
+          "text": "食欲尚可",
+          "start": 0,
+          "end": 4,
+          "findings": [],
+          "qualifiers": {
+            "severity": [
+              {
+                "text": "尚可",
+                "start": 2,
+                "end": 4
+              }
+            ],
+            "frequency": [],
+            "time": []
+          }
+        }
+      ],
+      "coverage": "bounded_lexicon_requires_review"
+    }
+  ],
+  "fact_extraction_is_complete": false,
+  "visual_verification_method": "scope_and_resolution_rules_only",
+  "case_id": "h09",
+  "arm": "v3",
+  "evaluation_config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  }
+}

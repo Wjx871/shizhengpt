@@ -1,0 +1,5 @@
+# Preserve the system's DTK-customized torch 2.5.1 and torchvision.
+# Verified existing: transformers 4.57.1, accelerate 1.11.0, huggingface-hub 0.36.0,
+# safetensors 0.6.2, Pillow 12.0.0, PyYAML. Do not upgrade torch.
+# Install only the missing helper into the project venv, with --no-deps.
+qwen-vl-utils==0.0.14

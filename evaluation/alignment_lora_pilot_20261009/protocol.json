@@ -1,0 +1,57 @@
+{
+  "frozen_at_unix": 1791476079.1720064,
+  "training_rows": 64,
+  "test_rows": 16,
+  "regression_rows": 4,
+  "training_tasks": {
+    "vision": 16,
+    "symptoms": 24,
+    "citation": 24
+  },
+  "test_tasks": {
+    "vision": 4,
+    "symptoms": 6,
+    "citation": 6
+  },
+  "unique_train_image_assets": 5,
+  "unique_test_image_assets": 2,
+  "train_jsonl_sha256": "b57e1307cdec3f0960f2fddc41bb43b61663acb33dc8e721d321e0ca26a65571",
+  "test_jsonl_sha256": "18545a81bf673c1546b4d29b78542ea525021c3a205f6a99b3452eb217c6972c",
+  "source_sha256": {
+    "build_alignment_pilot.py": "9fb332b206be746868c23fb4ccebb2da505fc026e1eddf01ffb2ce55728ed582",
+    "train_alignment_pilot.py": "3a49b2444dac543228d4d5e4dc5b48f006661ee1fabd104cc3675f5f638db05f",
+    "evaluate_alignment_pilot.py": "499591e4b642a4c28e7ef332451c1b6f20cdc9d3c82c8ad9b775d4498cb54f2b",
+    "infer_image.py": "7a9b07d2eb27b91c1544dfa58aeebe573d96d62dee23e8cbf4cae9d8dc60f9a2"
+  },
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.0,
+    "target_suffixes": [
+      "self_attn.q_proj",
+      "self_attn.v_proj"
+    ]
+  },
+  "training": {
+    "seed": 20261009,
+    "epochs": 1,
+    "optimizer_steps": 64,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "max_sequence_tokens": 2048
+  },
+  "inference": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 768
+  },
+  "annotation": "Assistant engineering labels / synthetic authored facts, not expert clinical labels.",
+  "limitations": [
+    "Only five training image assets; most image rows repeat input/target.",
+    "Test real photo is a new asset/subject relative to adapter training, not verified independent relative to original pretraining.",
+    "Two held-out images with prompt repeats are not four patients.",
+    "Structured fact tasks measure alignment, not clinical diagnoses.",
+    "Regression prompts and images informed development and may overlap training subjects."
+  ],
+  "selection": "One fixed final checkpoint. No test-set selection or tuning; retain failed/regressed candidates as research artifacts."
+}

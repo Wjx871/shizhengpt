@@ -1,0 +1,22 @@
+{
+  "cases": 12,
+  "pipeline_results": 24,
+  "model_inferences": 28,
+  "elapsed_sec": 382.45811891555786,
+  "config": {
+    "model_path": "/root/private_data/models/ShizhenGPT-7B-VL",
+    "dtype": "bfloat16",
+    "attention": "eager",
+    "max_pixels": 1003520,
+    "min_pixels": 3136,
+    "max_new_tokens": 768,
+    "do_sample": false,
+    "seed": 42
+  },
+  "scripts_sha256": {
+    "guarded_consultation.py": "25ae7f722c629b6f09303e9e090345659b743593164219adbae851e08f251569",
+    "evaluate_guarded_consultation.py": "f8a428ba1f70a71dd8cc4e406fd92a5f6a071d81f6dc2a84efefb79859576415",
+    "face_quality.py": "2c4c55cba03c40eda0564c3b874706000aa34ac09319da621536ac995873a97b"
+  },
+  "note": "Combined pipeline intervention. Public images/synthetic symptoms; no independent clinical patients. New conditions are not an independent patient holdout."
+}
